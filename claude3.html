@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="all">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unoloft – Ahmedabad's Premium PG for Boys &amp; Girls</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<style>
+:root{
+  --brand:#f06520;--navy:#162d5e;--navy2:#1e3a7a;--gold:#c9a84c;
+  --cream:#eef5ff;--gray:#6b7280;--gray2:#2d3e60;
+  --boys:#1e3a7a;--girls:#2d5fa8;
+  --t:all .35s cubic-bezier(.4,0,.2,1);
+}
+[data-mode=boys]{--mc:#1e3a7a;--mlt:#dbeafe;--mbg:linear-gradient(135deg,#0d2e72 0%,#1a4898 50%,#2a62c0 100%);--sb:#eef5ff;}
+[data-mode=girls]{--mc:#2d5fa8;--mlt:#dbeafe;--mbg:linear-gradient(135deg,#2e6abf 0%,#4888d8 50%,#72aef0 100%);--sb:#f0f7ff;}
+[data-mode=all]{--mc:#162d5e;--mlt:#dbeafe;--mbg:linear-gradient(135deg,#0d2e72 0%,#1a4898 50%,#2a62c0 100%);--sb:#eef5ff;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#f5f9ff;color:#2d3e60;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}img{max-width:100%;display:block;}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-thumb{background:var(--brand);border-radius:3px;}
+/* LOADER */
+#loader{position:fixed;inset:0;z-index:9999;background:#1a4898;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;transition:opacity .6s ease,visibility .6s;}
+#loader.done{opacity:0;visibility:hidden;pointer-events:none;}
+.ldr-name{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#fff;}
+.ldr-name span{color:var(--brand);}
+.ldr-sub{font-size:.68rem;letter-spacing:3px;color:rgba(255,255,255,.35);text-transform:uppercase;margin-top:-14px;}
+.ldr-bar{width:150px;height:2px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden;}
+.ldr-fill{height:100%;background:var(--brand);border-radius:2px;animation:ldfill 2s cubic-bezier(.4,0,.2,1) forwards;}
+@keyframes ldfill{0%{width:0}100%{width:100%}}
+/* NAVBAR */
+#nav{position:fixed;top:0;left:0;width:100%;z-index:1000;height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;transition:var(--t);}
+#nav.s{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(0,0,0,.08);height:62px;}
+.nav-logo{display:flex;align-items:center;gap:10px;}
+.logo-sq{width:38px;height:38px;border-radius:11px;background:var(--brand);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:900;color:#fff;font-size:1.15rem;box-shadow:0 4px 14px rgba(240,101,32,.35);transition:var(--t);}
+.logo-sq:hover{transform:rotate(-4deg) scale(1.06);}
+.logo-n{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;color:#fff;transition:color .3s;}
+#nav.s .logo-n{color:var(--navy);}
+.nav-tabs{display:flex;align-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:50px;padding:4px;gap:2px;transition:var(--t);}
+#nav.s .nav-tabs{background:rgba(15,31,75,.06);border-color:rgba(15,31,75,.12);}
+.pg-tab{padding:7px 20px;border-radius:50px;font-size:.8rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:rgba(255,255,255,.7);transition:var(--t);}
+#nav.s .pg-tab{color:var(--gray);}
+.pg-tab.active{background:var(--brand);color:#fff;box-shadow:0 2px 10px rgba(240,101,32,.3);}
+.pg-tab:not(.active):hover{background:rgba(255,255,255,.12);color:#fff;}
+#nav.s .pg-tab:not(.active):hover{background:rgba(15,31,75,.08);color:var(--navy);}
+.nav-r{display:flex;align-items:center;gap:26px;list-style:none;}
+.nav-r a{font-size:.83rem;font-weight:500;color:rgba(255,255,255,.8);transition:var(--t);}
+#nav.s .nav-r a{color:var(--gray2);}
+.nav-r a:hover{color:var(--brand);}
+.nav-cta{background:var(--brand)!important;color:#fff!important;padding:9px 22px;border-radius:50px;font-weight:700!important;box-shadow:0 4px 14px rgba(240,101,32,.3);}
+.nav-cta:hover{transform:translateY(-2px)!important;}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hbg span{width:23px;height:2px;border-radius:2px;background:#fff;transition:var(--t);}
+#nav.s .hbg span{background:var(--navy);}
+/* HERO */
+#hero{min-height:100vh;background:var(--mbg);position:relative;overflow:hidden;display:flex;align-items:center;padding:80px 5% 0;transition:background .7s ease;}
+.hero-noise{position:absolute;inset:0;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none;}
+.city-wm{position:absolute;font-family:'Cormorant Garamond',serif;font-size:clamp(90px,15vw,220px);font-weight:900;text-transform:uppercase;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.045);letter-spacing:.05em;white-space:nowrap;pointer-events:none;user-select:none;bottom:2%;left:-1%;animation:wmdrift 18s ease-in-out infinite;}
+.city-wm .hl{-webkit-text-stroke:1px rgba(240,101,32,.18);}
+@keyframes wmdrift{0%,100%{transform:translateX(0)}50%{transform:translateX(-1.5%)}}
+.hero-glow{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(240,101,32,.09) 0%,transparent 65%);top:50%;left:32%;transform:translate(-50%,-50%);pointer-events:none;animation:glowp 7s ease-in-out infinite;}
+@keyframes glowp{0%,100%{opacity:.8;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.12)}}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;width:100%;max-width:1380px;margin:0 auto;padding-bottom:80px;}
+.hero-l{padding-top:16px;}
+.hero-ey{display:inline-flex;align-items:center;gap:10px;font-size:.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--brand);margin-bottom:22px;opacity:0;animation:fup .7s ease .3s forwards;}
+.hero-ey::before{content:'';width:26px;height:1px;background:var(--brand);}
+.h1a{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,4.8vw,4rem);font-weight:900;color:#fff;line-height:1.08;opacity:0;animation:fup .8s ease .5s forwards;}
+.h1b{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,4.8vw,4rem);font-weight:900;color:rgba(255,255,255,.8);line-height:1.08;margin-bottom:26px;font-style:italic;opacity:0;animation:fup .8s ease .62s forwards;}
+.hero-loc{display:inline-flex;align-items:center;gap:7px;font-size:.88rem;color:rgba(255,255,255,.5);margin-bottom:32px;opacity:0;animation:fup .8s ease .72s forwards;}
+.hero-loc strong{background:linear-gradient(90deg,#f06520,#ff8c42);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700;}
+.hero-pills{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:36px;opacity:0;animation:fup .8s ease .82s forwards;}
+.h-pill{display:flex;align-items:center;gap:6px;padding:7px 15px;border-radius:50px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);font-size:.77rem;color:rgba(255,255,255,.85);font-weight:500;}
+.h-pill i{color:var(--brand);font-size:.8rem;}
+.hero-btns{display:flex;gap:13px;flex-wrap:wrap;opacity:0;animation:fup .8s ease .92s forwards;}
+.btn-ora{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#fff;padding:13px 30px;border-radius:50px;font-weight:700;font-size:.88rem;box-shadow:0 8px 26px rgba(240,101,32,.4);transition:var(--t);}
+.btn-ora:hover{transform:translateY(-3px);box-shadow:0 13px 34px rgba(240,101,32,.55);}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,.85);padding:13px 26px;border-radius:50px;font-weight:600;font-size:.88rem;border:1.5px solid rgba(255,255,255,.28);transition:var(--t);}
+.btn-ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.6);transform:translateY(-3px);}
+.hero-stats{display:flex;gap:28px;margin-top:44px;opacity:0;animation:fup .8s ease 1.05s forwards;}
+.hs{display:flex;flex-direction:column;}
+.hs-n{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;color:#fff;}
+.hs-n em{color:var(--brand);font-style:normal;}
+.hs-l{font-size:.72rem;color:rgba(255,255,255,.4);margin-top:2px;}
+.hs-div{width:1px;background:rgba(255,255,255,.1);}
+/* MOSAIC */
+.hero-r{position:relative;height:570px;opacity:0;animation:frgt 1s ease .4s forwards;}
+@keyframes frgt{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:none}}
+.mc{position:absolute;border-radius:20px;overflow:hidden;box-shadow:0 22px 65px rgba(0,0,0,.45);transition:var(--t);}
+.mc:hover{box-shadow:0 30px 80px rgba(0,0,0,.6);}
+.mc img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .3s ease,transform .5s ease;}
+.mc:hover img{transform:scale(1.05);}
+.mc1{top:0;left:0;width:57%;height:50%;transform:rotate(-2.2deg);z-index:2;}
+.mc1:hover{transform:rotate(0deg) scale(1.02);}
+.mc2{top:3%;right:0;width:41%;height:44%;transform:rotate(1.8deg);z-index:1;}
+.mc2:hover{transform:rotate(0deg) scale(1.02);}
+.mc3{bottom:3%;left:4%;width:40%;height:46%;transform:rotate(1.2deg);z-index:3;}
+.mc3:hover{transform:rotate(0deg) scale(1.02);}
+.mc4{bottom:0;right:1%;width:53%;height:47%;transform:rotate(-1.4deg);z-index:2;}
+.mc4:hover{transform:rotate(0deg) scale(1.02);}
+.mc-badge{position:absolute;z-index:10;display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.96);padding:9px 15px;border-radius:50px;box-shadow:0 8px 28px rgba(0,0,0,.18);font-size:.75rem;font-weight:700;color:var(--navy);}
+.mc-badge i{color:var(--brand);}
+.mb1{top:47%;left:17%;animation:fbadge 4s ease-in-out infinite;}
+.mb2{bottom:48%;right:8%;animation:fbadge 4s ease-in-out 1.6s infinite;}
+@keyframes fbadge{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes fup{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+/* SECTION COMMONS */
+.s-ey{display:inline-flex;align-items:center;gap:9px;font-size:.7rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:12px;}
+.s-ey::before{content:'';width:22px;height:1px;background:var(--brand);}
+.s-t{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.2vw,2.7rem);font-weight:700;color:var(--navy);line-height:1.2;}
+.s-t em{font-style:italic;color:var(--brand);}
+.s-sub{font-size:.93rem;color:var(--gray);line-height:1.8;margin-top:12px;max-width:540px;}
+.sh{margin-bottom:52px;}.sh-c{text-align:center;}.sh-c .s-sub{margin-left:auto;margin-right:auto;}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease;}
+.rvl{opacity:0;transform:translateX(-28px);transition:opacity .65s ease,transform .65s ease;}
+.rvr{opacity:0;transform:translateX(28px);transition:opacity .65s ease,transform .65s ease;}
+.rv.in,.rvl.in,.rvr.in{opacity:1;transform:none;}
+/* PG INTRO */
+#pg-intro{padding:100px 5%;background:var(--cream);}
+.pg-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:52px;}
+.pg-card{border-radius:28px;overflow:hidden;position:relative;height:490px;cursor:pointer;transition:var(--t);box-shadow:0 14px 48px rgba(0,0,0,.12);}
+.pg-card:hover{transform:translateY(-9px);box-shadow:0 24px 68px rgba(0,0,0,.18);}
+.pg-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+.pg-card:hover img{transform:scale(1.05);}
+.pg-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.78) 0%,rgba(0,0,0,.08) 55%,transparent 100%);}
+.pg-con{position:absolute;bottom:0;left:0;right:0;padding:30px 30px 34px;}
+.pg-tag{display:inline-flex;align-items:center;gap:6px;font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:50px;margin-bottom:12px;}
+.tb{background:rgba(30,58,122,.8);color:#93c5fd;border:1px solid rgba(147,197,253,.35);}
+.tg{background:rgba(45,95,168,.8);color:#bfdbfe;border:1px solid rgba(191,219,254,.35);}
+.pg-name{font-family:'Cormorant Garamond',serif;font-size:1.85rem;font-weight:700;color:#fff;margin-bottom:9px;}
+.pg-desc{font-size:.85rem;color:rgba(255,255,255,.72);line-height:1.65;margin-bottom:16px;}
+.pg-feats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}
+.pg-feat{font-size:.7rem;font-weight:600;color:rgba(255,255,255,.88);padding:4px 12px;border-radius:50px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.18);}
+.pg-link{display:inline-flex;align-items:center;gap:8px;font-size:.83rem;font-weight:700;color:#fff;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:2px;transition:var(--t);}
+.pg-link:hover{color:var(--brand);border-color:var(--brand);gap:14px;}
+/* FACILITIES */
+#facilities{padding:100px 5%;background:#f8fbff;}
+.fac-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:18px;}
+.fac-c{padding:26px 20px;border-radius:20px;background:var(--cream);border:1px solid rgba(0,0,0,.04);transition:var(--t);position:relative;overflow:hidden;}
+.fac-c::after{content:'';position:absolute;bottom:-36px;right:-36px;width:90px;height:90px;border-radius:50%;background:var(--brand);opacity:.04;transition:var(--t);}
+.fac-c:hover{transform:translateY(-6px);background:#fff;box-shadow:0 12px 38px rgba(0,0,0,.09);border-color:rgba(240,101,32,.14);}
+.fac-c:hover::after{transform:scale(2.2);opacity:.07;}
+.fac-ic{width:52px;height:52px;border-radius:14px;background:rgba(240,101,32,.1);color:var(--brand);display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:16px;transition:var(--t);}
+.fac-c:hover .fac-ic{background:var(--brand);color:#fff;}
+.fac-n{font-weight:700;font-size:.92rem;color:var(--navy);margin-bottom:5px;}
+.fac-d{font-size:.78rem;color:var(--gray);line-height:1.6;}
+/* ROOMS */
+#rooms{padding:100px 5%;background:var(--cream);}
+.rooms-g{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.room-c{background:#fff;border-radius:24px;overflow:hidden;transition:var(--t);box-shadow:0 4px 18px rgba(0,0,0,.05);}
+.room-c:hover{transform:translateY(-8px);box-shadow:0 20px 52px rgba(0,0,0,.12);}
+.room-img{height:210px;position:relative;overflow:hidden;}
+.room-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.room-c:hover .room-img img{transform:scale(1.06);}
+.r-badge{position:absolute;top:15px;right:15px;background:var(--brand);color:#fff;font-size:.68rem;font-weight:700;padding:5px 13px;border-radius:50px;}
+.room-body{padding:22px 24px 26px;}
+.r-label{font-size:.67rem;font-weight:700;letter-spacing:2px;color:var(--brand);text-transform:uppercase;margin-bottom:7px;}
+.r-name{font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:700;color:var(--navy);margin-bottom:8px;}
+.r-desc{font-size:.83rem;color:var(--gray);line-height:1.65;margin-bottom:14px;}
+.r-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;}
+.r-chip{font-size:.7rem;font-weight:600;padding:4px 11px;border-radius:50px;background:rgba(74,127,203,.1);color:#2d4a8a;}
+.r-price{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:700;color:var(--navy);}
+.r-price small{font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;color:var(--gray);font-weight:400;}
+/* WHY */
+#why{padding:100px 5%;background:var(--mbg);position:relative;overflow:hidden;transition:background .7s ease;}
+.why-dot{position:absolute;inset:0;opacity:.03;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:28px 28px;pointer-events:none;}
+.why-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:center;}
+.why-l .s-t{color:#fff;}.why-l .s-sub{color:rgba(255,255,255,.62);}.why-l .s-ey{color:var(--brand);}
+.why-pts{margin-top:34px;display:flex;flex-direction:column;gap:14px;}
+.why-pt{display:flex;gap:15px;align-items:flex-start;padding:17px 20px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);transition:var(--t);}
+.why-pt:hover{background:rgba(255,255,255,.11);transform:translateX(6px);}
+.wpi{width:42px;height:42px;min-width:42px;border-radius:12px;background:rgba(240,101,32,.18);display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--brand);}
+.wpt h4{color:#fff;font-weight:600;font-size:.9rem;margin-bottom:3px;}
+.wpt p{color:rgba(255,255,255,.52);font-size:.8rem;line-height:1.6;}
+.why-r{display:grid;grid-template-columns:1fr 1fr;gap:15px;}
+.why-f{border-radius:20px;padding:26px 20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);text-align:center;transition:var(--t);}
+.why-f:hover{background:rgba(240,101,32,.15);border-color:rgba(240,101,32,.28);transform:translateY(-6px);}
+.wfe{font-size:2rem;margin-bottom:10px;display:block;}
+.why-f h4{color:#fff;font-size:.85rem;font-weight:700;margin-bottom:5px;}
+.why-f p{color:rgba(255,255,255,.48);font-size:.76rem;line-height:1.55;}
+/* GALLERY */
+#gallery{padding:100px 5%;background:#ffffff;}
+.gal-tabs{display:flex;gap:9px;justify-content:center;margin-bottom:34px;flex-wrap:wrap;}
+.gf{padding:7px 21px;border-radius:50px;font-size:.8rem;font-weight:600;cursor:pointer;border:1.5px solid rgba(0,0,0,.1);background:#fff;color:var(--gray);transition:var(--t);}
+.gf.active,.gf:hover{background:var(--brand);color:#fff;border-color:var(--brand);}
+.gal-masonry{columns:4;column-gap:13px;}
+.gi{break-inside:avoid;border-radius:16px;overflow:hidden;margin-bottom:13px;position:relative;cursor:pointer;transition:var(--t);}
+.gi:hover{transform:scale(1.02);}
+.gi img{width:100%;display:block;transition:transform .5s;}
+.gi:hover img{transform:scale(1.06);}
+.gi-ov{position:absolute;inset:0;background:rgba(12,26,61,.48);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s;border-radius:16px;}
+.gi:hover .gi-ov{opacity:1;}
+.gi-ov i{font-size:1.7rem;color:#fff;}
+/* LIGHTBOX */
+#lb{position:fixed;inset:0;z-index:9990;background:rgba(0,0,0,.93);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
+#lb.on{opacity:1;pointer-events:all;}
+#lb img{max-width:88vw;max-height:84vh;border-radius:14px;}
+.lbx{position:absolute;top:22px;right:26px;color:#fff;font-size:1.6rem;cursor:pointer;opacity:.6;}
+.lbx:hover{opacity:1;}
+.lba{position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:1.5rem;cursor:pointer;background:rgba(255,255,255,.1);padding:13px 17px;border-radius:12px;transition:var(--t);opacity:.7;}
+.lba:hover{background:rgba(240,101,32,.4);opacity:1;}
+.lba.p{left:18px;}.lba.n{right:18px;}
+/* TESTIMONIALS */
+#testimonials{padding:100px 5%;background:var(--cream);}
+.testi-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.testi-c{background:#fff;border-radius:22px;padding:28px 24px;border:1px solid rgba(0,0,0,.05);transition:var(--t);}
+.testi-c:hover{transform:translateY(-6px);box-shadow:0 14px 44px rgba(0,0,0,.1);}
+.t-stars{color:#f59e0b;font-size:.8rem;margin-bottom:12px;}
+.t-q{font-size:2.2rem;color:var(--brand);opacity:.22;line-height:1;font-family:Georgia,serif;margin-bottom:4px;}
+.t-text{font-size:.88rem;color:var(--gray);line-height:1.75;margin-bottom:20px;font-style:italic;}
+.t-auth{display:flex;align-items:center;gap:11px;}
+.t-av{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.95rem;color:#fff;}
+.t-name{font-weight:700;font-size:.88rem;color:var(--navy);}
+.t-role{font-size:.73rem;color:var(--gray);}
+/* FAQ */
+#faq{padding:100px 5%;background:#f8fbff;}
+.faq-cols{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start;}
+.faq-l{position:sticky;top:90px;}
+.faq-img{margin-top:28px;border-radius:22px;overflow:hidden;height:240px;}
+.faq-img img{width:100%;height:100%;object-fit:cover;}
+.faq-list{display:flex;flex-direction:column;gap:9px;}
+.faq-i{border-radius:16px;overflow:hidden;border:1px solid rgba(0,0,0,.07);background:var(--cream);}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:17px 20px;cursor:pointer;font-weight:600;font-size:.88rem;color:var(--navy);transition:color .2s;}
+.faq-q:hover{color:var(--brand);}
+.faq-ic{width:26px;height:26px;min-width:26px;border-radius:50%;background:rgba(240,101,32,.1);color:var(--brand);display:flex;align-items:center;justify-content:center;font-size:.75rem;transition:var(--t);}
+.faq-i.open .faq-ic{background:var(--brand);color:#fff;transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;padding:0 20px;font-size:.85rem;color:var(--gray);line-height:1.75;transition:max-height .4s ease,padding .4s ease;}
+.faq-i.open .faq-a{max-height:200px;padding:0 20px 16px;}
+/* MAP */
+#map-sec{padding:100px 5%;background:var(--cream);}
+.map-g{display:grid;grid-template-columns:1fr 1.5fr;gap:48px;align-items:start;}
+.map-cards{display:flex;flex-direction:column;gap:12px;margin-top:28px;}
+.map-card{display:flex;gap:13px;align-items:flex-start;padding:17px 18px;background:#fff;border-radius:15px;border:1px solid rgba(0,0,0,.05);box-shadow:0 2px 10px rgba(0,0,0,.04);}
+.map-ic{width:42px;height:42px;min-width:42px;border-radius:11px;background:rgba(240,101,32,.1);display:flex;align-items:center;justify-content:center;font-size:.95rem;color:var(--brand);}
+.map-card h4{font-size:.75rem;color:var(--gray);margin-bottom:2px;}
+.map-card p{font-size:.88rem;font-weight:600;color:var(--navy);}
+.map-em{border-radius:22px;overflow:hidden;box-shadow:0 12px 44px rgba(0,0,0,.1);}
+.map-em iframe{display:block;width:100%;height:420px;border:none;}
+/* CONTACT */
+#contact{padding:100px 5%;background:var(--mbg);position:relative;overflow:hidden;transition:background .7s ease;}
+.con-dot{position:absolute;inset:0;opacity:.025;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:24px 24px;pointer-events:none;}
+.con-cen{position:relative;z-index:1;max-width:660px;margin:0 auto;text-align:center;}
+.con-cen .s-t{color:#fff;}.con-cen .s-sub{color:rgba(255,255,255,.62);margin:12px auto 42px;}.con-cen .s-ey{color:var(--brand);}
+.con-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px;}
+.con-cd{display:flex;flex-direction:column;align-items:center;padding:30px 20px;border-radius:22px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);text-decoration:none;transition:var(--t);}
+.con-cd:hover{background:rgba(255,255,255,.14);transform:translateY(-7px);}
+.cd-ic{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:#fff;margin-bottom:14px;}
+.cd-wa{background:linear-gradient(135deg,#25d366,#128c7e);}
+.cd-ph{background:linear-gradient(135deg,#f06520,#c0441a);}
+.con-cd h3{color:#fff;font-weight:700;font-size:.97rem;margin-bottom:5px;}
+.con-cd p{color:rgba(255,255,255,.58);font-size:.8rem;margin-bottom:7px;}
+.cd-num{color:#fff;font-weight:700;font-size:1.08rem;}
+.con-ex{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;}
+.con-ext{display:flex;align-items:center;gap:7px;font-size:.8rem;color:rgba(255,255,255,.52);}
+.con-ext i{color:var(--brand);}
+/* FOOTER */
+footer{background:#060d1e;color:rgba(255,255,255,.45);}
+.ft-main{display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:38px;padding:62px 5% 46px;border-bottom:1px solid rgba(255,255,255,.07);}
+.ft-desc{font-size:.83rem;color:rgba(255,255,255,.38);line-height:1.75;margin:15px 0 22px;}
+.ft-socs{display:flex;gap:9px;}
+.ft-soc{width:34px;height:34px;border-radius:9px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:rgba(255,255,255,.45);transition:var(--t);}
+.ft-soc:hover{background:var(--brand);color:#fff;border-color:var(--brand);transform:translateY(-3px);}
+.ft-col h4{color:#fff;font-size:.83rem;font-weight:700;margin-bottom:16px;}
+.ft-lks{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.ft-lks a{font-size:.8rem;color:rgba(255,255,255,.38);transition:color .2s;}
+.ft-lks a:hover{color:var(--brand);}
+.ft-bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:18px 5%;font-size:.78rem;}
+.ft-bar-lks{display:flex;gap:16px;}
+.ft-bar-lks a{color:rgba(255,255,255,.3);transition:color .2s;}
+.ft-bar-lks a:hover{color:var(--brand);}
+/* AVAILABILITY */
+#availability{padding:100px 5%;background:#eef5ff;}
+.avail-g{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.avail-c{background:#fff;border-radius:24px;padding:30px 28px 32px;border:1.5px solid rgba(74,127,203,.12);transition:var(--t);position:relative;overflow:hidden;box-shadow:0 4px 18px rgba(22,45,94,.05);}
+.avail-c::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--brand),#ff8c42);}
+.avail-c:hover{transform:translateY(-9px);box-shadow:0 22px 58px rgba(22,45,94,.13);border-color:rgba(240,101,32,.22);}
+.av-sharing{font-size:.68rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--brand);margin-bottom:8px;}
+.av-name{font-family:'Cormorant Garamond',serif;font-size:1.38rem;font-weight:700;color:var(--navy);margin-bottom:5px;}
+.av-price{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;color:var(--navy);margin-bottom:20px;}
+.av-price small{font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;color:var(--gray);font-weight:400;}
+.av-slots-lbl{font-size:.72rem;font-weight:600;color:var(--gray);margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;}
+.av-slots{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:18px;}
+.av-slot{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:var(--t);}
+.av-slot.free{background:rgba(34,197,94,.12);border:2px solid #22c55e;}
+.av-slot.free::after{content:'';width:10px;height:10px;background:#22c55e;border-radius:50%;display:block;}
+.av-slot.taken{background:rgba(107,114,128,.08);border:2px solid #e5e7eb;}
+.av-slot.taken::after{content:'';width:10px;height:10px;background:#d1d5db;border-radius:50%;display:block;}
+.av-status{display:inline-flex;align-items:center;gap:7px;font-size:.77rem;font-weight:700;padding:6px 16px;border-radius:50px;margin-bottom:22px;}
+.av-status.avail{background:rgba(34,197,94,.1);color:#15803d;}
+.av-status.avail i{color:#22c55e;}
+.av-status.almost{background:rgba(245,158,11,.12);color:#b45309;}
+.av-status.almost i{color:#f59e0b;}
+.av-status.full{background:rgba(239,68,68,.1);color:#b91c1c;}
+.av-status.full i{color:#ef4444;}
+.av-book{display:block;width:100%;text-align:center;padding:13px;border-radius:14px;font-weight:700;font-size:.88rem;transition:var(--t);border:none;cursor:pointer;text-decoration:none;}
+.av-book.active-btn{background:var(--brand);color:#fff;box-shadow:0 6px 20px rgba(240,101,32,.3);}
+.av-book.active-btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(240,101,32,.45);}
+.av-book.waitlist-btn{background:rgba(107,114,128,.1);color:var(--gray);cursor:default;pointer-events:none;}
+.av-divider{height:1px;background:rgba(74,127,203,.1);margin:0 0 20px;}
+/* BTT */
+#btt{position:fixed;bottom:26px;right:26px;z-index:900;width:42px;height:42px;border-radius:50%;border:none;background:var(--brand);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.88rem;box-shadow:0 4px 17px rgba(240,101,32,.4);opacity:0;transform:translateY(14px);transition:var(--t);}
+#btt.on{opacity:1;transform:none;}
+#btt:hover{background:#d9561a;transform:translateY(-3px);}
+/* MOBILE */
+.mob-ov{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:1100;opacity:0;pointer-events:none;transition:opacity .3s;}
+.mob-ov.on{opacity:1;pointer-events:all;}
+.mob-m{position:fixed;top:0;right:-100%;width:270px;height:100vh;background:#fff;z-index:1200;padding:68px 26px 26px;display:flex;flex-direction:column;gap:3px;transition:right .4s cubic-bezier(.4,0,.2,1);box-shadow:-10px 0 38px rgba(0,0,0,.12);}
+.mob-m.on{right:0;}
+.mob-x{position:absolute;top:18px;right:18px;font-size:1.25rem;cursor:pointer;color:var(--navy);}
+.mob-tabs-w{display:flex;gap:7px;margin-bottom:6px;}
+.mob-tabs-w .pg-tab{flex:1;text-align:center;color:var(--gray);background:rgba(15,31,75,.06);border:1px solid rgba(15,31,75,.1);}
+.mob-tabs-w .pg-tab.active{background:var(--brand);color:#fff;border-color:var(--brand);}
+.mob-m a{display:block;padding:10px 0;font-size:.92rem;font-weight:500;color:var(--navy);border-bottom:1px solid rgba(0,0,0,.05);transition:color .2s;}
+.mob-m a:hover{color:var(--brand);}
+/* MODE VISIBILITY */
+[data-mode=boys] .girls-only{display:none!important;}
+[data-mode=girls] .boys-only{display:none!important;}
+/* RESPONSIVE */
+@media(max-width:1080px){
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-r{height:380px;}
+  .why-inner{grid-template-columns:1fr;gap:48px;}
+  .faq-cols{grid-template-columns:1fr;}
+  .faq-l{position:relative;top:auto;}
+  .ft-main{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:860px){
+  .avail-g{grid-template-columns:1fr 1fr;}
+  .pg-grid{grid-template-columns:1fr;}
+  .pg-card{height:370px;}
+  .rooms-g{grid-template-columns:1fr 1fr;}
+  .gal-masonry{columns:3;}
+  .testi-g{grid-template-columns:1fr 1fr;}
+  .map-g{grid-template-columns:1fr;}
+  .nav-r{display:none;}
+  .nav-tabs{display:none;}
+  .hbg{display:flex;}
+}
+@media(max-width:580px){
+  .avail-g{grid-template-columns:1fr;}
+  .rooms-g{grid-template-columns:1fr;}
+  .gal-masonry{columns:2;}
+  .testi-g{grid-template-columns:1fr;}
+  .con-cards{grid-template-columns:1fr;}
+  .why-r{grid-template-columns:1fr 1fr;}
+  .ft-main{grid-template-columns:1fr;}
+  .hero-r{height:280px;}
+  .mc3,.mc4{display:none;}
+}
+</style>
+</head>
+<body>
+
+<div id="loader">
+  <div class="ldr-name">Uno<span>loft</span></div>
+  <div class="ldr-sub">Premium Co-Living &middot; Ahmedabad</div>
+  <div class="ldr-bar"><div class="ldr-fill"></div></div>
+</div>
+
+<div id="lb">
+  <span class="lbx" onclick="lbClose()"><i class="fa-solid fa-xmark"></i></span>
+  <span class="lba p" onclick="lbNav(-1)"><i class="fa-solid fa-chevron-left"></i></span>
+  <img id="lb-img" src="" alt=""/>
+  <span class="lba n" onclick="lbNav(1)"><i class="fa-solid fa-chevron-right"></i></span>
+</div>
+
+<div class="mob-ov" id="mobOv" onclick="mobClose()"></div>
+<div class="mob-m" id="mobM">
+  <span class="mob-x" onclick="mobClose()"><i class="fa-solid fa-xmark"></i></span>
+  <div class="mob-tabs-w">
+    <button class="pg-tab active" data-mode="all" onclick="setMode('all');mobClose()">All</button>
+    <button class="pg-tab" data-mode="boys" onclick="setMode('boys');mobClose()">Boys</button>
+    <button class="pg-tab" data-mode="girls" onclick="setMode('girls');mobClose()">Girls</button>
+  </div>
+  <a href="#pg-intro" onclick="mobClose()">About</a>
+  <a href="#facilities" onclick="mobClose()">Facilities</a>
+  <a href="#rooms" onclick="mobClose()">Rooms</a>
+  <a href="#availability" onclick="mobClose()">Availability</a>
+  <a href="#gallery" onclick="mobClose()">Gallery</a>
+  <a href="#faq" onclick="mobClose()">FAQ</a>
+  <a href="#map-sec" onclick="mobClose()">Location</a>
+  <a href="#contact" onclick="mobClose()" style="color:var(--brand);font-weight:700">Contact Us</a>
+</div>
+
+<nav id="nav">
+  <a href="#hero" class="nav-logo">
+    <div class="logo-sq">U</div>
+    <span class="logo-n">Unoloft</span>
+  </a>
+  <div class="nav-tabs">
+    <button class="pg-tab active" data-mode="all" onclick="setMode('all')">All</button>
+    <button class="pg-tab" data-mode="boys" onclick="setMode('boys')">Boys</button>
+    <button class="pg-tab" data-mode="girls" onclick="setMode('girls')">Girls</button>
+  </div>
+  <ul class="nav-r">
+    <li><a href="#pg-intro">About</a></li>
+    <li><a href="#facilities">Facilities</a></li>
+    <li><a href="#availability">Availability</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <div class="hbg" onclick="mobOpen()"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-noise"></div>
+  <div class="hero-glow"></div>
+  <div class="city-wm">Ahmed<span class="hl">abad</span></div>
+  <div class="hero-inner">
+    <div class="hero-l">
+      <div class="hero-ey" id="hero-ey">Premium Co-Living &middot; Ahmedabad</div>
+      <div class="h1a" id="hero-h1a">Your PG Hunt</div>
+      <div class="h1b" id="hero-h1b">is finally over.</div>
+      <div class="hero-loc"><i class="fa-solid fa-location-dot" style="color:var(--brand)"></i><span><strong>Ahmedabad's</strong> finest paying guest accommodation</span></div>
+      <div class="hero-pills">
+        <div class="h-pill"><i class="fa-solid fa-wifi"></i> High-Speed WiFi</div>
+        <div class="h-pill"><i class="fa-solid fa-bowl-food"></i> Home-cooked Meals</div>
+        <div class="h-pill"><i class="fa-solid fa-dumbbell"></i> Fully Equipped Gym</div>
+        <div class="h-pill"><i class="fa-solid fa-shield-halved"></i> 24/7 Security</div>
+        <div class="h-pill"><i class="fa-solid fa-car"></i> Free Parking</div>
+      </div>
+      <div class="hero-btns">
+        <a href="#pg-intro" class="btn-ora"><i class="fa-solid fa-building"></i> Explore Homes</a>
+        <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20Interested%20in%20Unoloft%20PG." target="_blank" class="btn-ghost"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hs"><div class="hs-n">200<em>+</em></div><div class="hs-l">Happy Residents</div></div>
+        <div class="hs-div"></div>
+        <div class="hs"><div class="hs-n">5<em>yr</em></div><div class="hs-l">Of Excellence</div></div>
+        <div class="hs-div"></div>
+        <div class="hs"><div class="hs-n">10<em>+</em></div><div class="hs-l">Amenities</div></div>
+        <div class="hs-div"></div>
+        <div class="hs"><div class="hs-n">4.9<em>&#9733;</em></div><div class="hs-l">Avg Rating</div></div>
+      </div>
+    </div>
+    <div class="hero-r">
+      <div class="mc mc1"><img id="img-mc1" data-all="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=700&q=85" data-boys="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=700&q=85" data-girls="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=700&q=85" src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=700&q=85" alt="Room"/></div>
+      <div class="mc mc2"><img id="img-mc2" data-all="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=85" data-boys="https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?w=600&q=85" data-girls="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&q=85" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=85" alt="Study"/></div>
+      <div class="mc mc3"><img id="img-mc3" data-all="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=85" data-boys="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=85" data-girls="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&q=85" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=85" alt="Gym"/></div>
+      <div class="mc mc4"><img id="img-mc4" data-all="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=85" data-boys="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&q=85" data-girls="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=700&q=85" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=85" alt="Common Area"/></div>
+      <div class="mc-badge mb1"><i class="fa-solid fa-star"></i> 4.9 Resident Rating</div>
+      <div class="mc-badge mb2"><i class="fa-solid fa-shield-halved"></i> 100% Safe &amp; Verified</div>
+    </div>
+  </div>
+</section>
+
+<!-- PG INTRO -->
+<section id="pg-intro">
+  <div class="sh rv">
+    <div class="s-ey">Who We Are</div>
+    <h2 class="s-t">Two Homes, <em>One Family</em></h2>
+    <p class="s-sub">Safe, premium, and vibrant co-living spaces crafted for Ahmedabad's young professionals and students.</p>
+  </div>
+  <div class="pg-grid">
+    <div class="pg-card boys-only rv" style="transition-delay:.05s">
+      <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=900&q=85" alt="Aster Homes Boys PG"/>
+      <div class="pg-ov"></div>
+      <div class="pg-con">
+        <div class="pg-tag tb"><i class="fa-solid fa-mars"></i> For Boys</div>
+        <div class="pg-name">Aster Homes</div>
+        <p class="pg-desc">A modern haven built for the ambitious man. Structured, comfortable, and packed with everything you need to thrive.</p>
+        <div class="pg-feats"><span class="pg-feat">Single &amp; Sharing Rooms</span><span class="pg-feat">Gym</span><span class="pg-feat">Study Lounge</span><span class="pg-feat">24/7 Access</span></div>
+        <a href="#contact" class="pg-link">Book a Visit <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="pg-card girls-only rv" style="transition-delay:.12s">
+      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=900&q=85" alt="Iris Homes Girls PG"/>
+      <div class="pg-ov"></div>
+      <div class="pg-con">
+        <div class="pg-tag tg"><i class="fa-solid fa-venus"></i> For Girls</div>
+        <div class="pg-name">Iris Homes</div>
+        <p class="pg-desc">Elegantly designed for safety and sisterhood. A warm, secure sanctuary where women grow and belong.</p>
+        <div class="pg-feats"><span class="pg-feat">Lady Warden</span><span class="pg-feat">Premium Interiors</span><span class="pg-feat">CCTV</span><span class="pg-feat">Meals Included</span></div>
+        <a href="#contact" class="pg-link">Book a Visit <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITIES -->
+<section id="facilities">
+  <div class="sh sh-c rv">
+    <div class="s-ey">Amenities</div>
+    <h2 class="s-t">World-Class <em>Facilities</em></h2>
+    <p class="s-sub">Everything you need for a comfortable, productive, and joyful stay &mdash; all under one roof.</p>
+  </div>
+  <div class="fac-grid">
+    <div class="fac-c rv" style="transition-delay:.0s"><div class="fac-ic"><i class="fa-solid fa-wifi"></i></div><div class="fac-n">High-Speed WiFi</div><div class="fac-d">Gigabit fiber internet throughout &mdash; perfect for work, classes &amp; streaming.</div></div>
+    <div class="fac-c rv" style="transition-delay:.06s"><div class="fac-ic"><i class="fa-solid fa-bowl-food"></i></div><div class="fac-n">Home-Cooked Meals</div><div class="fac-d">Fresh breakfast, lunch &amp; dinner prepared daily by our in-house cooks.</div></div>
+    <div class="fac-c rv" style="transition-delay:.12s"><div class="fac-ic"><i class="fa-solid fa-dumbbell"></i></div><div class="fac-n">Fully Equipped Gym</div><div class="fac-d">Modern fitness equipment available 24/7. No extra membership needed.</div></div>
+    <div class="fac-c rv" style="transition-delay:.18s"><div class="fac-ic"><i class="fa-solid fa-snowflake"></i></div><div class="fac-n">Air Conditioning</div><div class="fac-d">All rooms are fully air-conditioned for year-round comfort.</div></div>
+    <div class="fac-c rv" style="transition-delay:.24s"><div class="fac-ic"><i class="fa-solid fa-shield-halved"></i></div><div class="fac-n">24/7 Security &amp; CCTV</div><div class="fac-d">Trained guards and cameras across all entry points and common areas.</div></div>
+    <div class="fac-c rv" style="transition-delay:.30s"><div class="fac-ic"><i class="fa-solid fa-shirt"></i></div><div class="fac-n">Laundry Service</div><div class="fac-d">In-house washing machines and professional laundry on request.</div></div>
+    <div class="fac-c rv" style="transition-delay:.36s"><div class="fac-ic"><i class="fa-solid fa-broom"></i></div><div class="fac-n">Daily Housekeeping</div><div class="fac-d">Regular room cleaning and common area maintenance every day.</div></div>
+    <div class="fac-c rv" style="transition-delay:.42s"><div class="fac-ic"><i class="fa-solid fa-car"></i></div><div class="fac-n">Free Parking</div><div class="fac-d">Secure covered parking for bikes and cars at no extra cost.</div></div>
+    <div class="fac-c rv" style="transition-delay:.48s"><div class="fac-ic"><i class="fa-solid fa-book-open"></i></div><div class="fac-n">Study Area</div><div class="fac-d">Quiet, well-lit study rooms &mdash; ideal for focused work and exam prep.</div></div>
+    <div class="fac-c rv" style="transition-delay:.54s"><div class="fac-ic"><i class="fa-solid fa-bolt"></i></div><div class="fac-n">Power Backup</div><div class="fac-d">24/7 backup ensures lights, fans &amp; WiFi stay on without interruption.</div></div>
+    <div class="fac-c rv" style="transition-delay:.60s"><div class="fac-ic"><i class="fa-solid fa-droplet"></i></div><div class="fac-n">Hot Water Supply</div><div class="fac-d">Round-the-clock hot water for a refreshing start every single day.</div></div>
+    <div class="fac-c rv" style="transition-delay:.66s"><div class="fac-ic"><i class="fa-solid fa-couch"></i></div><div class="fac-n">Common Lounge</div><div class="fac-d">Spacious social areas with TV, games &amp; space to unwind and connect.</div></div>
+  </div>
+</section>
+
+<!-- ROOMS -->
+<section id="rooms">
+  <div class="sh sh-c rv">
+    <div class="s-ey">Accommodation</div>
+    <h2 class="s-t">Choose Your <em>Perfect Room</em></h2>
+    <p class="s-sub">Flexible options for every budget &mdash; fully furnished and ready to move in.</p>
+  </div>
+  <div class="rooms-g">
+    <div class="room-c rv">
+      <div class="room-img"><img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=85" alt="Single Room"/><span class="r-badge">Most Private</span></div>
+      <div class="room-body"><div class="r-label">Single Occupancy</div><div class="r-name">Private Studio Room</div><p class="r-desc">Your personal sanctuary &mdash; fully furnished private room with attached or shared bath.</p><div class="r-chips"><span class="r-chip">AC</span><span class="r-chip">Attached Bath</span><span class="r-chip">WiFi</span><span class="r-chip">Wardrobe</span></div><div class="r-price">&#8377;8,500 <small>/ month</small></div></div>
+    </div>
+    <div class="room-c rv" style="transition-delay:.1s">
+      <div class="room-img"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=85" alt="Double Room"/><span class="r-badge">Popular</span></div>
+      <div class="room-body"><div class="r-label">Double Sharing</div><div class="r-name">Twin Comfort Room</div><p class="r-desc">Spacious room with a friendly roommate &mdash; perfect blend of privacy and community.</p><div class="r-chips"><span class="r-chip">AC</span><span class="r-chip">Common Bath</span><span class="r-chip">WiFi</span><span class="r-chip">Study Table</span></div><div class="r-price">&#8377;6,500 <small>/ month</small></div></div>
+    </div>
+    <div class="room-c rv" style="transition-delay:.2s">
+      <div class="room-img"><img src="https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?w=800&q=85" alt="Triple Room"/><span class="r-badge">Best Value</span></div>
+      <div class="room-body"><div class="r-label">Triple Sharing</div><div class="r-name">Triple Share Room</div><p class="r-desc">Budget-friendly with a great community vibe &mdash; ideal for students on a budget.</p><div class="r-chips"><span class="r-chip">Fan+Cooler</span><span class="r-chip">Common Bath</span><span class="r-chip">WiFi</span><span class="r-chip">Wardrobe</span></div><div class="r-price">&#8377;4,500 <small>/ month</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AVAILABILITY -->
+<section id="availability">
+  <div class="sh sh-c rv">
+    <div class="s-ey">Live Availability</div>
+    <h2 class="s-t">Room <em>Availability</em></h2>
+    <p class="s-sub">Check real-time slot availability and secure your bed before it fills up. Hurry &mdash; spots go fast!</p>
+  </div>
+  <div class="avail-g">
+
+    <!-- 1 Sharing -->
+    <div class="avail-c rv">
+      <div class="av-sharing">1 Sharing</div>
+      <div class="av-name">Private Single Room</div>
+      <div class="av-price">&#8377;8,500 <small>/ month</small></div>
+      <div class="av-divider"></div>
+      <div class="av-slots-lbl">Slot Availability</div>
+      <div class="av-slots">
+        <div class="av-slot free"></div>
+        <div class="av-slot free"></div>
+        <div class="av-slot taken"></div>
+        <div class="av-slot taken"></div>
+        <div class="av-slot taken"></div>
+        <div class="av-slot taken"></div>
+      </div>
+      <div class="av-status avail"><i class="fa-solid fa-circle-check"></i> 2 Beds Available</div>
+      <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I%20want%20to%20book%20a%20Single%20Room%20at%20Unoloft." class="av-book active-btn" target="_blank">
+        Book Now &nbsp;<i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <!-- 2 Sharing -->
+    <div class="avail-c rv" style="transition-delay:.1s">
+      <div class="av-sharing">2 Sharing</div>
+      <div class="av-name">Twin Comfort Room</div>
+      <div class="av-price">&#8377;6,500 <small>/ month</small></div>
+      <div class="av-divider"></div>
+      <div class="av-slots-lbl">Slot Availability</div>
+      <div class="av-slots">
+        <div class="av-slot free"></div>
+        <div class="av-slot taken"></div>
+        <div class="av-slot taken"></div>
+        <div class="av-slot taken"></div>
+        <div class="av-slot taken"></div>
+        <div class="av-slot taken"></div>
+        <div class="av-slot taken"></div>
+        <div class="av-slot taken"></div>
+      </div>
+      <div class="av-status almost"><i class="fa-solid fa-triangle-exclamation"></i> Only 1 Bed Left!</div>
+      <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20I%20want%20to%20book%20a%20Double%20Sharing%20Room%20at%20Unoloft." class="av-book active-btn" target="_blank">
+        Book Now &nbsp;<i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <!-- 3 Sharing -->
+    <div class="avail-c rv" style="transition-delay:.2s">
+      <div class="av-sharing">3 Sharing</div>
+      <div class="av-name">Triple Share Room</div>
+      <div class="av-price">&#8377;4,500 <small>/ month</small></div>
+      <div class="av-divider"></div>
+      <div class="av-slots-lbl">Slot Availability</div>
+      <div class="av-slots">
+        <div class="av-slot taken"></div>
+        <div class="av-slot taken"></div>
+        <div class="av-slot taken"></div>
+        <div class="av-slot taken"></div>
+        <div class="av-slot taken"></div>
+        <div class="av-slot taken"></div>
+        <div class="av-slot taken"></div>
+        <div class="av-slot taken"></div>
+        <div class="av-slot taken"></div>
+      </div>
+      <div class="av-status full"><i class="fa-solid fa-circle-xmark"></i> Fully Occupied</div>
+      <span class="av-book waitlist-btn">Join Waitlist</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="why-dot"></div>
+  <div class="why-inner">
+    <div class="why-l rvl">
+      <div class="s-ey">Why Unoloft</div>
+      <h2 class="s-t">More Than <em>Just a Room</em></h2>
+      <p class="s-sub">We've built more than a PG &mdash; a home where residents grow, connect &amp; thrive.</p>
+      <div class="why-pts">
+        <div class="why-pt"><div class="wpi"><i class="fa-solid fa-location-dot"></i></div><div class="wpt"><h4>Prime Location</h4><p>Near IT hubs, colleges &amp; metro &mdash; effortless daily commuting.</p></div></div>
+        <div class="why-pt"><div class="wpi"><i class="fa-solid fa-headset"></i></div><div class="wpt"><h4>Responsive Management</h4><p>Any issue resolved in under 2 hours &mdash; warden available 24/7.</p></div></div>
+        <div class="why-pt"><div class="wpi"><i class="fa-solid fa-people-group"></i></div><div class="wpt"><h4>Community &amp; Events</h4><p>Festivals, movie nights &amp; outings &mdash; friendships that last a lifetime.</p></div></div>
+        <div class="why-pt"><div class="wpi"><i class="fa-solid fa-indian-rupee-sign"></i></div><div class="wpt"><h4>Transparent Pricing</h4><p>No hidden charges. What you see is exactly what you pay.</p></div></div>
+      </div>
+    </div>
+    <div class="why-r rvr">
+      <div class="why-f"><span class="wfe">&#127968;</span><h4>Fully Furnished</h4><p>Move in with just your bag &mdash; everything ready for you.</p></div>
+      <div class="why-f"><span class="wfe">&#128274;</span><h4>Total Safety</h4><p>Biometric entry, CCTV, security guards round the clock.</p></div>
+      <div class="why-f"><span class="wfe">&#127869;&#65039;</span><h4>Fresh Daily Meals</h4><p>Healthy, hygienic, home-style food cooked fresh every day.</p></div>
+      <div class="why-f"><span class="wfe">&#128170;</span><h4>Wellness First</h4><p>Gym, yoga space &amp; mental wellness initiatives included.</p></div>
+      <div class="why-f"><span class="wfe">&#128246;</span><h4>Always Connected</h4><p>Gigabit fiber WiFi with zero downtime for work &amp; study.</p></div>
+      <div class="why-f"><span class="wfe">&#127807;</span><h4>Eco Friendly</h4><p>Solar power, water harvesting &amp; sustainable practices.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="sh sh-c rv">
+    <div class="s-ey">Photo Gallery</div>
+    <h2 class="s-t">Life at <em>Unoloft</em></h2>
+    <p class="s-sub">A visual tour of our beautiful spaces, rooms &amp; community.</p>
+  </div>
+  <div class="gal-tabs">
+    <button class="gf active" onclick="gFilter('all',this)">All</button>
+    <button class="gf boys-only" onclick="gFilter('boys-room',this)">Boys Rooms</button>
+    <button class="gf girls-only" onclick="gFilter('girls-room',this)">Girls Rooms</button>
+    <button class="gf" onclick="gFilter('common',this)">Common Areas</button>
+    <button class="gf" onclick="gFilter('facilities',this)">Facilities</button>
+  </div>
+  <div class="gal-masonry" id="galGrid">
+    <div class="gi" data-cat="boys-room" onclick="lbOpen(0)"><img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=600&q=85" alt="Boys Room"/><div class="gi-ov"><i class="fa-solid fa-expand"></i></div></div>
+    <div class="gi" data-cat="girls-room" onclick="lbOpen(1)"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=85" alt="Girls Room"/><div class="gi-ov"><i class="fa-solid fa-expand"></i></div></div>
+    <div class="gi" data-cat="facilities" onclick="lbOpen(2)"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=85" alt="Gym"/><div class="gi-ov"><i class="fa-solid fa-expand"></i></div></div>
+    <div class="gi" data-cat="common" onclick="lbOpen(3)"><img src="https://images.unsplash.com/photo-1585128792020-803d29415281?w=600&q=85" alt="Common Area"/><div class="gi-ov"><i class="fa-solid fa-expand"></i></div></div>
+    <div class="gi" data-cat="boys-room" onclick="lbOpen(4)"><img src="https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?w=600&q=85" alt="Boys Room 2"/><div class="gi-ov"><i class="fa-solid fa-expand"></i></div></div>
+    <div class="gi" data-cat="girls-room" onclick="lbOpen(5)"><img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=85" alt="Girls Room 2"/><div class="gi-ov"><i class="fa-solid fa-expand"></i></div></div>
+    <div class="gi" data-cat="common" onclick="lbOpen(6)"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=85" alt="Lounge"/><div class="gi-ov"><i class="fa-solid fa-expand"></i></div></div>
+    <div class="gi" data-cat="facilities" onclick="lbOpen(7)"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=85" alt="Study Area"/><div class="gi-ov"><i class="fa-solid fa-expand"></i></div></div>
+    <div class="gi" data-cat="common" onclick="lbOpen(8)"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=85" alt="Dining"/><div class="gi-ov"><i class="fa-solid fa-expand"></i></div></div>
+    <div class="gi" data-cat="facilities" onclick="lbOpen(9)"><img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=600&q=85" alt="Equipment"/><div class="gi-ov"><i class="fa-solid fa-expand"></i></div></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="sh sh-c rv">
+    <div class="s-ey">Testimonials</div>
+    <h2 class="s-t">What Our <em>Residents Say</em></h2>
+    <p class="s-sub">Real experiences from people who call Unoloft their home.</p>
+  </div>
+  <div class="testi-g">
+    <div class="testi-c boys-only rv">
+      <div class="t-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+      <div class="t-q">"</div>
+      <p class="t-text">Aster Homes has been my home for 2 years. The food is fantastic, gym is a lifesaver, and management is incredibly responsive. Couldn't ask for more!</p>
+      <div class="t-auth"><div class="t-av" style="background:#1e3a7a">R</div><div><div class="t-name">Rahul Mehta</div><div class="t-role">Software Engineer &middot; Aster Homes</div></div></div>
+    </div>
+    <div class="testi-c girls-only rv" style="transition-delay:.1s">
+      <div class="t-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+      <div class="t-q">"</div>
+      <p class="t-text">As a girl in a new city, safety was everything. Iris Homes gave me exactly that &mdash; plus a wonderful community. I feel totally at home here.</p>
+      <div class="t-auth"><div class="t-av" style="background:#6d28d9">P</div><div><div class="t-name">Priya Sharma</div><div class="t-role">MBA Student &middot; Iris Homes</div></div></div>
+    </div>
+    <div class="testi-c rv" style="transition-delay:.2s">
+      <div class="t-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+      <div class="t-q">"</div>
+      <p class="t-text">The study area is a game-changer during exams. WiFi is blazing fast and staff always make you feel at home. Worth every rupee!</p>
+      <div class="t-auth"><div class="t-av" style="background:var(--brand)">A</div><div><div class="t-name">Arjun Kapoor</div><div class="t-role">Engineering Student &middot; Aster Homes</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-cols">
+    <div class="faq-l rvl">
+      <div class="s-ey">FAQ</div>
+      <h2 class="s-t">Frequently Asked <em>Questions</em></h2>
+      <p class="s-sub">Everything you need to know before moving in to Unoloft.</p>
+      <div class="faq-img"><img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=700&q=85" alt="Unoloft interior"/></div>
+    </div>
+    <div class="faq-list rvr">
+      <div class="faq-i"><div class="faq-q" onclick="faqToggle(this)"><span>What is included in the monthly rent?</span><div class="faq-ic"><i class="fa-solid fa-plus"></i></div></div><div class="faq-a">Monthly rent includes fully furnished accommodation, three meals daily, high-speed WiFi, electricity (fair usage), housekeeping, water, and access to all amenities including gym and study area.</div></div>
+      <div class="faq-i"><div class="faq-q" onclick="faqToggle(this)"><span>Is the security deposit refundable?</span><div class="faq-ic"><i class="fa-solid fa-plus"></i></div></div><div class="faq-a">Yes, a refundable security deposit of 1-2 months rent is collected at joining. Fully refunded within 7-14 working days after vacating, subject to no damage deductions.</div></div>
+      <div class="faq-i"><div class="faq-q" onclick="faqToggle(this)"><span>What are the gate timings and visiting hours?</span><div class="faq-ic"><i class="fa-solid fa-plus"></i></div></div><div class="faq-a">Aster Homes (Boys): 24/7 access with log after 10 PM. Iris Homes (Girls): entry until 10 PM; prior notice required for late returns. Visitors in common areas 9 AM to 8 PM only.</div></div>
+      <div class="faq-i"><div class="faq-q" onclick="faqToggle(this)"><span>Are meals customizable for dietary preferences?</span><div class="faq-ic"><i class="fa-solid fa-plus"></i></div></div><div class="faq-a">Yes! We serve vegetarian, non-vegetarian, vegan, and Jain diets. Residents can inform the kitchen of allergies or special dietary needs at any time.</div></div>
+      <div class="faq-i"><div class="faq-q" onclick="faqToggle(this)"><span>What is the minimum lock-in period?</span><div class="faq-ic"><i class="fa-solid fa-plus"></i></div></div><div class="faq-a">Minimum stay is 3 months with a 30-day notice period before vacating. Short stays of 1-2 months can be arranged at a slightly higher rate on request.</div></div>
+      <div class="faq-i"><div class="faq-q" onclick="faqToggle(this)"><span>How do I book a room or schedule a visit?</span><div class="faq-ic"><i class="fa-solid fa-plus"></i></div></div><div class="faq-a">Simply WhatsApp or call us. You can schedule an in-person tour (recommended) or request a virtual walkthrough. We respond within 30 minutes during working hours.</div></div>
+      <div class="faq-i"><div class="faq-q" onclick="faqToggle(this)"><span>How is safety managed at Unoloft?</span><div class="faq-ic"><i class="fa-solid fa-plus"></i></div></div><div class="faq-a">24/7 security guards, CCTV on all entry/exit points, biometric access, and a resident warden round the clock. Iris Homes has a dedicated lady warden on-site.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section id="map-sec">
+  <div class="sh rv">
+    <div class="s-ey">Location</div>
+    <h2 class="s-t">Find Us <em>Easily</em></h2>
+    <p class="s-sub">Strategically located near major offices, colleges &amp; public transport in Ahmedabad.</p>
+  </div>
+  <div class="map-g">
+    <div class="rvl">
+      <div class="map-cards">
+        <div class="map-card"><div class="map-ic"><i class="fa-solid fa-location-dot"></i></div><div><h4>Address</h4><p>42, Patel Nagar, Near SG Highway, Ahmedabad, Gujarat &mdash; 380015</p></div></div>
+        <div class="map-card boys-only"><div class="map-ic"><i class="fa-solid fa-phone"></i></div><div><h4>Aster Homes (Boys)</h4><p>+91 XXXXX XXXXX</p></div></div>
+        <div class="map-card girls-only"><div class="map-ic"><i class="fa-solid fa-phone"></i></div><div><h4>Iris Homes (Girls)</h4><p>+91 XXXXX XXXXX</p></div></div>
+        <div class="map-card"><div class="map-ic"><i class="fa-solid fa-clock"></i></div><div><h4>Office Hours</h4><p>Mon&ndash;Sat: 9 AM &ndash; 8 PM &middot; Sun: 10 AM &ndash; 5 PM</p></div></div>
+      </div>
+      <a href="https://maps.google.com" target="_blank" class="btn-ora" style="margin-top:22px;display:inline-flex;font-size:.88rem"><i class="fa-solid fa-diamond-turn-right"></i> Get Directions</a>
+    </div>
+    <div class="map-em rvr">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.9!2d72.5214!3d23.0225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="con-dot"></div>
+  <div class="con-cen rv">
+    <div class="s-ey">Contact Us</div>
+    <h2 class="s-t">Ready to <em>Move In?</em></h2>
+    <p class="s-sub">Reach out instantly via WhatsApp or call us directly. We'd love to welcome you home!</p>
+    <div class="con-cards">
+      <a href="https://wa.me/91XXXXXXXXXX?text=Hi!%20Interested%20in%20Unoloft%20PG." target="_blank" class="con-cd">
+        <div class="cd-ic cd-wa"><i class="fa-brands fa-whatsapp"></i></div>
+        <h3>WhatsApp Us</h3>
+        <p>Chat instantly &mdash; availability, pricing, tour</p>
+        <div class="cd-num">+91 XXXXX XXXXX</div>
+      </a>
+      <a href="tel:+91XXXXXXXXXX" class="con-cd">
+        <div class="cd-ic cd-ph"><i class="fa-solid fa-phone"></i></div>
+        <h3>Call Us Now</h3>
+        <p>Speak with our team, Mon&ndash;Sat 9 AM&ndash;8 PM</p>
+        <div class="cd-num">+91 XXXXX XXXXX</div>
+      </a>
+    </div>
+    <div class="con-ex">
+      <div class="con-ext"><i class="fa-solid fa-clock"></i> Responds within 30 mins</div>
+      <div class="con-ext"><i class="fa-solid fa-eye"></i> Virtual tours available</div>
+      <div class="con-ext"><i class="fa-solid fa-language"></i> Hindi, English &amp; Gujarati</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-main">
+    <div>
+      <div class="nav-logo"><div class="logo-sq">U</div><span style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#fff;margin-left:10px;">Unoloft</span></div>
+      <p class="ft-desc">Ahmedabad's most premium paying guest accommodation for boys and girls. Your home, away from home &mdash; since 2019.</p>
+      <div class="ft-socs">
+        <a href="#" class="ft-soc"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="ft-soc"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="ft-soc"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="#" class="ft-soc"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="ft-col"><h4>Navigate</h4><ul class="ft-lks"><li><a href="#pg-intro">About Us</a></li><li><a href="#facilities">Facilities</a></li><li><a href="#rooms">Rooms</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    <div class="ft-col"><h4>Our Homes</h4><ul class="ft-lks"><li><a href="#pg-intro">Aster Homes (Boys)</a></li><li><a href="#pg-intro">Iris Homes (Girls)</a></li><li><a href="#rooms">Single Room</a></li><li><a href="#rooms">Double Sharing</a></li><li><a href="#rooms">Triple Sharing</a></li></ul></div>
+    <div class="ft-col"><h4>Contact</h4><ul class="ft-lks"><li><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></li><li><a href="https://wa.me/91XXXXXXXXXX">WhatsApp Us</a></li><li><a href="mailto:hello@unoloft.com">hello@unoloft.com</a></li><li><a href="#map-sec">Ahmedabad, Gujarat</a></li></ul></div>
+  </div>
+  <div class="ft-bar">
+    <div>&copy; 2025 Unoloft. All rights reserved.</div>
+    <div class="ft-bar-lks"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+  </div>
+</footer>
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-chevron-up"></i></button>
+
+<script>
+window.addEventListener('load',function(){setTimeout(function(){document.getElementById('loader').classList.add('done');},1800);});
+var curMode='all';
+var heroTx={all:{h1:'Your PG Hunt',h2:'is finally over.',ey:'Premium Co-Living \u00b7 Ahmedabad'},boys:{h1:'Built for the',h2:'Modern Man.',ey:'Aster Homes \u00b7 Boys PG \u00b7 Ahmedabad'},girls:{h1:'Designed for',h2:'Her Comfort.',ey:'Iris Homes \u00b7 Girls PG \u00b7 Ahmedabad'}};
+var mcIds=['img-mc1','img-mc2','img-mc3','img-mc4'];
+mcIds.forEach(function(id){var el=document.getElementById(id);if(el)el.style.transition='opacity .3s ease';});
+function setMode(mode){
+  curMode=mode;
+  document.documentElement.setAttribute('data-mode',mode);
+  document.querySelectorAll('.pg-tab').forEach(function(t){t.classList.toggle('active',t.dataset.mode===mode);});
+  var tx=heroTx[mode];
+  document.getElementById('hero-h1a').textContent=tx.h1;
+  document.getElementById('hero-h1b').textContent=tx.h2;
+  document.getElementById('hero-ey').textContent=tx.ey;
+  mcIds.forEach(function(id){var el=document.getElementById(id);if(!el)return;var src=el.dataset[mode]||el.dataset.all;if(el.getAttribute('src')!==src){el.style.opacity='0';setTimeout(function(){el.setAttribute('src',src);el.style.opacity='1';},280);}});
+  document.querySelectorAll('.gal-tabs .gf').forEach(function(b){if(b.classList.contains('boys-only'))b.style.display=(mode==='girls')?'none':'';if(b.classList.contains('girls-only'))b.style.display=(mode==='boys')?'none':'';});
+  gFilter('all',document.querySelector('.gf.active')||document.querySelector('.gf'));
+}
+function gFilter(cat,btn){
+  if(btn){document.querySelectorAll('.gf').forEach(function(b){b.classList.remove('active');});btn.classList.add('active');}
+  document.querySelectorAll('.gi').forEach(function(item){
+    var c=item.dataset.cat;var show=false;
+    if(cat==='all'){if(curMode==='boys')show=c==='boys-room'||c==='common'||c==='facilities';else if(curMode==='girls')show=c==='girls-room'||c==='common'||c==='facilities';else show=true;}
+    else{show=c===cat;}
+    item.style.display=show?'':'none';
+  });
+}
+var lbImgs=['https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=1200&q=90','https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=90','https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=90','https://images.unsplash.com/photo-1585128792020-803d29415281?w=1200&q=90','https://images.unsplash.com/photo-1562438668-bcf0ca6578f0?w=1200&q=90','https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&q=90','https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&q=90','https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=90','https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=90','https://images.unsplash.com/photo-1576678927484-cc907957088c?w=1200&q=90'];
+var lbIdx=0;
+function lbOpen(i){lbIdx=i;document.getElementById('lb-img').setAttribute('src',lbImgs[i]);document.getElementById('lb').classList.add('on');document.body.style.overflow='hidden';}
+function lbClose(){document.getElementById('lb').classList.remove('on');document.body.style.overflow='';}
+function lbNav(d){lbIdx=(lbIdx+d+lbImgs.length)%lbImgs.length;document.getElementById('lb-img').setAttribute('src',lbImgs[lbIdx]);}
+document.getElementById('lb').addEventListener('click',function(e){if(e.target===e.currentTarget)lbClose();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lbClose();if(e.key==='ArrowLeft')lbNav(-1);if(e.key==='ArrowRight')lbNav(1);});
+function faqToggle(el){var item=el.parentElement;document.querySelectorAll('.faq-i').forEach(function(i){if(i!==item)i.classList.remove('open');});item.classList.toggle('open');}
+var navEl=document.getElementById('nav');var bttEl=document.getElementById('btt');
+window.addEventListener('scroll',function(){var y=window.scrollY;navEl.classList.toggle('s',y>55);bttEl.classList.toggle('on',y>400);});
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.12});
+document.querySelectorAll('.rv,.rvl,.rvr').forEach(function(el){obs.observe(el);});
+function mobOpen(){document.getElementById('mobM').classList.add('on');document.getElementById('mobOv').classList.add('on');document.body.style.overflow='hidden';}
+function mobClose(){document.getElementById('mobM').classList.remove('on');document.getElementById('mobOv').classList.remove('on');document.body.style.overflow='';}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-75,behavior:'smooth'});}});});
+</script>
+</body>
+</html>
