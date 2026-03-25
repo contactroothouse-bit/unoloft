@@ -4,18 +4,11 @@
       <div className="ft-main">
         <div>
           <div className="nav-logo">
-            <div className="logo-sq">U</div>
-            <span
-              style={{
-                fontFamily: "'Cormorant Garamond',serif",
-                fontSize: "1.2rem",
-                fontWeight: 700,
-                color: "#fff",
-                marginLeft: 10,
-              }}
-            >
-              Unoloft
-            </span>
+            <img
+              src="/Screenshot_2026-03-25_233347-removebg-preview.png"
+              alt="Unoloft"
+              className="brand-logo-img footer-brand-logo"
+            />
           </div>
           <p className="ft-desc">
             Ahmedabad&apos;s most premium paying guest accommodation for boys.

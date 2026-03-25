@@ -99,15 +99,10 @@ img {
   pointer-events: none;
 }
 
-.ldr-name {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #fff;
-}
-
-.ldr-name span {
-  color: var(--brand);
+.ldr-logo {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
 }
 
 .ldr-sub {
@@ -180,6 +175,22 @@ img {
 
 #nav.s .nav-logo {
   gap: 8px;
+}
+
+.brand-logo-img {
+  width: 156px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: var(--t);
+}
+
+#nav.s .brand-logo-img {
+  width: 138px;
+}
+
+.footer-brand-logo {
+  width: 170px;
 }
 
 .logo-sq {
@@ -2544,6 +2555,18 @@ footer {
 @media (max-width: 580px) {
   #nav {
     padding: 0 18px;
+  }
+
+  .brand-logo-img {
+    width: 132px;
+  }
+
+  #nav.s .brand-logo-img {
+    width: 118px;
+  }
+
+  .ldr-logo {
+    width: 148px;
   }
 
   #hero {

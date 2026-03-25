@@ -11,9 +11,12 @@ export default function Navbar({
 }: NavbarProps) {
   return (
     <nav id="nav" className={cn(navScrolled && "s")}>
-      <a href="#hero" className="nav-logo">
-        <div className="logo-sq">U</div>
-        <span className="logo-n">Unoloft</span>
+      <a href="#hero" className="nav-logo" aria-label="Unoloft home">
+        <img
+          src="/Screenshot_2026-03-25_233347-removebg-preview.png"
+          alt="Unoloft"
+          className="brand-logo-img"
+        />
       </a>
 
       <ul className="nav-r">
