@@ -19,10 +19,7 @@ export default function FaqSection({ openIndex, onToggle }: FaqSectionProps) {
             Everything you need to know before moving in to Unoloft.
           </p>
           <div className="faq-img">
-            <img
-              src="/rooms/IMG-20260201-WA0002.jpg"
-              alt="Unoloft interior"
-            />
+            <img src="/rooms/IMG-20260201-WA0002.jpg" alt="Unoloft interior" />
           </div>
         </div>
 
