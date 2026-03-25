@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 type ContactPayload = {
   name?: string;
@@ -75,6 +76,41 @@ export async function POST(request: Request) {
         },
         { status: 502 },
       );
+    }
+
+    const smtpHost = getEnv("SMTP_HOST");
+    const smtpPort = getEnv("SMTP_PORT");
+    const smtpUser = getEnv("SMTP_USER");
+    const smtpPass = getEnv("SMTP_PASS");
+    const smtpFrom = getEnv("SMTP_FROM") || smtpUser;
+    const smtpTo = getEnv("SMTP_TO");
+
+    if (smtpHost && smtpPort && smtpUser && smtpPass && smtpFrom && smtpTo) {
+      const transporter = nodemailer.createTransport({
+        host: smtpHost,
+        port: Number(smtpPort),
+        secure: Number(smtpPort) === 465,
+        auth: {
+          user: smtpUser,
+          pass: smtpPass,
+        },
+      });
+
+      await transporter.sendMail({
+        from: smtpFrom,
+        to: smtpTo,
+        subject: `New Lead: ${name} (${preferredLocation.toUpperCase()})`,
+        text: `New lead details:
+
+Name: ${name}
+Phone: ${phone}
+Profession: ${profession === "student" ? "Student" : "Working Professional"}
+Location Preference: ${preferredLocation === "aster" ? "Aster" : "Iris"}
+Note: ${note || "-"}
+Source: Website
+Timestamp: ${new Date().toLocaleString("en-IN")}
+`,
+      });
     }
 
     return NextResponse.json({
