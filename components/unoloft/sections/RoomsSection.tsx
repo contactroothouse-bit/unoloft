@@ -7,6 +7,7 @@ type RoomsSectionProps = {
 
 export default function RoomsSection({ selectedHome }: RoomsSectionProps) {
   const rooms = ROOMS_BY_HOME[selectedHome];
+  const gridClassName = rooms.length === 2 ? "rooms-g rooms-g-two" : "rooms-g";
 
   return (
     <section id="rooms">
@@ -21,7 +22,7 @@ export default function RoomsSection({ selectedHome }: RoomsSectionProps) {
         </p>
       </div>
 
-      <div className="rooms-g">
+      <div className={gridClassName}>
         {rooms.map((room) => (
           <div
             className="room-c rv"

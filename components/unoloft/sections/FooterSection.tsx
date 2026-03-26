@@ -58,10 +58,10 @@
           <h4>Our Homes</h4>
           <ul className="ft-lks">
             <li>
-              <a href="#pg-intro">Aster Homes (Boys)</a>
+              <a href="#pg-intro">Aster Homes </a>
             </li>
             <li>
-              <a href="#pg-intro">Iris Homes (Boys)</a>
+              <a href="#pg-intro">Iris Homes </a>
             </li>
             <li>
               <a href="#rooms">Single Room</a>
@@ -85,7 +85,9 @@
               <a href="tel:+919909901291">9909901291</a>
             </li>
             <li>
-              <a href="mailto:hello@unoloft.com">hello@unoloft.com</a>
+              <a href="mailto:nilesh.unoloft@gmail.com">
+                nilesh.unoloft@gmail.com
+              </a>
             </li>
             <li>
               <a href="#map-sec">Ahmedabad, Gujarat</a>
@@ -104,4 +106,3 @@
     </footer>
   );
 }
-

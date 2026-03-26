@@ -394,7 +394,6 @@ img {
 }
 
 @keyframes wmdrift {
-
   0%,
   100% {
     transform: translateX(0);
@@ -410,9 +409,11 @@ img {
   width: 700px;
   height: 700px;
   border-radius: 50%;
-  background: radial-gradient(circle,
-      rgba(240, 101, 32, 0.09) 0%,
-      transparent 65%);
+  background: radial-gradient(
+    circle,
+    rgba(240, 101, 32, 0.09) 0%,
+    transparent 65%
+  );
   top: 50%;
   left: 32%;
   transform: translate(-50%, -50%);
@@ -421,7 +422,6 @@ img {
 }
 
 @keyframes glowp {
-
   0%,
   100% {
     opacity: 0.8;
@@ -600,9 +600,9 @@ img {
 }
 
 .hs-n {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.7rem;
-  font-weight: 700;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
   color: var(--navy);
 }
 
@@ -769,7 +769,6 @@ img {
 }
 
 @keyframes fbadge {
-
   0%,
   100% {
     transform: translateY(0);
@@ -945,10 +944,12 @@ img {
 .pg-ov {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top,
-      rgba(0, 0, 0, 0.78) 0%,
-      rgba(0, 0, 0, 0.08) 55%,
-      transparent 100%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.08) 55%,
+    transparent 100%
+  );
 }
 
 .pg-con {
@@ -1133,6 +1134,11 @@ img {
   gap: 22px;
 }
 
+.rooms-g-two {
+  grid-template-columns: repeat(2, minmax(320px, 560px));
+  justify-content: center;
+}
+
 .room-c {
   position: relative;
   height: 560px;
@@ -1159,10 +1165,12 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top,
-      rgba(8, 18, 40, 0.38) 0%,
-      rgba(8, 18, 40, 0.2) 26%,
-      rgba(8, 18, 40, 0) 52%);
+  background: linear-gradient(
+    to top,
+    rgba(8, 18, 40, 0.38) 0%,
+    rgba(8, 18, 40, 0.2) 26%,
+    rgba(8, 18, 40, 0) 52%
+  );
   pointer-events: none;
 }
 
@@ -1223,7 +1231,7 @@ img {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.12rem;
   font-weight: 700;
-  color: var(--navy);
+  color: #fff;
   margin-bottom: 2px;
 }
 
@@ -1278,8 +1286,10 @@ img {
   position: absolute;
   inset: 0;
   opacity: 0.03;
-  background-image: radial-gradient(rgba(22, 45, 94, 0.22) 1px,
-      transparent 1px);
+  background-image: radial-gradient(
+    rgba(22, 45, 94, 0.22) 1px,
+    transparent 1px
+  );
   background-size: 28px 28px;
   pointer-events: none;
 }
@@ -1655,14 +1665,14 @@ img {
 
 .faq-l {
   position: sticky;
-  top: 90px;
+  top: 80px;
 }
 
 .faq-img {
-  margin-top: 28px;
+  margin-top: 8px;
   border-radius: 22px;
   overflow: hidden;
-  height: 240px;
+  height: 350px;
 }
 
 .faq-img img {
@@ -1675,6 +1685,8 @@ img {
   display: flex;
   flex-direction: column;
   gap: 9px;
+    margin-top: 60px;
+
 }
 
 .faq-i {
@@ -1871,8 +1883,10 @@ img {
   position: absolute;
   inset: 0;
   opacity: 0.025;
-  background-image: radial-gradient(rgba(22, 45, 94, 0.22) 1px,
-      transparent 1px);
+  background-image: radial-gradient(
+    rgba(22, 45, 94, 0.22) 1px,
+    transparent 1px
+  );
   background-size: 24px 24px;
   pointer-events: none;
 }

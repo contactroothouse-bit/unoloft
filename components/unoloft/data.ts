@@ -311,17 +311,6 @@ export const ASTER_ROOMS: Room[] = [
 
 export const IRIS_ROOMS: Room[] = [
   {
-    image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0019.jpg`,
-    alt: "Single Room",
-    badge: "Most Private",
-    label: "Single Occupancy",
-    name: "Private Single Sharing",
-    description:
-      "Your personal sanctuary — fully furnished private room with attached or shared bath.",
-    chips: ["AC", "Fan", "Study Table", "Wardrobe"],
-    price: "₹16,500",
-  },
-  {
     image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0002.jpg`,
     alt: "Double Room",
     badge: "Popular",
@@ -729,7 +718,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "What are the gate timings and visiting hours?",
     answer:
-      "Aster Homes (Boys): 24/7 access with log after 10 PM. Iris Homes (Girls): entry until 10 PM; prior notice required for late returns. Visitors in common areas 9 AM to 8 PM only.",
+      "Aster Homes: 24/7 access with log after 10 PM. prior notice required for late returns. Visitors in common areas 9 AM to 8 PM only.",
   },
 
   {
@@ -758,13 +747,13 @@ export const MAP_CARDS: MapCard[] = [
   },
   {
     icon: "fa-solid fa-phone",
-    title: "Aster Homes (Boys)",
+    title: "Aster Homes",
     value: "+91 XXXXX XXXXX",
     mode: "boys",
   },
   {
     icon: "fa-solid fa-phone",
-    title: "Iris Homes (Girls)",
+    title: "Iris Homes ",
     value: "+91 XXXXX XXXXX",
     mode: "girls",
   },
