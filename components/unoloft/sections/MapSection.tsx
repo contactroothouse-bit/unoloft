@@ -14,9 +14,9 @@ const ASTER_DATA = {
   address:
     "Royal Lakend Gota - Jagatpur Road, Sarkhej - Gandhinagar Hwy, behind Gota Lake, opposite Royal Heights, Ahmedabad, Gujarat 382481.",
   mapLink:
-    "https://www.google.com/maps?q=Royal%20Lakend%20Gota%20Jagatpur%20Road%20Sarkhej%20Gandhinagar%20Hwy%20behind%20Gota%20Lake%20opposite%20Royal%20Heights%20Ahmedabad%20Gujarat%20382481",
+    "https://www.google.com/maps?q=Aster%20Homes%20by%20Unoloft%20-%20PG%20in%20Gota%20Ahmedabad",
   mapEmbed:
-    "https://www.google.com/maps?q=Royal%20Lakend%20Gota%20Jagatpur%20Road%20Sarkhej%20Gandhinagar%20Hwy%20behind%20Gota%20Lake%20opposite%20Royal%20Heights%20Ahmedabad%20Gujarat%20382481&output=embed",
+    "https://www.google.com/maps?q=Aster%20Homes%20by%20Unoloft%20-%20PG%20in%20Gota%20Ahmedabad&output=embed",
 };
 
 const IRIS_DATA = {

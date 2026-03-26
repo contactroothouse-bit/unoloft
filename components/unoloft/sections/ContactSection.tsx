@@ -88,26 +88,6 @@ export default function ContactSection({ selectedHome }: ContactSectionProps) {
           availability.
         </p>
 
-        <div className="con-cards">
-          <a href="tel:+917043306301" className="con-cd">
-            <div className="cd-ic cd-ph">
-              <i className="fa-solid fa-phone" />
-            </div>
-            <h3>Nilesh Patel</h3>
-            <p>Nirma Alumni</p>
-            <div className="cd-num">7043306301</div>
-          </a>
-
-          <a href="tel:+919909901291" className="con-cd">
-            <div className="cd-ic cd-ph">
-              <i className="fa-solid fa-phone" />
-            </div>
-            <h3>Dhwanit Pansuriya</h3>
-            <p>Nirma Alumni</p>
-            <div className="cd-num">9909901291</div>
-          </a>
-        </div>
-
         <form className="con-form" onSubmit={onSubmit}>
           <div className="con-form-grid">
             <label className="con-field">
@@ -207,6 +187,26 @@ export default function ContactSection({ selectedHome }: ContactSectionProps) {
             </p>
           ) : null}
         </form>
+
+        <div className="con-cards">
+          <a href="tel:+917043306301" className="con-cd">
+            <div className="cd-ic cd-ph">
+              <i className="fa-solid fa-phone" />
+            </div>
+            <h3>Nilesh Patel</h3>
+            <p>Nirma Alumni</p>
+            <div className="cd-num">7043306301</div>
+          </a>
+
+          <a href="tel:+919909901291" className="con-cd">
+            <div className="cd-ic cd-ph">
+              <i className="fa-solid fa-phone" />
+            </div>
+            <h3>Dhwanit Pansuriya</h3>
+            <p>Nirma Alumni</p>
+            <div className="cd-num">9909901291</div>
+          </a>
+        </div>
       </div>
     </section>
   );

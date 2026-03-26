@@ -28,7 +28,7 @@ export const HERO_TEXT: Record<Mode, HeroText> = {
   girls: {
     h1: "Designed for",
     h2: "Her Comfort.",
-    ey: "Iris Homes · Girls PG · Ahmedabad",
+    ey: "Iris House · Girls PG · Ahmedabad",
   },
 };
 
@@ -695,7 +695,7 @@ export const ASTER_TESTIMONIALS: Testimonial[] = [
 export const IRIS_TESTIMONIALS: Testimonial[] = ASTER_TESTIMONIALS.map(
   (testimonial) => ({
     ...testimonial,
-    role: "Google Review - Iris Homes",
+    role: "Google Review - Iris House",
   }),
 );
 
@@ -734,7 +734,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "How is safety managed at Unoloft?",
     answer:
-      "24/7 security guards, CCTV on all entry/exit points, biometric access, and a resident warden round the clock. Iris Homes has a dedicated lady warden on-site.",
+      "24/7 security guards, CCTV on all entry/exit points, biometric access, and a resident warden round the clock. Iris House has a dedicated lady warden on-site.",
   },
 ];
 
@@ -753,7 +753,7 @@ export const MAP_CARDS: MapCard[] = [
   },
   {
     icon: "fa-solid fa-phone",
-    title: "Iris Homes ",
+    title: "Iris House ",
     value: "+91 XXXXX XXXXX",
     mode: "girls",
   },

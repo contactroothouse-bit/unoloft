@@ -61,7 +61,7 @@
               <a href="#pg-intro">Aster Homes </a>
             </li>
             <li>
-              <a href="#pg-intro">Iris Homes </a>
+              <a href="#pg-intro">Iris House </a>
             </li>
             <li>
               <a href="#rooms">Single Room</a>
@@ -98,10 +98,6 @@
 
       <div className="ft-bar">
         <div>© 2026 Unoloft. All rights reserved.</div>
-        <div className="ft-bar-lks">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-        </div>
       </div>
     </footer>
   );

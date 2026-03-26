@@ -68,11 +68,11 @@ export default function PgIntroSection({
           >
             <img
               src="/Iris%20homes/Iris%20homes/IMG-20260322-WA0003.jpg"
-              alt="Iris Homes Boys PG"
+              alt="Iris House Boys PG"
             />
             <div className="pg-ov" />
             <div className="pg-con">
-              <div className="pg-name">Iris Homes</div>
+              <div className="pg-name">Iris House</div>
               <p className="pg-desc">
                 Elegantly designed for comfort and brotherhood. A warm, secure
                 sanctuary where men grow and belong.
