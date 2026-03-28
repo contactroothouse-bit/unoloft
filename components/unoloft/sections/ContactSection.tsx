@@ -39,7 +39,7 @@ const LOCATION_OPTIONS: DropdownOption<Home>[] = [
   { value: "iris", label: "Iris" },
 ];
 
-function CustomDropdown<T extends string,>({
+function CustomDropdown<T extends string>({
   value,
   options,
   onChange,
@@ -125,9 +125,9 @@ export default function ContactSection({ selectedHome }: ContactSectionProps) {
     ...INITIAL_FORM,
     preferredLocation: selectedHome,
   });
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
-    "idle",
-  );
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
   const [statusText, setStatusText] = useState("");
 
   useEffect(() => {
