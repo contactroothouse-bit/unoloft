@@ -8,7 +8,7 @@ export default function Loader({ done }: LoaderProps) {
   return (
     <div id="loader" className={cn(done && "done")}>
       <img
-        src="/Screenshot_2026-03-25_233347-removebg-preview.png"
+        src="/logo.png"
         alt="Unoloft"
         className="ldr-logo"
       />

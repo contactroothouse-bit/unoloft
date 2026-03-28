@@ -5,7 +5,7 @@
         <div>
           <div className="nav-logo">
             <img
-              src="/Screenshot_2026-03-25_233347-removebg-preview.png"
+              src="/logo.png"
               alt="Unoloft"
               className="brand-logo-img footer-brand-logo"
             />

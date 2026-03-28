@@ -1,10 +1,16 @@
 ﻿"use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
+import { cn } from "@/components/unoloft/utils";
 import type { Home } from "@/components/unoloft/types";
 
 type ContactSectionProps = {
   selectedHome: Home;
+};
+
+type DropdownOption<T extends string> = {
+  value: T;
+  label: string;
 };
 
 type FormState = {
@@ -22,6 +28,97 @@ const INITIAL_FORM: FormState = {
   preferredLocation: "aster",
   note: "",
 };
+
+const PROFESSION_OPTIONS: DropdownOption<FormState["profession"]>[] = [
+  { value: "student", label: "Student" },
+  { value: "working", label: "Working Professional" },
+];
+
+const LOCATION_OPTIONS: DropdownOption<Home>[] = [
+  { value: "aster", label: "Aster" },
+  { value: "iris", label: "Iris" },
+];
+
+function CustomDropdown<T extends string,>({
+  value,
+  options,
+  onChange,
+}: {
+  value: T;
+  options: DropdownOption<T>[];
+  onChange: (value: T) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const listboxId = useId();
+  const selectedOption =
+    options.find((option) => option.value === value) ?? options[0];
+
+  useEffect(() => {
+    const onPointerDown = (event: MouseEvent) => {
+      if (!rootRef.current?.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    };
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.removeEventListener("mousedown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, []);
+
+  return (
+    <div className={cn("con-select", open && "open")} ref={rootRef}>
+      <button
+        type="button"
+        className="con-select-trigger"
+        aria-expanded={open}
+        aria-haspopup="listbox"
+        aria-controls={listboxId}
+        onClick={() => setOpen((previous) => !previous)}
+      >
+        <span>{selectedOption?.label}</span>
+        <i className="fa-solid fa-chevron-down" aria-hidden="true" />
+      </button>
+
+      <div
+        className="con-select-menu"
+        id={listboxId}
+        role="listbox"
+        aria-hidden={!open}
+      >
+        {options.map((option) => (
+          <button
+            key={option.value}
+            type="button"
+            className={cn(
+              "con-select-option",
+              option.value === value && "selected",
+            )}
+            onClick={() => {
+              onChange(option.value);
+              setOpen(false);
+            }}
+          >
+            <span>{option.label}</span>
+            {option.value === value ? (
+              <i className="fa-solid fa-check" aria-hidden="true" />
+            ) : null}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function ContactSection({ selectedHome }: ContactSectionProps) {
   const [form, setForm] = useState<FormState>({
@@ -126,34 +223,30 @@ export default function ContactSection({ selectedHome }: ContactSectionProps) {
 
             <label className="con-field">
               <span>Profession</span>
-              <select
+              <CustomDropdown
                 value={form.profession}
-                onChange={(event) =>
+                options={PROFESSION_OPTIONS}
+                onChange={(value) =>
                   setForm((previous) => ({
                     ...previous,
-                    profession: event.target.value as FormState["profession"],
+                    profession: value,
                   }))
                 }
-              >
-                <option value="student">Student</option>
-                <option value="working">Working Professional</option>
-              </select>
+              />
             </label>
 
             <label className="con-field">
               <span>Location Preference</span>
-              <select
+              <CustomDropdown
                 value={form.preferredLocation}
-                onChange={(event) =>
+                options={LOCATION_OPTIONS}
+                onChange={(value) =>
                   setForm((previous) => ({
                     ...previous,
-                    preferredLocation: event.target.value as Home,
+                    preferredLocation: value,
                   }))
                 }
-              >
-                <option value="aster">Aster</option>
-                <option value="iris">Iris</option>
-              </select>
+              />
             </label>
           </div>
 

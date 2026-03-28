@@ -67,8 +67,8 @@ export default function PgIntroSection({
             onClick={() => onHomeChange("iris")}
           >
             <img
-              src="/Iris%20homes/Iris%20homes/IMG-20260322-WA0003.jpg"
-              alt="Iris House Boys PG"
+              src="/Iris%20homes/Iris%20homes/IMG-20260322-WA0001.jpg"
+              alt="Iris House PG"
             />
             <div className="pg-ov" />
             <div className="pg-con">

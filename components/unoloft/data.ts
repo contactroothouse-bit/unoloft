@@ -41,7 +41,7 @@ export const HERO_MOSAIC_CARDS: HeroMosaicCard[] = [
     alt: "Room",
     sources: {
       aster: "/gallery/IMG-20260201-WA0003.jpg",
-      iris: "/gallery/IMG-20260201-WA0003.jpg",
+      iris: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0002.jpg`,
     },
   },
   {
@@ -50,7 +50,7 @@ export const HERO_MOSAIC_CARDS: HeroMosaicCard[] = [
     alt: "Reception",
     sources: {
       aster: "/gallery/IMG-20260201-WA0007.jpg",
-      iris: "/gallery/IMG-20260201-WA0007.jpg",
+      iris: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0021.jpg`,
     },
   },
   {
@@ -59,7 +59,7 @@ export const HERO_MOSAIC_CARDS: HeroMosaicCard[] = [
     alt: "Study Room",
     sources: {
       aster: "/gallery/IMG-20260201-WA0004(1).jpg",
-      iris: "/gallery/IMG-20260201-WA0004(1).jpg",
+      iris: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0019.jpg`,
     },
   },
   {
@@ -323,7 +323,7 @@ export const IRIS_ROOMS: Room[] = [
     delay: ".1s",
   },
   {
-    image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0001.jpg`,
+    image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0019.jpg`,
     alt: "Triple Room",
     badge: "Best Value",
     label: "Triple Sharing",
@@ -461,148 +461,115 @@ export const WHY_FEATURES: WhyFeature[] = [
   },
 ];
 
+const ASTER_ROOM_GALLERY_IMAGES = [
+  "/rooms/IMG-20260201-WA0002.jpg",
+  "/rooms/IMG-20260201-WA0015.jpg",
+  "/rooms/IMG-20260201-WA0016.jpg",
+  "/rooms/IMG-20260201-WA0017.jpg",
+  "/rooms/IMG-20260201-WA0018.jpg",
+  "/rooms/IMG-20260201-WA0019.jpg",
+  "/rooms/IMG-20260201-WA0020.jpg",
+  "/rooms/IMG-20260201-WA0021.jpg",
+  "/rooms/IMG-20260201-WA0022.jpg",
+  "/rooms/IMG-20260201-WA0023.jpg",
+  "/rooms/IMG-20260201-WA0024.jpg",
+  "/rooms/IMG-20260201-WA0025.jpg",
+  "/rooms/IMG-20260201-WA0026.jpg",
+];
+
 export const ASTER_GALLERY_ITEMS: GalleryItem[] = [
+  ...ASTER_ROOM_GALLERY_IMAGES.map((image, index) => ({
+    category: "boys-room" as const,
+    image,
+    lightboxImage: image,
+    alt: `Aster Room ${index + 1}`,
+  })),
   {
-    category: "boys-room",
-    image: "/rooms/IMG-20260201-WA0023.jpg",
-    lightboxImage: "/rooms/IMG-20260201-WA0023.jpg",
-    alt: "Boys Room",
-  },
-  {
-    category: "girls-room",
-    image: "/rooms/IMG-20260201-WA0022.jpg",
-    lightboxImage: "/rooms/IMG-20260201-WA0022.jpg",
-    alt: "Girls Room",
+    category: "facilities",
+    image: "/facilities/IMG-20260201-WA0004.jpg",
+    lightboxImage: "/facilities/IMG-20260201-WA0004.jpg",
+    alt: "Aster Facilities 1",
   },
   {
     category: "facilities",
     image: "/facilities/IMG-20260201-WA0005.jpg",
     lightboxImage: "/facilities/IMG-20260201-WA0005.jpg",
-    alt: "Gym",
+    alt: "Aster Facilities 2",
   },
   {
-    category: "common",
-    image: "/facilities/IMG-20260201-WA0011.jpg",
-    lightboxImage: "/facilities/IMG-20260201-WA0011.jpg",
-    alt: "Common Area",
-  },
-  {
-    category: "boys-room",
-    image: "/rooms/IMG-20260201-WA0024.jpg",
-    lightboxImage: "/rooms/IMG-20260201-WA0024.jpg",
-    alt: "Boys Room 2",
-  },
-  {
-    category: "girls-room",
-    image: "/rooms/IMG-20260201-WA0018.jpg",
-    lightboxImage: "/rooms/IMG-20260201-WA0018.jpg",
-    alt: "Girls Room 2",
-  },
-  {
-    category: "common",
-    image: "/facilities/IMG-20260201-WA0003.jpg",
-    lightboxImage: "/facilities/IMG-20260201-WA0003.jpg",
-    alt: "Lounge",
+    category: "facilities",
+    image: "/facilities/IMG-20260201-WA0006.jpg",
+    lightboxImage: "/facilities/IMG-20260201-WA0006.jpg",
+    alt: "Aster Facilities 3",
   },
   {
     category: "facilities",
     image: "/facilities/IMG-20260201-WA0007.jpg",
     lightboxImage: "/facilities/IMG-20260201-WA0007.jpg",
-    alt: "Study Area",
+    alt: "Aster Facilities 4",
   },
   {
-    category: "common",
+    category: "facilities",
+    image: "/facilities/IMG-20260201-WA0008.jpg",
+    lightboxImage: "/facilities/IMG-20260201-WA0008.jpg",
+    alt: "Aster Facilities 5",
+  },
+  {
+    category: "facilities",
     image: "/facilities/IMG-20260201-WA0009.jpg",
     lightboxImage: "/facilities/IMG-20260201-WA0009.jpg",
-    alt: "Dining",
+    alt: "Aster Facilities 6",
   },
   {
     category: "facilities",
     image: "/facilities/IMG-20260201-WA0010.jpg",
     lightboxImage: "/facilities/IMG-20260201-WA0010.jpg",
-    alt: "Equipment",
+    alt: "Aster Facilities 7",
+  },
+  {
+    category: "facilities",
+    image: "/facilities/IMG-20260201-WA0012.jpg",
+    lightboxImage: "/facilities/IMG-20260201-WA0012.jpg",
+    alt: "Aster Facilities 8",
+  },
+  {
+    category: "facilities",
+    image: "/facilities/IMG-20260201-WA0013.jpg",
+    lightboxImage: "/facilities/IMG-20260201-WA0013.jpg",
+    alt: "Aster Facilities 9",
+  },
+  {
+    category: "facilities",
+    image: "/facilities/IMG-20260201-WA0014.jpg",
+    lightboxImage: "/facilities/IMG-20260201-WA0014.jpg",
+    alt: "Aster Facilities 10",
   },
 ];
 
 export const IRIS_GALLERY_ITEMS: GalleryItem[] = [
-  {
-    category: "girls-room",
-    image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0010.jpg`,
-    lightboxImage: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0010.jpg`,
-    alt: "Iris Room",
-  },
-  {
-    category: "girls-room",
-    image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0011.jpg`,
-    lightboxImage: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0011.jpg`,
-    alt: "Iris Room 2",
-  },
-  {
-    category: "girls-room",
-    image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0012.jpg`,
-    lightboxImage: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0012.jpg`,
-    alt: "Iris Room 3",
-  },
-  {
-    category: "common",
-    image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0013.jpg`,
-    lightboxImage: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0013.jpg`,
-    alt: "Common Area",
-  },
-  {
-    category: "common",
-    image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0014.jpg`,
-    lightboxImage: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0014.jpg`,
-    alt: "Common Area 2",
-  },
-  {
-    category: "facilities",
-    image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0015.jpg`,
-    lightboxImage: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0015.jpg`,
-    alt: "Facility",
-  },
-  {
-    category: "facilities",
-    image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0019.jpg`,
-    lightboxImage: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0019.jpg`,
-    alt: "Facility 2",
-  },
-  {
-    category: "facilities",
-    image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0020.jpg`,
-    lightboxImage: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0020.jpg`,
-    alt: "Facility 3",
-  },
-  {
-    category: "common",
-    image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0021.jpg`,
-    lightboxImage: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0021.jpg`,
-    alt: "Common Area 3",
-  },
-  {
-    category: "girls-room",
-    image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0022.jpg`,
-    lightboxImage: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0022.jpg`,
-    alt: "Iris Room 4",
-  },
-  {
-    category: "girls-room",
-    image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0023.jpg`,
-    lightboxImage: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0023.jpg`,
-    alt: "Iris Room 5",
-  },
-  {
-    category: "common",
-    image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0024.jpg`,
-    lightboxImage: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0024.jpg`,
-    alt: "Common Area 4",
-  },
-  {
-    category: "facilities",
-    image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0025.jpg`,
-    lightboxImage: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0025.jpg`,
-    alt: "Facility 4",
-  },
+  ...[
+    "IMG-20260322-WA0002.jpg",
+    "IMG-20260322-WA0019.jpg",
+    "IMG-20260322-WA0024.jpg",
+  ].map((fileName, index) => ({
+    category: "girls-room" as const,
+    image: `${IRIS_IMAGE_BASE}/${fileName}`,
+    lightboxImage: `${IRIS_IMAGE_BASE}/${fileName}`,
+    alt: `Iris Room ${index + 1}`,
+  })),
+  ...[
+    "IMG-20260322-WA0001.jpg",
+    "IMG-20260322-WA0010.jpg",
+    "IMG-20260322-WA0021.jpg",
+    "IMG-20260322-WA0022.jpg",
+    "IMG-20260322-WA0023.jpg",
+    "IMG-20260322-WA0025.jpg",
+  ].map((fileName, index) => ({
+    category: "facilities" as const,
+    image: `${IRIS_IMAGE_BASE}/${fileName}`,
+    lightboxImage: `${IRIS_IMAGE_BASE}/${fileName}`,
+    alt: `Iris Facilities ${index + 1}`,
+  })),
 ];
 
 export const GALLERY_ITEMS_BY_HOME: Record<Home, GalleryItem[]> = {

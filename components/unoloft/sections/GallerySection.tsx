@@ -1,4 +1,8 @@
-import type { GalleryFilter, GalleryItem, Home } from "@/components/unoloft/types";
+import type {
+  GalleryFilter,
+  GalleryItem,
+  Home,
+} from "@/components/unoloft/types";
 import { cn } from "@/components/unoloft/utils";
 
 type GallerySectionProps = {
@@ -23,6 +27,10 @@ function shouldShowItem(
       category === "common" ||
       category === "facilities"
     );
+  }
+
+  if (filter === "facilities") {
+    return category === "common" || category === "facilities";
   }
 
   return category === filter;
@@ -63,16 +71,10 @@ export default function GallerySection({
           {selectedHome === "aster" ? "Aster Rooms" : "Iris Rooms"}
         </button>
         <button
-          className={cn("gf", filter === "common" && "active")}
-          onClick={() => onFilterChange("common")}
-        >
-          Common Areas
-        </button>
-        <button
           className={cn("gf", filter === "facilities" && "active")}
           onClick={() => onFilterChange("facilities")}
         >
-          Facilities
+          Common Areas & Facilities
         </button>
       </div>
 

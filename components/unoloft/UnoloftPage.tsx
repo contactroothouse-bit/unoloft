@@ -3,7 +3,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import BackToTopButton from "@/components/unoloft/BackToTopButton";
 import Lightbox from "@/components/unoloft/Lightbox";
-import Loader from "@/components/unoloft/Loader";
 import MobileMenu from "@/components/unoloft/MobileMenu";
 import Navbar from "@/components/unoloft/Navbar";
 import { GALLERY_ITEMS_BY_HOME, TESTIMONIALS_BY_HOME } from "@/components/unoloft/data";
@@ -22,7 +21,6 @@ import type { GalleryFilter, Home, Mode } from "@/components/unoloft/types";
 const SCROLL_OFFSET = 75;
 
 export default function UnoloftPage() {
-  const [loaderDone, setLoaderDone] = useState(false);
   const mode: Mode = "all";
   const [selectedHome, setSelectedHome] = useState<Home>("aster");
   const [galleryFilter, setGalleryFilter] = useState<GalleryFilter>("all");
@@ -57,14 +55,6 @@ export default function UnoloftPage() {
     },
     [lightboxImages.length],
   );
-
-  useEffect(() => {
-    const timer = window.setTimeout(() => {
-      setLoaderDone(true);
-    }, 1800);
-
-    return () => window.clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     const onScroll = () => {
@@ -166,8 +156,6 @@ export default function UnoloftPage() {
 
   return (
     <>
-      <Loader done={loaderDone} />
-
       <Lightbox
         open={lightboxOpen}
         image={lightboxImages[lightboxIndex] ?? ""}

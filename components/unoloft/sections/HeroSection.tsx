@@ -23,9 +23,7 @@ export default function HeroSection({ mode, selectedHome }: HeroSectionProps) {
 
     setFading(true);
     const timer = window.setTimeout(() => {
-      setSources(
-        HERO_MOSAIC_CARDS.map((card) => card.sources[selectedHome]),
-      );
+      setSources(HERO_MOSAIC_CARDS.map((card) => card.sources[selectedHome]));
       setFading(false);
     }, 280);
 
@@ -86,7 +84,7 @@ export default function HeroSection({ mode, selectedHome }: HeroSectionProps) {
               <i className="fa-solid fa-building" /> Explore Homes
             </a>
             <a
-              href="https://wa.me/91XXXXXXXXXX?text=Hi!%20Interested%20in%20Unoloft%20PG."
+              href="https://wa.me/917043306301?text=Hi%20Unoloft%20Team%2C%20I%20am%20interested%20in%20PG%20accommodation.%20Please%20share%20room%20availability%2C%20pricing%2C%20and%20the%20earliest%20visit%20slot."
               target="_blank"
               className="btn-ghost"
               rel="noreferrer"

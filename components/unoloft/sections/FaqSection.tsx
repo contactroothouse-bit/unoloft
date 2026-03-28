@@ -20,8 +20,8 @@ export default function FaqSection({ openIndex, onToggle }: FaqSectionProps) {
           </p>
           <div className="faq-img">
             <img
-              src="/Iris%20homes/Iris%20homes/IMG-20260322-WA0020.jpg"
-              alt="Iris House interior"
+              src="/facilities/IMG-20260201-WA0003.jpg"
+              alt="Unoloft facilities"
             />
           </div>
         </div>
