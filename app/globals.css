@@ -458,7 +458,7 @@ footer .nav-logo {
 }
 
 .hero-l {
-  padding-top: 16px;
+  padding-top: 0px;
 }
 
 .hero-ey {
@@ -1458,6 +1458,42 @@ footer .nav-logo {
   column-gap: 13px;
 }
 
+.gal-load-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.gal-load-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 999px;
+  padding: 13px 24px;
+  background: linear-gradient(135deg, var(--brand) 0%, #ff8b43 100%);
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 16px 34px rgba(240, 101, 32, 0.22);
+  cursor: pointer;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    filter 0.22s ease;
+}
+
+.gal-load-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 40px rgba(240, 101, 32, 0.28);
+  filter: saturate(1.05);
+}
+
+.gal-load-btn i {
+  font-size: 0.86rem;
+}
+
 .gi {
   break-inside: avoid;
   border-radius: 16px;
@@ -1572,7 +1608,7 @@ footer .nav-logo {
 /* TESTIMONIALS */
 #testimonials {
   padding: 32px 5%;
-  background: #060d1e;
+  background: #000965;
   position: relative;
   isolation: isolate;
   z-index: 2;
@@ -2533,6 +2569,10 @@ footer {
   transition: var(--t);
 }
 
+.btt-wa {
+  font-size: 1.02rem;
+}
+
 #btt.on {
   opacity: 1;
   transform: none;
@@ -2708,8 +2748,22 @@ footer {
 }
 
 @media (max-width: 580px) {
+  #btt {
+    background: #25d366;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+  }
+
+  #btt:hover {
+    background: #1ebe5b;
+  }
+
+  .btt-wa {
+    font-size: 1.18rem;
+  }
+
   #nav {
     padding: 0 0px;
+    padding-right: 8px;
   }
 
   .brand-logo-img {
@@ -2828,12 +2882,7 @@ footer {
   }
 
   .hero-r {
-    height: 280px;
-  }
-
-  .mc3,
-  .mc4 {
-    display: none;
+    height: 340px;
   }
 
   .map-adv-c {

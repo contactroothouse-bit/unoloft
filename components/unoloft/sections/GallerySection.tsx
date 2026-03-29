@@ -1,9 +1,15 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
 import type {
   GalleryFilter,
   GalleryItem,
   Home,
 } from "@/components/unoloft/types";
 import { cn } from "@/components/unoloft/utils";
+
+const INITIAL_ALL_VISIBLE = 8;
+const LOAD_MORE_STEP = 8;
 
 type GallerySectionProps = {
   selectedHome: Home;
@@ -43,7 +49,25 @@ export default function GallerySection({
   onFilterChange,
   onOpenLightbox,
 }: GallerySectionProps) {
+  const [visibleCount, setVisibleCount] = useState(INITIAL_ALL_VISIBLE);
   const roomFilter = selectedHome === "aster" ? "boys-room" : "girls-room";
+
+  useEffect(() => {
+    setVisibleCount(INITIAL_ALL_VISIBLE);
+  }, [selectedHome, filter]);
+
+  const filteredItems = useMemo(
+    () =>
+      items
+        .map((item, index) => ({ ...item, index }))
+        .filter((item) => shouldShowItem(selectedHome, filter, item.category)),
+    [filter, items, selectedHome],
+  );
+
+  const renderedItems =
+    filter === "all" ? filteredItems.slice(0, visibleCount) : filteredItems;
+  const canLoadMore =
+    filter === "all" && filteredItems.length > renderedItems.length;
 
   return (
     <section id="gallery">
@@ -79,25 +103,35 @@ export default function GallerySection({
       </div>
 
       <div className="gal-masonry" id="galGrid">
-        {items.map((item, index) => {
-          const visible = shouldShowItem(selectedHome, filter, item.category);
-
-          return (
-            <div
-              className="gi"
-              data-cat={item.category}
-              key={`${item.alt}-${index}`}
-              onClick={() => onOpenLightbox(index)}
-              style={{ display: visible ? undefined : "none" }}
-            >
-              <img src={item.image} alt={item.alt} />
-              <div className="gi-ov">
-                <i className="fa-solid fa-expand" />
-              </div>
+        {renderedItems.map((item) => (
+          <div
+            className="gi"
+            data-cat={item.category}
+            key={`${item.alt}-${item.index}`}
+            onClick={() => onOpenLightbox(item.index)}
+          >
+            <img src={item.image} alt={item.alt} />
+            <div className="gi-ov">
+              <i className="fa-solid fa-expand" />
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
+
+      {canLoadMore ? (
+        <div className="gal-load-wrap">
+          <button
+            type="button"
+            className="gal-load-btn"
+            onClick={() =>
+              setVisibleCount((current) => current + LOAD_MORE_STEP)
+            }
+          >
+            <span>View More</span>
+            <i className="fa-solid fa-arrow-down" />
+          </button>
+        </div>
+      ) : null}
     </section>
   );
 }

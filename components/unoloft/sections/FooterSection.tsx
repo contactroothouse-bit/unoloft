@@ -24,9 +24,6 @@
             <a href="#" className="ft-soc">
               <i className="fa-brands fa-whatsapp" />
             </a>
-            <a href="#" className="ft-soc">
-              <i className="fa-brands fa-youtube" />
-            </a>
           </div>
         </div>
 
@@ -97,7 +94,7 @@
       </div>
 
       <div className="ft-bar">
-        <div>© 2026 Unoloft. All rights reserved.</div>
+        <div>© 2026 Roothouse Pvt. Ltd. All rights reserved.</div>
       </div>
     </footer>
   );

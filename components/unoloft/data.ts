@@ -548,9 +548,14 @@ export const ASTER_GALLERY_ITEMS: GalleryItem[] = [
 
 export const IRIS_GALLERY_ITEMS: GalleryItem[] = [
   ...[
+    "IMG-20260322-WA0001.jpg",
     "IMG-20260322-WA0002.jpg",
     "IMG-20260322-WA0019.jpg",
+    "IMG-20260322-WA0020.jpg",
+    "IMG-20260322-WA0021.jpg",
+    "IMG-20260322-WA0023.jpg",
     "IMG-20260322-WA0024.jpg",
+    "IMG-20260322-WA0025.jpg",
   ].map((fileName, index) => ({
     category: "girls-room" as const,
     image: `${IRIS_IMAGE_BASE}/${fileName}`,
@@ -558,12 +563,13 @@ export const IRIS_GALLERY_ITEMS: GalleryItem[] = [
     alt: `Iris Room ${index + 1}`,
   })),
   ...[
-    "IMG-20260322-WA0001.jpg",
+    "IMG-20260322-WA0005.jpg",
+    "IMG-20260322-WA0008.jpg",
+    "IMG-20260322-WA0009.jpg",
     "IMG-20260322-WA0010.jpg",
-    "IMG-20260322-WA0021.jpg",
-    "IMG-20260322-WA0022.jpg",
-    "IMG-20260322-WA0023.jpg",
-    "IMG-20260322-WA0025.jpg",
+    "IMG-20260322-WA0011.jpg",
+    "IMG-20260322-WA0012.jpg",
+    "IMG-20260322-WA0014.jpg",
   ].map((fileName, index) => ({
     category: "facilities" as const,
     image: `${IRIS_IMAGE_BASE}/${fileName}`,
