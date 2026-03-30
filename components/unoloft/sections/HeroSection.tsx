@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { HERO_MOSAIC_CARDS, HERO_TEXT } from "@/components/unoloft/data";
 import type { Home, Mode } from "@/components/unoloft/types";
@@ -127,10 +128,13 @@ export default function HeroSection({ mode, selectedHome }: HeroSectionProps) {
         <div className="hero-r">
           {HERO_MOSAIC_CARDS.map((card, index) => (
             <div className={`mc ${card.cardClass}`} key={card.id}>
-              <img
+              <Image
                 id={card.id}
                 src={sources[index]}
-                alt={card.alt}
+                alt={`${card.alt} at Unoloft premium PG in Gota Ahmedabad`}
+                fill
+                sizes="(max-width: 860px) 90vw, 45vw"
+                priority={index === 0}
                 style={{ opacity: fading ? 0 : 1 }}
               />
             </div>

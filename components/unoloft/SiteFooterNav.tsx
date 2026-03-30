@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
-export default function FooterSection() {
+export default function SiteFooterNav() {
   return (
     <footer>
       <div className="ft-main">
@@ -26,7 +26,7 @@ export default function FooterSection() {
             <a href="#" className="ft-soc">
               <i className="fa-brands fa-facebook-f" />
             </a>
-            <a href="#" className="ft-soc">
+            <a href="https://wa.me/917043306301" className="ft-soc" target="_blank" rel="noreferrer">
               <i className="fa-brands fa-whatsapp" />
             </a>
           </div>
@@ -67,7 +67,6 @@ export default function FooterSection() {
             </li>
           </ul>
         </div>
-
         <div className="ft-col">
           <h4>Our Homes</h4>
           <ul className="ft-lks">
@@ -88,7 +87,6 @@ export default function FooterSection() {
             </li>
           </ul>
         </div>
-
         <div className="ft-col">
           <h4>Contact</h4>
           <ul className="ft-lks">
@@ -109,7 +107,6 @@ export default function FooterSection() {
           </ul>
         </div>
       </div>
-
       <div className="ft-bar">
         <div>© 2026 Roothouse Pvt. Ltd. All rights reserved.</div>
       </div>

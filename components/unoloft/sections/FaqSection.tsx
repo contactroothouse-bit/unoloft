@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FAQ_ITEMS } from "@/components/unoloft/data";
 import { cn } from "@/components/unoloft/utils";
 
@@ -19,9 +20,12 @@ export default function FaqSection({ openIndex, onToggle }: FaqSectionProps) {
             Everything you need to know before moving in to Unoloft.
           </p>
           <div className="faq-img">
-            <img
+            <Image
               src="/facilities/IMG-20260201-WA0003.jpg"
-              alt="Unoloft facilities"
+              alt="Study lounge at Unoloft boys PG near Nirma University Ahmedabad"
+              fill
+              sizes="(max-width: 1080px) 100vw, 40vw"
+              loading="lazy"
             />
           </div>
         </div>

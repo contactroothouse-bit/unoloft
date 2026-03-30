@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import type {
   GalleryFilter,
@@ -110,7 +111,14 @@ export default function GallerySection({
             key={`${item.alt}-${item.index}`}
             onClick={() => onOpenLightbox(item.index)}
           >
-            <img src={item.image} alt={item.alt} />
+            <Image
+              src={item.image}
+              alt={`${item.alt} at Unoloft PG near Nirma University Ahmedabad`}
+              width={900}
+              height={1200}
+              sizes="(max-width: 580px) 50vw, (max-width: 860px) 33vw, 25vw"
+              loading="lazy"
+            />
             <div className="gi-ov">
               <i className="fa-solid fa-expand" />
             </div>

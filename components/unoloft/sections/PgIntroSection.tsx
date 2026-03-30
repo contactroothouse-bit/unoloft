@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Home } from "@/components/unoloft/types";
 import { cn } from "@/components/unoloft/utils";
 
@@ -33,9 +34,11 @@ export default function PgIntroSection({
             className={cn("pg-card", selectedHome === "aster" && "active")}
             onClick={() => onHomeChange("aster")}
           >
-            <img
+            <Image
               src="/gallery/IMG-20260201-WA0028.jpg"
-              alt="Aster Homes Boys PG"
+              alt="Aster Homes boys PG building and premium rooms in Gota Ahmedabad"
+              fill
+              sizes="(max-width: 860px) 100vw, 50vw"
             />
             <div className="pg-ov" />
             <div className="pg-con">
@@ -66,9 +69,11 @@ export default function PgIntroSection({
             className={cn("pg-card", selectedHome === "iris" && "active")}
             onClick={() => onHomeChange("iris")}
           >
-            <img
+            <Image
               src="/Iris%20homes/Iris%20homes/IMG-20260322-WA0001.jpg"
-              alt="Iris House PG"
+              alt="Iris House premium boys PG near Silver Oak University Ahmedabad"
+              fill
+              sizes="(max-width: 860px) 100vw, 50vw"
             />
             <div className="pg-ov" />
             <div className="pg-con">

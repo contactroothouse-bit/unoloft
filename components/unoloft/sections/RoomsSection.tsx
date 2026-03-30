@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ROOMS_BY_HOME } from "@/components/unoloft/data";
 import type { Home } from "@/components/unoloft/types";
 
@@ -30,7 +31,13 @@ export default function RoomsSection({ selectedHome }: RoomsSectionProps) {
             style={room.delay ? { transitionDelay: room.delay } : undefined}
           >
             <div className="room-img">
-              <img src={room.image} alt={room.alt} />
+              <Image
+                src={room.image}
+                alt={`${room.alt} at Unoloft PG in Ahmedabad with AC and study setup`}
+                fill
+                sizes="(max-width: 860px) 100vw, 33vw"
+                loading="lazy"
+              />
               <span className="r-badge">{room.badge}</span>
             </div>
 

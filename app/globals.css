@@ -51,7 +51,7 @@ html {
 }
 
 body {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-body), sans-serif;
   background: #ffffff;
   color: #2d3e60;
   max-width: 100%;
@@ -211,7 +211,7 @@ footer .nav-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-heading), serif;
   font-weight: 900;
   color: #fff;
   font-size: 1.2rem;
@@ -231,7 +231,7 @@ footer .nav-logo {
 }
 
 .logo-n {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-heading), serif;
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--navy);
@@ -384,7 +384,7 @@ footer .nav-logo {
 
 .city-wm {
   position: absolute;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-heading), serif;
   font-size: clamp(90px, 15vw, 220px);
   font-weight: 900;
   text-transform: uppercase;
@@ -483,7 +483,7 @@ footer .nav-logo {
 }
 
 .h1a {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-heading), serif;
   font-size: clamp(2rem, 3.8vw, 3.1rem);
   font-weight: 900;
   color: var(--navy);
@@ -493,7 +493,7 @@ footer .nav-logo {
 }
 
 .h1b {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-heading), serif;
   font-size: clamp(2rem, 3.8vw, 3.1rem);
   font-weight: 900;
   color: rgba(22, 45, 94, 0.8);
@@ -615,7 +615,7 @@ footer .nav-logo {
 }
 
 .hs-n {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--navy);
@@ -627,7 +627,7 @@ footer .nav-logo {
 }
 
 .hs-l {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 0.72rem;
   color: rgba(45, 62, 96, 0.7);
   margin-top: 2px;
@@ -828,7 +828,7 @@ footer .nav-logo {
 }
 
 .s-t {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-heading), serif;
   font-size: clamp(1.8rem, 3.2vw, 2.7rem);
   font-weight: 800;
   color: var(--navy);
@@ -860,6 +860,87 @@ footer .nav-logo {
 .sh-c .s-sub {
   margin-left: auto;
   margin-right: auto;
+}
+
+.subpage-main {
+  padding-top: 86px;
+}
+
+.subpage-main-local .s-sub {
+  max-width: 860px;
+}
+
+.subpage-section {
+  scroll-margin-top: 86px;
+}
+
+.subpage-main #pg-intro,
+.subpage-main #facilities,
+.subpage-main #rooms,
+.subpage-main #gallery,
+.subpage-main #faq,
+.subpage-main #map-sec,
+.subpage-main #contact,
+.subpage-main #amenities {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.subpage-main .sh {
+  margin-bottom: 22px;
+}
+
+.subpage-main .hero-btns {
+  margin-top: 8px;
+}
+
+.local-cta-row .btn-ora,
+.local-cta-row .btn-ghost {
+  margin-bottom: 6px;
+}
+
+.local-landmarks {
+  margin-top: 12px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 14px;
+}
+
+.local-landmarks li {
+  background: #fff;
+  border: 1px solid rgba(30, 58, 122, 0.12);
+  border-radius: 12px;
+  padding: 10px 12px;
+  color: var(--navy2);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+#location-explore {
+  padding: 24px 5% 12px;
+  background: #ffffff;
+}
+
+.loc-exp-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  margin-bottom: 10px;
+}
+
+.loc-exp-links a {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--navy2);
+  border-bottom: 1px solid rgba(30, 58, 122, 0.18);
+  transition: var(--t);
+}
+
+.loc-exp-links a:hover {
+  color: var(--brand);
+  border-color: var(--brand);
 }
 
 .rv {
@@ -1010,7 +1091,7 @@ footer .nav-logo {
 }
 
 .pg-name {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-heading), serif;
   font-size: 1.85rem;
   font-weight: 700;
   color: #fff;
@@ -1244,7 +1325,7 @@ footer .nav-logo {
 }
 
 .r-name {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-heading), serif;
   font-size: 1.12rem;
   font-weight: 700;
   color: #fff;
@@ -1276,14 +1357,14 @@ footer .nav-logo {
 }
 
 .r-price {
-  font-family: "Outfit", "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--navy);
 }
 
 .r-price small {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 0.8rem;
   color: rgba(22, 45, 94, 0.82);
   font-weight: 400;
@@ -1962,6 +2043,18 @@ footer .nav-logo {
   border: none;
 }
 
+.local-map-section .sh {
+  margin-bottom: 16px;
+}
+
+.local-faq-layout .faq-l {
+  padding-right: 10px;
+}
+
+.local-faq-layout .faq-list .faq-i {
+  border-radius: 16px;
+}
+
 /* CONTACT */
 #contact {
   padding: 32px 5%;
@@ -2415,7 +2508,7 @@ footer {
 }
 
 .av-name {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-heading), serif;
   font-size: 1.38rem;
   font-weight: 700;
   color: var(--navy);
@@ -2423,7 +2516,7 @@ footer {
 }
 
 .av-price {
-  font-family: "Outfit", "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 1.3rem;
   font-weight: 800;
   color: var(--navy);
@@ -2432,7 +2525,7 @@ footer {
 }
 
 .av-price small {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 0.8rem;
   color: var(--gray);
   font-weight: 400;
@@ -2699,6 +2792,18 @@ footer {
   .ft-main {
     grid-template-columns: 1fr 1fr;
   }
+
+  .subpage-main #pg-intro,
+  .subpage-main #facilities,
+  .subpage-main #rooms,
+  .subpage-main #gallery,
+  .subpage-main #faq,
+  .subpage-main #map-sec,
+  .subpage-main #contact,
+  .subpage-main #amenities {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 @media (max-width: 860px) {
@@ -2744,6 +2849,10 @@ footer {
 
   .hbg {
     display: flex;
+  }
+
+  .local-landmarks {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -2879,6 +2988,48 @@ footer {
 
   .ft-main {
     grid-template-columns: 1fr;
+  }
+
+  .subpage-main {
+    padding-top: 74px;
+  }
+
+  .subpage-main #pg-intro,
+  .subpage-main #facilities,
+  .subpage-main #rooms,
+  .subpage-main #gallery,
+  .subpage-main #faq,
+  .subpage-main #map-sec,
+  .subpage-main #contact,
+  .subpage-main #amenities {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .subpage-main .sh {
+    margin-bottom: 14px;
+  }
+
+  .local-cta-row {
+    justify-content: flex-start !important;
+  }
+
+  .local-cta-row .btn-ora,
+  .local-cta-row .btn-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .subpage-main .faq-list {
+    margin-top: 18px;
+  }
+
+  .local-map-section .map-em iframe {
+    height: 320px;
+  }
+
+  .local-landmarks li {
+    font-size: 0.84rem;
   }
 
   .hero-r {

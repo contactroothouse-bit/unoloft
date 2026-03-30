@@ -1,10 +1,46 @@
 import type { Metadata } from "next";
+import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { OG_IMAGE_URL, SITE_NAME, SITE_URL } from "@/components/unoloft/seo";
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+});
+
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: "Unoloft – Ahmedabad's Premium PG for Boys & Girls",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Unoloft – Premium PG in Ahmedabad",
+    template: `%s | ${SITE_NAME}`,
+  },
   description:
-    "Ahmedabad's premium paying guest accommodation for boys and girls.",
+    "Ahmedabad's premium paying guest accommodation for boys near Gota and SG Highway.",
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    siteName: SITE_NAME,
+    images: [
+      {
+        url: OG_IMAGE_URL,
+        width: 1200,
+        height: 630,
+        alt: "Unoloft Premium PG Ahmedabad",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [OG_IMAGE_URL],
+  },
 };
 
 export default function RootLayout({
@@ -17,14 +53,14 @@ export default function RootLayout({
       <head>
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-        />
-        <link
-          rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         />
       </head>
-      <body>{children}</body>
+      <body
+        className={`${plusJakartaSans.variable} ${cormorantGaramond.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

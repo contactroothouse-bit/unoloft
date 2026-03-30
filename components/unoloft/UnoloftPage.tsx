@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import BackToTopButton from "@/components/unoloft/BackToTopButton";
 import Lightbox from "@/components/unoloft/Lightbox";
@@ -203,6 +204,20 @@ export default function UnoloftPage() {
 
       <MapSection selectedHome={selectedHome} />
       <ContactSection selectedHome={selectedHome} />
+      <section id="location-explore">
+        <div className="sh sh-c rv">
+          <div className="s-ey">Explore by Location</div>
+          <h2 className="s-t">
+            Find Unoloft <em>Near You</em>
+          </h2>
+        </div>
+        <div className="loc-exp-links rv">
+          <Link href="/pg-near-nirma-university">PG near Nirma University</Link>
+          <Link href="/pg-near-silver-oak">PG near Silver Oak University</Link>
+          <Link href="/pg-in-gota-ahmedabad">PG in Gota Ahmedabad</Link>
+          <Link href="/pg-near-sg-highway">PG near SG Highway</Link>
+        </div>
+      </section>
       <FooterSection />
       <BackToTopButton show={showBackToTop} />
     </>
