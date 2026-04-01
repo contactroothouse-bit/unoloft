@@ -16,8 +16,8 @@ export default function FooterSection() {
             />
           </div>
           <p className="ft-desc">
-            Ahmedabad&apos;s most premium paying guest accommodation for boys.
-            Your home, away from home - since 2021.
+            Roothouse Living offers premium paying guest accommodation in
+            Ahmedabad. Your home, away from home - since 2021.
           </p>
           <div className="ft-socs">
             <a href="#" className="ft-soc">
@@ -37,6 +37,12 @@ export default function FooterSection() {
           <ul className="ft-lks">
             <li>
               <Link href="/">About Us</Link>
+            </li>
+            <li>
+              <Link href="/aster-homes">Aster Homes</Link>
+            </li>
+            <li>
+              <Link href="/iris-house">Iris House</Link>
             </li>
             <li>
               <Link href="/amenities">Facilities</Link>
@@ -111,7 +117,7 @@ export default function FooterSection() {
       </div>
 
       <div className="ft-bar">
-        <div>© 2026 Roothouse Pvt. Ltd. All rights reserved.</div>
+        <div>© 2026 Roothouse Living. All rights reserved.</div>
       </div>
     </footer>
   );

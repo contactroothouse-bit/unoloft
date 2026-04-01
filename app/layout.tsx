@@ -22,6 +22,11 @@ export const metadata: Metadata = {
     default: "Unoloft – Premium PG in Ahmedabad",
     template: `%s | ${SITE_NAME}`,
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
   description:
     "Ahmedabad's premium paying guest accommodation for boys near Gota and SG Highway.",
   openGraph: {
