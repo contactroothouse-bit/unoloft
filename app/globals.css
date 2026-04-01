@@ -1338,7 +1338,7 @@ footer .nav-logo {
 
 .r-desc {
   font-size: 0.78rem;
-  color: rgba(12, 28, 62, 0.98);
+  color: rgba(255, 255, 255, 0.94);
   line-height: 1.3;
   margin-bottom: 5px;
 }
@@ -1355,9 +1355,9 @@ footer .nav-logo {
   font-weight: 600;
   padding: 3px 9px;
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.42);
-  color: #1f3d7a;
-  border: 1px solid rgba(31, 61, 122, 0.14);
+  background: rgba(16, 34, 72, 0.32);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.34);
 }
 
 .r-price {
