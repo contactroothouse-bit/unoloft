@@ -75,200 +75,220 @@ export const HERO_MOSAIC_CARDS: HeroMosaicCard[] = [
 
 export const ASTER_FACILITIES: Facility[] = [
   {
-    icon: "fa-solid fa-wifi",
-    name: "High-Speed WiFi",
+    icon: "fa-solid fa-bowl-food",
+    name: "Fabulous Food",
     description:
-      "Gigabit fiber internet throughout â€” perfect for work, classes & streaming.",
+      "Separate live kitchen and dining facility.",
     delay: ".0s",
   },
   {
     icon: "fa-solid fa-bowl-food",
-    name: "Home-Cooked Meals",
+    name: "4 Time Indian Meals",
     description:
-      "Fresh breakfast, lunch & dinner prepared daily by our in-house cooks.",
+      "Hot, delicious, nutritious authentic Indian 4 time meals in live kitchen. Packed lunch is provided on weekdays.",
     delay: ".06s",
   },
   {
-    icon: "fa-solid fa-dumbbell",
-    name: "Gym",
-    description: "Fitness equipment access available for all residents.",
-    delay: ".12s",
-  },
-  {
     icon: "fa-solid fa-snowflake",
-    name: "Air Conditioning",
-    description: "All rooms are fully air-conditioned for year-round comfort.",
-    delay: ".18s",
-  },
-  {
-    icon: "fa-solid fa-shield-halved",
-    name: "24/7 Security & CCTV",
-    description:
-      "Trained guards and cameras across all entry points and common areas.",
-    delay: ".24s",
-  },
-  {
-    icon: "fa-solid fa-shirt",
-    name: "Washing Machine",
-    description: "In-house washing machines available for regular use.",
-    delay: ".30s",
-  },
-  {
-    icon: "fa-solid fa-droplet",
-    name: "Mineral Water",
-    description: "Safe mineral drinking water available throughout the day.",
-    delay: ".36s",
-  },
-  {
-    icon: "fa-solid fa-temperature-low",
-    name: "Fridge Facility",
-    description: "Shared refrigerator facility available for residents.",
-    delay: ".42s",
-  },
-  {
-    icon: "fa-solid fa-broom",
-    name: "Daily Housekeeping",
-    description: "Regular room cleaning and common area maintenance every day.",
-    delay: ".48s",
-  },
-  {
-    icon: "fa-solid fa-motorcycle",
-    name: "Free Parking",
-    description: "Secure covered parking for bikes at no extra cost.",
-    delay: ".54s",
-  },
-  {
-    icon: "fa-solid fa-book-open",
-    name: "Study Area",
-    description:
-      "Quiet, well-lit study rooms â€” ideal for focused work and exam prep.",
-    delay: ".60s",
-  },
-  {
-    icon: "fa-solid fa-bolt",
-    name: "Power Backup",
-    description:
-      "24/7 backup ensures lights, fans & WiFi stay on without interruption.",
-    delay: ".66s",
-  },
-  {
-    icon: "fa-solid fa-droplet",
-    name: "Hot Water Supply",
-    description:
-      "Round-the-clock hot water for a refreshing start every single day.",
-    delay: ".72s",
+    name: "Fully Furnished A.C Rooms",
+    description: "Fully furnished air-conditioned rooms for daily comfort.",
+    delay: ".12s",
   },
   {
     icon: "fa-solid fa-bed",
     name: "Bed with Extra Storage",
-    description: "Comfortable beds with added storage space.",
-    delay: ".78s",
-  },
-  {
-    icon: "fa-solid fa-chair",
-    name: "Study Table and Chair",
-    description: "Dedicated study table with chair in every room.",
-    delay: ".84s",
-  },
-];
-
-export const IRIS_FACILITIES: Facility[] = [
-  {
-    icon: "fa-solid fa-kitchen-set",
-    name: "Live Kitchen & Dining",
-    description: "Separate live kitchen and dining facility for residents.",
-    delay: ".0s",
+    description: "Comfortable bed with additional storage space.",
+    delay: ".18s",
   },
   {
     icon: "fa-solid fa-glass-water",
     name: "Purified Drinking Water",
-    description: "Purified drinking water available throughout the day.",
-    delay: ".06s",
-  },
-  {
-    icon: "fa-solid fa-utensils",
-    name: "Authentic Indian Meals",
-    description:
-      "Hot, delicious, nutritious Indian meals served 4 times daily in live kitchen.",
-    delay: ".12s",
-  },
-  {
-    icon: "fa-solid fa-fire-burner",
-    name: "Induction & Vessels",
-    description: "Induction and vessels available for personal use.",
-    delay: ".18s",
-  },
-  {
-    icon: "fa-solid fa-temperature-low",
-    name: "Refrigerator & Geyser",
-    description: "In-room refrigerator and geyser support for daily comfort.",
+    description: "Safe purified drinking water available throughout the day.",
     delay: ".24s",
   },
   {
-    icon: "fa-solid fa-wifi",
-    name: "High-Speed WiFi",
-    description: "High speed WiFi connectivity across the property.",
+    icon: "fa-solid fa-fire-burner",
+    name: "Induction and Vessels",
+    description: "Induction and vessels available for personal use.",
     delay: ".30s",
   },
   {
-    icon: "fa-solid fa-broom",
-    name: "Daily Cleaning Service",
-    description: "Cleaning service provided on a daily basis.",
+    icon: "fa-solid fa-temperature-low",
+    name: "Refrigerator and Geyser",
+    description: "Refrigerator and geyser support for day-to-day convenience.",
     delay: ".36s",
+  },
+  {
+    icon: "fa-solid fa-door-open",
+    name: "Spacious Personal Cupboard",
+    description: "Spacious personal cupboard in each room.",
+    delay: ".42s",
+  },
+  {
+    icon: "fa-solid fa-chair",
+    name: "Study Table with Chair",
+    description: "Dedicated study table with chair in every room.",
+    delay: ".48s",
+  },
+  {
+    icon: "fa-solid fa-dumbbell",
+    name: "Gym Area",
+    description: "Well-equipped gym area for daily fitness and workouts.",
+    delay: ".51s",
+  },
+  {
+    icon: "fa-solid fa-wifi",
+    name: "High Speed WiFi (100 Mbps)",
+    description: "High speed WiFi connectivity up to 100 Mbps.",
+    delay: ".54s",
   },
   {
     icon: "fa-solid fa-shirt",
     name: "Laundry",
     description: "Fully automatic washing machine facility available.",
-    delay: ".42s",
-  },
-  {
-    icon: "fa-solid fa-book-open",
-    name: "Library & Recreation",
-    description: "Library and recreational area for focused and leisure time.",
-    delay: ".48s",
+    delay: ".60s",
   },
   {
     icon: "fa-solid fa-video",
     name: "CCTV Surveillance",
     description: "CCTV surveillance across key entry and common areas.",
-    delay: ".54s",
-  },
-  {
-    icon: "fa-solid fa-motorcycle",
-    name: "Parking Facility",
-    description: "Dedicated parking facility for residents.",
-    delay: ".60s",
+    delay: ".66s",
   },
   {
     icon: "fa-solid fa-truck-fast",
     name: "Transport Facility",
     description: "Transport support available for convenient commuting.",
-    delay: ".66s",
-  },
-  {
-    icon: "fa-solid fa-shield-halved",
-    name: "24/7 Security",
-    description: "Round-the-clock security coverage for complete safety.",
     delay: ".72s",
   },
   {
-    icon: "fa-solid fa-door-open",
-    name: "Spacious Cupboard",
-    description: "Spacious personal cupboard in each room.",
+    icon: "fa-solid fa-broom",
+    name: "Daily Cleaning Service",
+    description: "Cleaning service provided on a daily basis.",
     delay: ".78s",
+  },
+  {
+    icon: "fa-solid fa-book-open",
+    name: "Library and Recreational Area",
+    description: "Library and recreational area for focused and leisure time.",
+    delay: ".84s",
+  },
+  {
+    icon: "fa-solid fa-motorcycle",
+    name: "Parking Facility",
+    description: "Dedicated parking facility for residents.",
+    delay: ".90s",
+  },
+  {
+    icon: "fa-solid fa-shield-halved",
+    name: "24*7 Security",
+    description: "Round-the-clock security coverage for complete safety.",
+    delay: ".96s",
+  },
+];
+
+export const IRIS_FACILITIES: Facility[] = [
+  {
+    icon: "fa-solid fa-bowl-food",
+    name: "Fabulous Food",
+    description: "Separate live kitchen and dining facility.",
+    delay: ".0s",
+  },
+  {
+    icon: "fa-solid fa-bowl-food",
+    name: "4 Time Indian Meals",
+    description:
+      "Hot, delicious, nutritious authentic Indian 4 time meals in live kitchen. Packed lunch is provided on weekdays.",
+    delay: ".06s",
+  },
+  {
+    icon: "fa-solid fa-snowflake",
+    name: "Fully Furnished A.C Rooms",
+    description: "Fully furnished air-conditioned rooms for daily comfort.",
+    delay: ".12s",
   },
   {
     icon: "fa-solid fa-bed",
     name: "Bed with Extra Storage",
-    description: "Comfortable beds with added storage space.",
-    delay: ".84s",
+    description: "Comfortable bed with additional storage space.",
+    delay: ".18s",
+  },
+  {
+    icon: "fa-solid fa-glass-water",
+    name: "Purified Drinking Water",
+    description: "Safe purified drinking water available throughout the day.",
+    delay: ".24s",
+  },
+  {
+    icon: "fa-solid fa-fire-burner",
+    name: "Induction and Vessels",
+    description: "Induction and vessels available for personal use.",
+    delay: ".30s",
+  },
+  {
+    icon: "fa-solid fa-temperature-low",
+    name: "Refrigerator and Geyser",
+    description: "Refrigerator and geyser support for day-to-day convenience.",
+    delay: ".36s",
+  },
+  {
+    icon: "fa-solid fa-door-open",
+    name: "Spacious Personal Cupboard",
+    description: "Spacious personal cupboard in each room.",
+    delay: ".42s",
   },
   {
     icon: "fa-solid fa-chair",
-    name: "Study Table and Chair",
+    name: "Study Table with Chair",
     description: "Dedicated study table with chair in every room.",
+    delay: ".48s",
+  },
+  {
+    icon: "fa-solid fa-wifi",
+    name: "High Speed WiFi (100 Mbps)",
+    description: "High speed WiFi connectivity up to 100 Mbps.",
+    delay: ".54s",
+  },
+  {
+    icon: "fa-solid fa-shirt",
+    name: "Laundry",
+    description: "Fully automatic washing machine facility available.",
+    delay: ".60s",
+  },
+  {
+    icon: "fa-solid fa-video",
+    name: "CCTV Surveillance",
+    description: "CCTV surveillance across key entry and common areas.",
+    delay: ".66s",
+  },
+  {
+    icon: "fa-solid fa-truck-fast",
+    name: "Transport Facility",
+    description: "Transport support available for convenient commuting.",
+    delay: ".72s",
+  },
+  {
+    icon: "fa-solid fa-broom",
+    name: "Daily Cleaning Service",
+    description: "Cleaning service provided on a daily basis.",
+    delay: ".78s",
+  },
+  {
+    icon: "fa-solid fa-book-open",
+    name: "Library and Recreational Area",
+    description: "Library and recreational area for focused and leisure time.",
+    delay: ".84s",
+  },
+  {
+    icon: "fa-solid fa-motorcycle",
+    name: "Parking Facility",
+    description: "Dedicated parking facility for residents.",
     delay: ".90s",
+  },
+  {
+    icon: "fa-solid fa-shield-halved",
+    name: "24*7 Security",
+    description: "Round-the-clock security coverage for complete safety.",
+    delay: ".96s",
   },
 ];
 

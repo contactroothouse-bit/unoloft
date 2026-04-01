@@ -286,6 +286,10 @@ footer .nav-logo {
   box-shadow: 0 2px 10px rgba(240, 101, 32, 0.3);
 }
 
+#nav.s .pg-tab.active {
+  color: #fff;
+}
+
 .pg-tab:not(.active):hover {
   background: rgba(0, 0, 0, 0.04);
   color: var(--navy);
