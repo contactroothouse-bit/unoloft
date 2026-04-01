@@ -158,6 +158,18 @@ export const ASTER_FACILITIES: Facility[] = [
       "Round-the-clock hot water for a refreshing start every single day.",
     delay: ".72s",
   },
+  {
+    icon: "fa-solid fa-bed",
+    name: "Bed with Extra Storage",
+    description: "Comfortable beds with added storage space.",
+    delay: ".78s",
+  },
+  {
+    icon: "fa-solid fa-chair",
+    name: "Study Table and Chair",
+    description: "Dedicated study table with chair in every room.",
+    delay: ".84s",
+  },
 ];
 
 export const IRIS_FACILITIES: Facility[] = [
@@ -241,28 +253,22 @@ export const IRIS_FACILITIES: Facility[] = [
     delay: ".72s",
   },
   {
-    icon: "fa-solid fa-snowflake",
-    name: "Fully Furnished A.C Rooms",
-    description: "Fully furnished air-conditioned rooms with modern setup.",
-    delay: ".78s",
-  },
-  {
     icon: "fa-solid fa-door-open",
     name: "Spacious Cupboard",
     description: "Spacious personal cupboard in each room.",
-    delay: ".84s",
+    delay: ".78s",
   },
   {
     icon: "fa-solid fa-bed",
     name: "Bed with Extra Storage",
     description: "Comfortable beds with added storage space.",
-    delay: ".90s",
+    delay: ".84s",
   },
   {
     icon: "fa-solid fa-chair",
-    name: "Study Table & Chair",
+    name: "Study Table and Chair",
     description: "Dedicated study table with chair in every room.",
-    delay: ".96s",
+    delay: ".90s",
   },
 ];
 
