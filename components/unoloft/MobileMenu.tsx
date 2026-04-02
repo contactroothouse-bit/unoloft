@@ -39,9 +39,7 @@ export default function MobileMenu({
   linkMode = "anchors",
 }: MobileMenuProps) {
   const isRoutesMode = linkMode === "routes";
-  const links = isRoutesMode
-    ? CONSISTENT_ROUTE_LINKS
-    : CONSISTENT_ANCHOR_LINKS;
+  const links = isRoutesMode ? CONSISTENT_ROUTE_LINKS : CONSISTENT_ANCHOR_LINKS;
 
   return (
     <>
@@ -60,7 +58,9 @@ export default function MobileMenu({
             key={item.href}
             href={item.href}
             onClick={onClose}
-            style={item.cta ? { color: "var(--brand)", fontWeight: 700 } : undefined}
+            style={
+              item.cta ? { color: "var(--brand)", fontWeight: 700 } : undefined
+            }
           >
             {item.label}
           </Link>

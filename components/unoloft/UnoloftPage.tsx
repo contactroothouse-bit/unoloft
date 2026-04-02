@@ -6,7 +6,10 @@ import BackToTopButton from "@/components/unoloft/BackToTopButton";
 import Lightbox from "@/components/unoloft/Lightbox";
 import MobileMenu from "@/components/unoloft/MobileMenu";
 import Navbar from "@/components/unoloft/Navbar";
-import { GALLERY_ITEMS_BY_HOME, TESTIMONIALS_BY_HOME } from "@/components/unoloft/data";
+import {
+  GALLERY_ITEMS_BY_HOME,
+  TESTIMONIALS_BY_HOME,
+} from "@/components/unoloft/data";
 import ContactSection from "@/components/unoloft/sections/ContactSection";
 import FacilitiesSection from "@/components/unoloft/sections/FacilitiesSection";
 import FooterSection from "@/components/unoloft/sections/FooterSection";
@@ -164,10 +167,7 @@ export default function UnoloftPage() {
         onNavigate={onLightboxNavigate}
       />
 
-      <MobileMenu
-        open={mobileOpen}
-        onClose={() => setMobileOpen(false)}
-      />
+      <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
 
       <Navbar
         navScrolled={navScrolled}
