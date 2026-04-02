@@ -88,14 +88,14 @@ export default function Navbar({
             className={cn("pg-tab", selectedHome === "aster" && "active")}
             onClick={() => onHomeChange("aster")}
           >
-            Aster
+            Aster Homes
           </button>
           <button
             type="button"
             className={cn("pg-tab", selectedHome === "iris" && "active")}
             onClick={() => onHomeChange("iris")}
           >
-            Iris
+            Iris House
           </button>
         </div>
       ) : null}

@@ -77,7 +77,7 @@ export default function MobileMenu({
                 onClose();
               }}
             >
-              Aster
+              Aster Homes
             </button>
             <button
               type="button"
@@ -87,7 +87,7 @@ export default function MobileMenu({
                 onClose();
               }}
             >
-              Iris
+              Iris House
             </button>
           </div>
         ) : null}
