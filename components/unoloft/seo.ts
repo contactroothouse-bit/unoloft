@@ -27,6 +27,7 @@ export const MAIN_ROUTES = [
   "/location",
   "/contact",
   "/gallery",
+  "/blogs",
   "/faq",
 ] as const;
 
@@ -46,6 +47,27 @@ export const ALL_SEO_ROUTES: RouteConfig[] = [
   { path: "/location", changeFrequency: "weekly", priority: 0.7 },
   { path: "/contact", changeFrequency: "weekly", priority: 0.7 },
   { path: "/gallery", changeFrequency: "weekly", priority: 0.7 },
+  { path: "/blogs", changeFrequency: "weekly", priority: 0.8 },
+  {
+    path: "/blogs/working-professional-pg-decision-framework-ahmedabad",
+    changeFrequency: "monthly",
+    priority: 0.7,
+  },
+  {
+    path: "/blogs/location-first-pg-strategy-students-professionals-ahmedabad",
+    changeFrequency: "monthly",
+    priority: 0.7,
+  },
+  {
+    path: "/blogs/student-pg-budget-blueprint-ahmedabad-2026",
+    changeFrequency: "monthly",
+    priority: 0.7,
+  },
+  {
+    path: "/blogs/parents-guide-safe-pg-ahmedabad",
+    changeFrequency: "monthly",
+    priority: 0.7,
+  },
   { path: "/faq", changeFrequency: "weekly", priority: 0.7 },
   { path: "/pg-in-gota-ahmedabad", changeFrequency: "weekly", priority: 0.9 },
   {
