@@ -15,6 +15,7 @@ const ANCHOR_DESKTOP_LINKS: NavLinkItem[] = [
   { href: "/iris-house", label: "Iris House" },
   { href: "#facilities", label: "Facilities" },
   { href: "#gallery", label: "Gallery" },
+  { href: "#blogs", label: "Blogs" },
   { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact Us", cta: true },
 ];
@@ -26,6 +27,7 @@ const ROUTE_DESKTOP_LINKS: NavLinkItem[] = [
   { href: "/amenities", label: "Facilities" },
   { href: "/rooms", label: "Rooms" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/blogs", label: "Blogs" },
   { href: "/location", label: "Location" },
   { href: "/faq", label: "FAQ" },
   { href: "/pg-near-nirma-university", label: "Near Nirma" },

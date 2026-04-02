@@ -15,6 +15,7 @@ import GallerySection from "@/components/unoloft/sections/GallerySection";
 import HeroSection from "@/components/unoloft/sections/HeroSection";
 import MapSection from "@/components/unoloft/sections/MapSection";
 import PgIntroSection from "@/components/unoloft/sections/PgIntroSection";
+import BlogsSection from "@/components/unoloft/sections/BlogsSection";
 import RoomsSection from "@/components/unoloft/sections/RoomsSection";
 import TestimonialsSection from "@/components/unoloft/sections/TestimonialsSection";
 import type { GalleryFilter, Home, Mode } from "@/components/unoloft/types";
@@ -215,6 +216,7 @@ export default function UnoloftPage() {
       />
 
       <TestimonialsSection items={TESTIMONIALS_BY_HOME[selectedHome]} />
+      <BlogsSection />
 
       <FaqSection
         openIndex={openFaqIndex}
