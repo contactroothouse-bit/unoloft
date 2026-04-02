@@ -21,14 +21,14 @@ export const HERO_TEXT: Record<Mode, HeroText> = {
     ey: "Premium PG  Ahmedabad",
   },
   boys: {
-    h1: "Built for the",
-    h2: "Modern Man.",
+    h1: "Built for",
+    h2: "Focused Living.",
     ey: "Aster Homes · Boys PG · Ahmedabad",
   },
   girls: {
-    h1: "Designed for",
-    h2: "Her Comfort.",
-    ey: "Iris House · Girls PG · Ahmedabad",
+    h1: "Crafted for",
+    h2: "Simple, Elegant Living.",
+    ey: "Iris House · Boys PG · Ahmedabad",
   },
 };
 
@@ -733,7 +733,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "How is safety managed at Unoloft?",
     answer:
-      "24/7 security guards, CCTV on all entry/exit points, biometric access, and a resident warden round the clock. Iris House has a dedicated lady warden on-site.",
+      "24/7 security guards, CCTV on all entry/exit points, biometric access, and a resident warden round the clock. Iris House has a dedicated on-site warden.",
   },
 ];
 
