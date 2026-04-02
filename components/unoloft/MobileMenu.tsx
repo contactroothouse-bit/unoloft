@@ -7,23 +7,23 @@ type MenuLinkItem = {
   cta?: boolean;
 };
 
-const ANCHOR_MOBILE_LINKS: MenuLinkItem[] = [
+const CONSISTENT_ANCHOR_LINKS: MenuLinkItem[] = [
   { href: "#pg-intro", label: "About" },
+  { href: "/aster-homes", label: "Aster Homes" },
+  { href: "/iris-house", label: "Iris House" },
   { href: "#facilities", label: "Facilities" },
-  { href: "#rooms", label: "Rooms" },
   { href: "#gallery", label: "Gallery" },
   { href: "#faq", label: "FAQ" },
-  { href: "#map-sec", label: "Location" },
-  { href: "#contact", label: "Contact Us", cta: true },
+  { href: "/contact", label: "Contact Us", cta: true },
 ];
 
-const ROUTE_MOBILE_LINKS: MenuLinkItem[] = [
-  { href: "/", label: "About" },
-  { href: "/amenities", label: "Facilities" },
-  { href: "/rooms", label: "Rooms" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/location", label: "Location" },
+const CONSISTENT_ROUTE_LINKS: MenuLinkItem[] = [
+  { href: "/#pg-intro", label: "About" },
+  { href: "/aster-homes", label: "Aster Homes" },
+  { href: "/iris-house", label: "Iris House" },
+  { href: "/#facilities", label: "Facilities" },
+  { href: "/#gallery", label: "Gallery" },
+  { href: "/#faq", label: "FAQ" },
   { href: "/contact", label: "Contact Us", cta: true },
 ];
 
@@ -39,7 +39,9 @@ export default function MobileMenu({
   linkMode = "anchors",
 }: MobileMenuProps) {
   const isRoutesMode = linkMode === "routes";
-  const links = isRoutesMode ? ROUTE_MOBILE_LINKS : ANCHOR_MOBILE_LINKS;
+  const links = isRoutesMode
+    ? CONSISTENT_ROUTE_LINKS
+    : CONSISTENT_ANCHOR_LINKS;
 
   return (
     <>
@@ -53,27 +55,16 @@ export default function MobileMenu({
           <i className="fa-solid fa-xmark" />
         </span>
 
-        {links.map((item) =>
-          isRoutesMode ? (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={onClose}
-              style={item.cta ? { color: "var(--brand)", fontWeight: 700 } : undefined}
-            >
-              {item.label}
-            </Link>
-          ) : (
-            <a
-              key={item.href}
-              href={item.href}
-              onClick={onClose}
-              style={item.cta ? { color: "var(--brand)", fontWeight: 700 } : undefined}
-            >
-              {item.label}
-            </a>
-          ),
-        )}
+        {links.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            onClick={onClose}
+            style={item.cta ? { color: "var(--brand)", fontWeight: 700 } : undefined}
+          >
+            {item.label}
+          </Link>
+        ))}
       </div>
     </>
   );

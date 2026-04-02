@@ -41,7 +41,7 @@ export const HERO_MOSAIC_CARDS: HeroMosaicCard[] = [
     alt: "Room",
     sources: {
       aster: "/gallery/IMG-20260201-WA0003.jpg",
-      iris: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0002.jpg`,
+      iris: "/gallery/IMG-20260201-WA0003.jpg",
     },
   },
   {
@@ -50,7 +50,7 @@ export const HERO_MOSAIC_CARDS: HeroMosaicCard[] = [
     alt: "Reception",
     sources: {
       aster: "/gallery/IMG-20260201-WA0007.jpg",
-      iris: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0021.jpg`,
+      iris: "/gallery/IMG-20260201-WA0007.jpg",
     },
   },
   {
@@ -59,7 +59,7 @@ export const HERO_MOSAIC_CARDS: HeroMosaicCard[] = [
     alt: "Study Room",
     sources: {
       aster: "/gallery/IMG-20260201-WA0004(1).jpg",
-      iris: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0019.jpg`,
+      iris: "/gallery/IMG-20260201-WA0004(1).jpg",
     },
   },
   {
@@ -67,8 +67,8 @@ export const HERO_MOSAIC_CARDS: HeroMosaicCard[] = [
     cardClass: "mc4",
     alt: "Building",
     sources: {
-      aster: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0001.jpg`,
-      iris: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0001.jpg`,
+      aster: "/gallery/IMG-20260201-WA0006.jpg",
+      iris: "/gallery/IMG-20260201-WA0006.jpg",
     },
   },
 ];

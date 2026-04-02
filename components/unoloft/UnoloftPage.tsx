@@ -172,6 +172,11 @@ export default function UnoloftPage() {
       <Navbar
         navScrolled={navScrolled}
         onMobileOpen={() => setMobileOpen(true)}
+        selectedHome={selectedHome}
+        onHomeChange={(home) => {
+          setSelectedHome(home);
+          setGalleryFilter("all");
+        }}
       />
 
       <HeroSection mode={mode} selectedHome={selectedHome} />
