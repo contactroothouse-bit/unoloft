@@ -14,7 +14,7 @@ const CONSISTENT_ANCHOR_LINKS: MenuLinkItem[] = [
   { href: "/iris-house", label: "Iris House" },
   { href: "#facilities", label: "Facilities" },
   { href: "#gallery", label: "Gallery" },
-  { href: "#blogs", label: "Blogs" },
+  { href: "/blogs", label: "Blogs" },
   { href: "#faq", label: "FAQ" },
   { href: "/contact", label: "Contact Us", cta: true },
 ];
@@ -24,13 +24,9 @@ const CONSISTENT_ROUTE_LINKS: MenuLinkItem[] = [
   { href: "/aster-homes", label: "Aster Homes" },
   { href: "/iris-house", label: "Iris House" },
   { href: "/#facilities", label: "Facilities" },
-  { href: "/#gallery", label: "Gallery" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/blogs", label: "Blogs" },
   { href: "/#faq", label: "FAQ" },
-  { href: "/pg-near-nirma-university", label: "PG near Nirma University" },
-  { href: "/pg-near-silver-oak", label: "PG near Silver Oak University" },
-  { href: "/pg-in-gota-ahmedabad", label: "PG in Gota Ahmedabad" },
-  { href: "/pg-near-sg-highway", label: "PG near SG Highway" },
   { href: "/contact", label: "Contact Us", cta: true },
 ];
 

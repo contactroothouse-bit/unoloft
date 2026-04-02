@@ -57,7 +57,10 @@ export default function PgNearNirmaUniversityPage() {
         ]}
         mapEmbed="https://www.google.com/maps?q=Aster%20Homes%20by%20Unoloft%20-%20PG%20in%20Gota%20Ahmedabad&output=embed"
         alsoNearLinks={[
-          { href: "/pg-near-silver-oak", label: "Also near Silver Oak University" },
+          {
+            href: "/pg-near-silver-oak",
+            label: "Also near Silver Oak University",
+          },
           { href: "/pg-near-sg-highway", label: "Also near SG Highway" },
           { href: "/pg-in-gota-ahmedabad", label: "Also in Gota Ahmedabad" },
         ]}

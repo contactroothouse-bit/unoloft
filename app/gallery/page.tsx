@@ -3,7 +3,10 @@ import Link from "next/link";
 import JsonLd from "@/components/unoloft/JsonLd";
 import PageShell from "@/components/unoloft/PageShell";
 import GalleryPageClient from "@/components/unoloft/GalleryPageClient";
-import { buildPageMetadata, getBreadcrumbSchema } from "@/components/unoloft/seo";
+import {
+  buildPageMetadata,
+  getBreadcrumbSchema,
+} from "@/components/unoloft/seo";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Unoloft Gallery – PG Rooms, Amenities & Common Spaces in Ahmedabad",
@@ -22,7 +25,8 @@ export default function GalleryPage() {
         <section id="contact" className="subpage-section">
           <div className="con-cen rv in">
             <p className="s-sub">
-              Seen enough? <Link href="/contact">Book your property tour now</Link>.
+              Seen enough?{" "}
+              <Link href="/contact">Book your property tour now</Link>.
             </p>
           </div>
         </section>

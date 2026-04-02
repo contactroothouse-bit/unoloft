@@ -68,7 +68,9 @@ export default function FacilitiesSection({
           <button
             type="button"
             className="fac-load-more"
-            onClick={() => setVisibleCount((current) => current + MOBILE_INITIAL_COUNT)}
+            onClick={() =>
+              setVisibleCount((current) => current + MOBILE_INITIAL_COUNT)
+            }
           >
             Load More Amenities
           </button>

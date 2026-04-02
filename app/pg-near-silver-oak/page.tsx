@@ -27,7 +27,8 @@ const LANDING_FAQS = [
 ];
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "PG near Silver Oak University Ahmedabad – Furnished Boys PG | Unoloft",
+  title:
+    "PG near Silver Oak University Ahmedabad – Furnished Boys PG | Unoloft",
   description:
     "Looking for PG near Silver Oak University? Unoloft offers furnished AC boys PG rooms with meals, WiFi, gym and security in Gota Ahmedabad.",
   path: "/pg-near-silver-oak",
@@ -40,7 +41,9 @@ export default function PgNearSilverOakPage() {
         data={getBreadcrumbSchema("/pg-near-silver-oak", "PG near Silver Oak")}
       />
       <JsonLd
-        data={getLodgingBusinessSchema("Unoloft – PG near Silver Oak University")}
+        data={getLodgingBusinessSchema(
+          "Unoloft – PG near Silver Oak University",
+        )}
       />
       <JsonLd data={getFaqSchema(LANDING_FAQS)} />
       <LocalSeoLandingPage
@@ -55,7 +58,10 @@ export default function PgNearSilverOakPage() {
         ]}
         mapEmbed="https://www.google.com/maps?q=Aster%20Homes%20by%20Unoloft%20-%20PG%20in%20Gota%20Ahmedabad&output=embed"
         alsoNearLinks={[
-          { href: "/pg-near-nirma-university", label: "Also near Nirma University" },
+          {
+            href: "/pg-near-nirma-university",
+            label: "Also near Nirma University",
+          },
           { href: "/pg-near-sg-highway", label: "Also near SG Highway" },
           { href: "/pg-in-gota-ahmedabad", label: "Also in Gota Ahmedabad" },
         ]}

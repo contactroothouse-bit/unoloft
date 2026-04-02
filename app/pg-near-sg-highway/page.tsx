@@ -10,7 +10,8 @@ import {
 
 const LANDING_FAQS = [
   {
-    question: "Is Unoloft suitable for students and working professionals near SG Highway?",
+    question:
+      "Is Unoloft suitable for students and working professionals near SG Highway?",
     answer:
       "Yes. Unoloft is close to SG Highway and works well for both university students and working professionals who need quick commute access.",
   },
@@ -40,7 +41,9 @@ export default function PgNearSgHighwayPage() {
         data={getBreadcrumbSchema("/pg-near-sg-highway", "PG near SG Highway")}
       />
       <JsonLd
-        data={getLodgingBusinessSchema("Unoloft – PG near SG Highway Ahmedabad")}
+        data={getLodgingBusinessSchema(
+          "Unoloft – PG near SG Highway Ahmedabad",
+        )}
       />
       <JsonLd data={getFaqSchema(LANDING_FAQS)} />
       <LocalSeoLandingPage
@@ -55,8 +58,14 @@ export default function PgNearSgHighwayPage() {
         ]}
         mapEmbed="https://www.google.com/maps?q=Aster%20Homes%20by%20Unoloft%20-%20PG%20in%20Gota%20Ahmedabad&output=embed"
         alsoNearLinks={[
-          { href: "/pg-near-nirma-university", label: "Also near Nirma University" },
-          { href: "/pg-near-silver-oak", label: "Also near Silver Oak University" },
+          {
+            href: "/pg-near-nirma-university",
+            label: "Also near Nirma University",
+          },
+          {
+            href: "/pg-near-silver-oak",
+            label: "Also near Silver Oak University",
+          },
           { href: "/pg-in-gota-ahmedabad", label: "Also in Gota Ahmedabad" },
         ]}
         faqs={LANDING_FAQS}

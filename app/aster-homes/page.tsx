@@ -3,10 +3,7 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/unoloft/JsonLd";
 import PageShell from "@/components/unoloft/PageShell";
 import GalleryPageClient from "@/components/unoloft/GalleryPageClient";
-import {
-  ASTER_TESTIMONIALS,
-  FAQ_ITEMS,
-} from "@/components/unoloft/data";
+import { ASTER_TESTIMONIALS, FAQ_ITEMS } from "@/components/unoloft/data";
 import FacilitiesSection from "@/components/unoloft/sections/FacilitiesSection";
 import MapSection from "@/components/unoloft/sections/MapSection";
 import RoomsSection from "@/components/unoloft/sections/RoomsSection";
@@ -50,12 +47,15 @@ export default function AsterHomesPage() {
               <p className="s-sub">
                 Aster Homes is Unoloft&apos;s flagship boys PG in Ahmedabad,
                 designed for students and working professionals who need premium
-                rooms, reliable meals, high-speed internet, and daily comfort near
-                SG Highway and Nirma University.
+                rooms, reliable meals, high-speed internet, and daily comfort
+                near SG Highway and Nirma University.
               </p>
             </div>
 
-            <div className="subpage-intro-media rv" style={{ transitionDelay: ".08s" }}>
+            <div
+              className="subpage-intro-media rv"
+              style={{ transitionDelay: ".08s" }}
+            >
               <div className="subpage-intro-shot">
                 <Image
                   src="/gallery/IMG-20260201-WA0003.jpg"

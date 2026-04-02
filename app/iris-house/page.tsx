@@ -3,10 +3,7 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/unoloft/JsonLd";
 import PageShell from "@/components/unoloft/PageShell";
 import GalleryPageClient from "@/components/unoloft/GalleryPageClient";
-import {
-  ASTER_TESTIMONIALS,
-  FAQ_ITEMS,
-} from "@/components/unoloft/data";
+import { ASTER_TESTIMONIALS, FAQ_ITEMS } from "@/components/unoloft/data";
 import FacilitiesSection from "@/components/unoloft/sections/FacilitiesSection";
 import MapSection from "@/components/unoloft/sections/MapSection";
 import RoomsSection from "@/components/unoloft/sections/RoomsSection";
@@ -48,14 +45,18 @@ export default function IrisHousePage() {
                 Iris House <em>Premium Boys PG</em>
               </h1>
               <p className="s-sub">
-                Iris House is a premium boys PG by Unoloft near top institutions in
-                Ahmedabad, offering furnished AC rooms, curated interiors, hygienic
-                meals, surveillance-enabled safety, and a focused environment for
-                students who need convenience and quality in one place.
+                Iris House is a premium boys PG by Unoloft near top institutions
+                in Ahmedabad, offering furnished AC rooms, curated interiors,
+                hygienic meals, surveillance-enabled safety, and a focused
+                environment for students who need convenience and quality in one
+                place.
               </p>
             </div>
 
-            <div className="subpage-intro-media rv" style={{ transitionDelay: ".08s" }}>
+            <div
+              className="subpage-intro-media rv"
+              style={{ transitionDelay: ".08s" }}
+            >
               <div className="subpage-intro-shot">
                 <Image
                   src="/gallery/IMG-20260201-WA0003.jpg"

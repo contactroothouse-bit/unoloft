@@ -20,8 +20,7 @@ export default function RoomsSection({
   eyebrow = "Accommodation",
   titleStart = "Choose Your",
   titleEmphasis = "Perfect Room",
-  subtitle =
-    "Flexible options for every budget — fully furnished and ready to move in.",
+  subtitle = "Flexible options for every budget — fully furnished and ready to move in.",
   homeLabel,
   sectionClassName,
 }: RoomsSectionProps) {

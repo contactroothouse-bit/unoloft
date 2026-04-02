@@ -15,7 +15,7 @@ const CONSISTENT_ANCHOR_LINKS: NavLinkItem[] = [
   { href: "/iris-house", label: "Iris House" },
   { href: "#facilities", label: "Facilities" },
   { href: "#gallery", label: "Gallery" },
-  { href: "#blogs", label: "Blogs" },
+  { href: "/blogs", label: "Blogs" },
   { href: "#faq", label: "FAQ" },
   { href: "/contact", label: "Contact Us", cta: true },
 ];
@@ -24,16 +24,10 @@ const CONSISTENT_ROUTE_LINKS: NavLinkItem[] = [
   { href: "/#pg-intro", label: "About" },
   { href: "/aster-homes", label: "Aster Homes" },
   { href: "/iris-house", label: "Iris House" },
-  { href: "/amenities", label: "Facilities" },
-  { href: "/rooms", label: "Rooms" },
+  { href: "/#facilities", label: "Facilities" },
   { href: "/gallery", label: "Gallery" },
   { href: "/blogs", label: "Blogs" },
-  { href: "/location", label: "Location" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/pg-near-nirma-university", label: "Near Nirma" },
-  { href: "/pg-near-silver-oak", label: "Near Silver Oak" },
-  { href: "/pg-in-gota-ahmedabad", label: "In Gota" },
-  { href: "/pg-near-sg-highway", label: "Near SG Highway" },
+  { href: "/#faq", label: "FAQ" },
   { href: "/contact", label: "Contact Us", cta: true },
 ];
 

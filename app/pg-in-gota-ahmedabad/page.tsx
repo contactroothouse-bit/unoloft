@@ -42,7 +42,9 @@ export default function PgInGotaAhmedabadPage() {
           "PG in Gota Ahmedabad",
         )}
       />
-      <JsonLd data={getLodgingBusinessSchema("Unoloft – PG in Gota Ahmedabad")} />
+      <JsonLd
+        data={getLodgingBusinessSchema("Unoloft – PG in Gota Ahmedabad")}
+      />
       <JsonLd data={getFaqSchema(LANDING_FAQS)} />
       <LocalSeoLandingPage
         h1="PG in Gota Ahmedabad – Unoloft"
@@ -56,7 +58,10 @@ export default function PgInGotaAhmedabadPage() {
         ]}
         mapEmbed="https://www.google.com/maps?q=Aster%20Homes%20by%20Unoloft%20-%20PG%20in%20Gota%20Ahmedabad&output=embed"
         alsoNearLinks={[
-          { href: "/pg-near-nirma-university", label: "Also near Nirma University" },
+          {
+            href: "/pg-near-nirma-university",
+            label: "Also near Nirma University",
+          },
           { href: "/pg-near-silver-oak", label: "Also near Silver Oak" },
           { href: "/pg-near-sg-highway", label: "Also near SG Highway" },
         ]}

@@ -43,7 +43,8 @@ export default function LocalSeoLandingPage({
       mapEmbed,
     },
     iris: {
-      address: "Behind Nirma University, Beside Adani Pratham, Tragad, Ahmedabad.",
+      address:
+        "Behind Nirma University, Beside Adani Pratham, Tragad, Ahmedabad.",
       mapEmbed:
         "https://www.google.com/maps?q=Iris%20House%20By%20Unoloft%20Hostel%20P.G.%20near%20Nirma%20University&output=embed",
     },
@@ -92,7 +93,10 @@ export default function LocalSeoLandingPage({
                 </button>
               ) : null}
             </div>
-            <div className="subpage-intro-shot rv in" style={{ transitionDelay: ".08s" }}>
+            <div
+              className="subpage-intro-shot rv in"
+              style={{ transitionDelay: ".08s" }}
+            >
               <Image
                 src={introImageSrc}
                 alt={`${h1} at Unoloft`}
@@ -141,9 +145,16 @@ export default function LocalSeoLandingPage({
               Also Near <em>These Areas</em>
             </h2>
           </div>
-          <div className="hero-btns local-cta-row" style={{ justifyContent: "center" }}>
+          <div
+            className="hero-btns local-cta-row"
+            style={{ justifyContent: "center" }}
+          >
             {alsoNearLinks.map((item) => (
-              <Link key={item.href} href={item.href} className="local-near-link">
+              <Link
+                key={item.href}
+                href={item.href}
+                className="local-near-link"
+              >
                 {item.label}
               </Link>
             ))}
