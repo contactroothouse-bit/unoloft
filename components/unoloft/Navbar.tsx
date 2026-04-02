@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Home } from "@/components/unoloft/types";
 import { cn } from "@/components/unoloft/utils";
-import type { Home } from "@/components/unoloft/types";
 
 export type NavLinkItem = {
   href: string;
@@ -24,17 +23,9 @@ const CONSISTENT_ROUTE_LINKS: NavLinkItem[] = [
   { href: "/#pg-intro", label: "About" },
   { href: "/aster-homes", label: "Aster Homes" },
   { href: "/iris-house", label: "Iris House" },
-  { href: "/aster-homes", label: "Aster Homes" },
-  { href: "/iris-house", label: "Iris House" },
   { href: "/#facilities", label: "Facilities" },
-  { href: "/rooms", label: "Rooms" },
   { href: "/#gallery", label: "Gallery" },
-  { href: "/location", label: "Location" },
   { href: "/#faq", label: "FAQ" },
-  { href: "/pg-near-nirma-university", label: "Near Nirma" },
-  { href: "/pg-near-silver-oak", label: "Near Silver Oak" },
-  { href: "/pg-in-gota-ahmedabad", label: "In Gota" },
-  { href: "/pg-near-sg-highway", label: "Near SG Highway" },
   { href: "/contact", label: "Contact Us", cta: true },
 ];
 
@@ -58,9 +49,7 @@ export default function Navbar({
   const navLinks = isRoutesMode
     ? CONSISTENT_ROUTE_LINKS
     : CONSISTENT_ANCHOR_LINKS;
-  const showHomeToggle = !isRoutesMode && selectedHome && onHomeChange;
-  const showHomeToggle =
-    !isRoutesMode && Boolean(selectedHome) && Boolean(onHomeChange);
+  const showHomeToggle = Boolean(selectedHome) && Boolean(onHomeChange);
 
   return (
     <nav id="nav" className={cn(navScrolled && "s")}>
@@ -92,25 +81,6 @@ export default function Navbar({
             onClick={() => onHomeChange?.("iris")}
             role="tab"
             aria-selected={selectedHome === "iris"}
-          >
-            Iris House
-          </button>
-        </div>
-      ) : null}
-
-      {showHomeToggle ? (
-        <div className="nav-tabs" aria-label="Select home">
-          <button
-            type="button"
-            className={cn("pg-tab", selectedHome === "aster" && "active")}
-            onClick={() => onHomeChange("aster")}
-          >
-            Aster Homes
-          </button>
-          <button
-            type="button"
-            className={cn("pg-tab", selectedHome === "iris" && "active")}
-            onClick={() => onHomeChange("iris")}
           >
             Iris House
           </button>

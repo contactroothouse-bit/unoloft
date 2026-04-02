@@ -46,7 +46,7 @@ export default function PgNearSgHighwayPage() {
       <LocalSeoLandingPage
         h1="PG near SG Highway, Ahmedabad – Unoloft"
         intro="Unoloft is an excellent choice for anyone searching for a premium PG near SG Highway, Ahmedabad with faster city connectivity and full-day convenience. SG Highway is approximately 2 minutes away from the property, so residents can quickly access college routes, coaching classes, office corridors, and transport links without losing time in daily traffic. This location is particularly useful for students attending nearby institutes like Nirma University and Silver Oak University because both campuses remain within a manageable commute radius. Unoloft offers furnished AC rooms in single, double, and triple sharing options, allowing residents to match comfort needs with budget preferences. Core services include high-speed WiFi, home-cooked meals, housekeeping, filtered water, and security monitoring for safer long-term stays. The property is also close to Gota Circle, which adds practicality for daily errands and local commute flexibility. For students and working professionals who value both mobility and comfort, this PG near SG Highway provides a structured and dependable setup that supports study focus, work discipline, and stress-free routine living."
-        audienceCta="Great for SG Highway commuters - double sharing from INR 14,500/month and triple sharing from INR 11,000/month with meals and WiFi (subject to availability)."
+        introImageSrc="/PG%20NEARS%20AREA/sghighway.jpg"
         landmarks={[
           "SG Highway access point: approx. 2 minutes",
           "Gota Circle: approx. 2 minutes",

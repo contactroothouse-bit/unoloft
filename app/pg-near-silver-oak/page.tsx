@@ -46,7 +46,7 @@ export default function PgNearSilverOakPage() {
       <LocalSeoLandingPage
         h1="PG near Silver Oak University, Ahmedabad – Unoloft"
         intro="Unoloft is a strong fit for students who want a premium PG near Silver Oak University, Ahmedabad without compromising on commute comfort or room quality. Silver Oak University is approximately 5 minutes away from this location, and on most days students can reach campus with a short auto ride from the Gota-Jagatpur corridor. That time advantage matters during morning lectures, lab sessions, and exam periods. The property offers furnished AC rooms in single, double, and triple sharing options, so students can choose based on privacy preference and monthly budget. Along with furnished rooms, residents receive high-speed WiFi for assignments and online classes, home-cooked meals, routine housekeeping, filtered drinking water, and round-the-clock safety through CCTV and support staff. The same location also keeps SG Highway and Gota Circle nearby, which helps with practical errands and city mobility after college hours. For families comparing options near Silver Oak University, Unoloft provides a safer and better-managed living setup that supports academic focus, predictable commuting, and long-term student convenience in Ahmedabad."
-        audienceCta="Ideal for Silver Oak students - triple sharing from INR 11,000/month and double sharing from INR 14,500/month with meals and WiFi included (subject to availability)."
+        introImageSrc="/PG%20NEARS%20AREA/silver%20oak.webp"
         landmarks={[
           "Silver Oak University main gate: approx. 5 minutes by auto",
           "Nirma University: approx. 10 minutes",

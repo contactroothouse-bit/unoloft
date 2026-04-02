@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
 import { HERO_MOSAIC_CARDS, HERO_TEXT } from "@/components/unoloft/data";
 import type { Home, Mode } from "@/components/unoloft/types";
 
@@ -10,26 +9,7 @@ type HeroSectionProps = {
 
 export default function HeroSection({ mode, selectedHome }: HeroSectionProps) {
   const heroText = HERO_TEXT[mode];
-  const [sources, setSources] = useState(() =>
-    HERO_MOSAIC_CARDS.map((card) => card.sources[selectedHome]),
-  );
-  const [fading, setFading] = useState(false);
-  const mountedRef = useRef(false);
-
-  useEffect(() => {
-    if (!mountedRef.current) {
-      mountedRef.current = true;
-      return;
-    }
-
-    setFading(true);
-    const timer = window.setTimeout(() => {
-      setSources(HERO_MOSAIC_CARDS.map((card) => card.sources[selectedHome]));
-      setFading(false);
-    }, 280);
-
-    return () => window.clearTimeout(timer);
-  }, [mode, selectedHome]);
+  const sources = HERO_MOSAIC_CARDS.map((card) => card.sources[selectedHome]);
 
   return (
     <section id="hero">
@@ -135,7 +115,6 @@ export default function HeroSection({ mode, selectedHome }: HeroSectionProps) {
                 fill
                 sizes="(max-width: 860px) 90vw, 45vw"
                 priority={index === 0}
-                style={{ opacity: fading ? 0 : 1 }}
               />
             </div>
           ))}

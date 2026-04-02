@@ -1,26 +1,42 @@
 import Image from "next/image";
+import { cn } from "@/components/unoloft/utils";
 import { ROOMS_BY_HOME } from "@/components/unoloft/data";
 import type { Home } from "@/components/unoloft/types";
 
 type RoomsSectionProps = {
   selectedHome: Home;
+  sectionId?: string;
+  eyebrow?: string;
+  titleStart?: string;
+  titleEmphasis?: string;
+  subtitle?: string;
+  homeLabel?: string;
+  sectionClassName?: string;
 };
 
-export default function RoomsSection({ selectedHome }: RoomsSectionProps) {
+export default function RoomsSection({
+  selectedHome,
+  sectionId = "rooms",
+  eyebrow = "Accommodation",
+  titleStart = "Choose Your",
+  titleEmphasis = "Perfect Room",
+  subtitle =
+    "Flexible options for every budget — fully furnished and ready to move in.",
+  homeLabel,
+  sectionClassName,
+}: RoomsSectionProps) {
   const rooms = ROOMS_BY_HOME[selectedHome];
   const gridClassName = rooms.length === 2 ? "rooms-g rooms-g-two" : "rooms-g";
 
   return (
-    <section id="rooms">
+    <section id={sectionId} className={cn("rooms-section", sectionClassName)}>
       <div className="sh sh-c rv">
-        <div className="s-ey">Accommodation</div>
+        <div className="s-ey">{eyebrow}</div>
+        {homeLabel ? <div className="rooms-home-chip">{homeLabel}</div> : null}
         <h2 className="s-t">
-          Choose Your <em>Perfect Room</em>
+          {titleStart} <em>{titleEmphasis}</em>
         </h2>
-        <p className="s-sub">
-          Flexible options for every budget — fully furnished and ready to move
-          in.
-        </p>
+        <p className="s-sub">{subtitle}</p>
       </div>
 
       <div className={gridClassName}>

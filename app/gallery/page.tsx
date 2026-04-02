@@ -17,17 +17,6 @@ export default function GalleryPage() {
     <>
       <JsonLd data={getBreadcrumbSchema("/gallery", "Gallery")} />
       <PageShell>
-        <section id="pg-intro" className="subpage-section">
-          <div className="sh rv in">
-            <h1 className="s-t">
-              Unoloft Photo Gallery <em>Ahmedabad PG</em>
-            </h1>
-            <p className="s-sub">
-              Browse real photos from Aster Homes and Iris House to evaluate room
-              quality, cleanliness, and amenities before your visit.
-            </p>
-          </div>
-        </section>
         <GalleryPageClient selectedHome="aster" />
         <GalleryPageClient selectedHome="iris" />
         <section id="contact" className="subpage-section">

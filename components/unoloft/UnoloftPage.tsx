@@ -26,7 +26,7 @@ const SCROLL_OFFSET = 75;
 
 export default function UnoloftPage() {
   const [selectedHome, setSelectedHome] = useState<Home>("aster");
-  const mode: Mode = selectedHome === "aster" ? "boys" : "girls";
+  const mode: Mode = "all";
   const [galleryFilter, setGalleryFilter] = useState<GalleryFilter>("all");
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);

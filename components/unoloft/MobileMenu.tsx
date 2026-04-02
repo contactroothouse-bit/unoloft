@@ -12,8 +12,6 @@ const CONSISTENT_ANCHOR_LINKS: MenuLinkItem[] = [
   { href: "#pg-intro", label: "About" },
   { href: "/aster-homes", label: "Aster Homes" },
   { href: "/iris-house", label: "Iris House" },
-  { href: "/aster-homes", label: "Aster Homes" },
-  { href: "/iris-house", label: "Iris House" },
   { href: "#facilities", label: "Facilities" },
   { href: "#gallery", label: "Gallery" },
   { href: "#faq", label: "FAQ" },
@@ -22,8 +20,6 @@ const CONSISTENT_ANCHOR_LINKS: MenuLinkItem[] = [
 
 const CONSISTENT_ROUTE_LINKS: MenuLinkItem[] = [
   { href: "/#pg-intro", label: "About" },
-  { href: "/aster-homes", label: "Aster Homes" },
-  { href: "/iris-house", label: "Iris House" },
   { href: "/aster-homes", label: "Aster Homes" },
   { href: "/iris-house", label: "Iris House" },
   { href: "/#facilities", label: "Facilities" },
@@ -53,7 +49,7 @@ export default function MobileMenu({
 }: MobileMenuProps) {
   const isRoutesMode = linkMode === "routes";
   const links = isRoutesMode ? CONSISTENT_ROUTE_LINKS : CONSISTENT_ANCHOR_LINKS;
-  const showHomeToggle = !isRoutesMode && selectedHome && onHomeChange;
+  const showHomeToggle = Boolean(selectedHome) && Boolean(onHomeChange);
 
   return (
     <>
@@ -73,7 +69,7 @@ export default function MobileMenu({
               type="button"
               className={cn("pg-tab", selectedHome === "aster" && "active")}
               onClick={() => {
-                onHomeChange("aster");
+                onHomeChange?.("aster");
                 onClose();
               }}
             >
@@ -83,32 +79,7 @@ export default function MobileMenu({
               type="button"
               className={cn("pg-tab", selectedHome === "iris" && "active")}
               onClick={() => {
-                onHomeChange("iris");
-                onClose();
-              }}
-            >
-              Iris House
-            </button>
-          </div>
-        ) : null}
-
-        {showHomeToggle ? (
-          <div className="mob-tabs-w" aria-label="Select home">
-            <button
-              type="button"
-              className={cn("pg-tab", selectedHome === "aster" && "active")}
-              onClick={() => {
-                onHomeChange("aster");
-                onClose();
-              }}
-            >
-              Aster Homes
-            </button>
-            <button
-              type="button"
-              className={cn("pg-tab", selectedHome === "iris" && "active")}
-              onClick={() => {
-                onHomeChange("iris");
+                onHomeChange?.("iris");
                 onClose();
               }}
             >

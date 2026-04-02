@@ -3,7 +3,10 @@ import Link from "next/link";
 import JsonLd from "@/components/unoloft/JsonLd";
 import PageShell from "@/components/unoloft/PageShell";
 import RoomsSection from "@/components/unoloft/sections/RoomsSection";
-import { buildPageMetadata, getBreadcrumbSchema } from "@/components/unoloft/seo";
+import {
+  buildPageMetadata,
+  getBreadcrumbSchema,
+} from "@/components/unoloft/seo";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Unoloft Room Types – Single, Double & Triple Sharing PG Rooms",
@@ -27,14 +30,35 @@ export default function RoomsPage() {
               sharing rooms with AC, study setups, and premium amenities.
             </p>
           </div>
+          <div className="rooms-page-switch rv in">
+            <a href="#aster-rooms">Aster Homes Rooms</a>
+            <a href="#iris-rooms">Iris House Rooms</a>
+          </div>
         </section>
-        <RoomsSection selectedHome="aster" />
-        <RoomsSection selectedHome="iris" />
+        <RoomsSection
+          selectedHome="aster"
+          sectionId="aster-rooms"
+          sectionClassName="rooms-section-aster"
+          eyebrow="Aster Homes"
+          titleStart="Aster Homes"
+          titleEmphasis="Room Options"
+          subtitle="Explore Aster Homes room types with private, double and triple sharing options near SG Highway and Nirma University."
+        />
+        <RoomsSection
+          selectedHome="iris"
+          sectionId="iris-rooms"
+          sectionClassName="rooms-section-iris"
+          eyebrow="Iris House"
+          titleStart="Iris House"
+          titleEmphasis="Room Options"
+          subtitle="Browse Iris House room layouts designed for comfort, study, and easy daily living near top institutions in Ahmedabad."
+        />
         <section id="contact" className="subpage-section">
           <div className="con-cen rv in">
             <p className="s-sub">
-              Need help choosing a room? <Link href="/contact">Contact the Unoloft team</Link> for
-              current availability and site visit slots.
+              Need help choosing a room?{" "}
+              <Link href="/contact">Contact the Unoloft team</Link> for current
+              availability and site visit slots.
             </p>
           </div>
         </section>

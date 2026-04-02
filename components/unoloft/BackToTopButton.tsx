@@ -9,12 +9,7 @@ type BackToTopButtonProps = {
 
 export default function BackToTopButton({ show }: BackToTopButtonProps) {
   const handleClick = () => {
-    if (window.matchMedia("(max-width: 580px)").matches) {
-      window.open(WHATSAPP_LINK, "_blank", "noopener,noreferrer");
-      return;
-    }
-
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.open(WHATSAPP_LINK, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -22,7 +17,7 @@ export default function BackToTopButton({ show }: BackToTopButtonProps) {
       id="btt"
       className={cn(show && "on")}
       onClick={handleClick}
-      aria-label="Scroll to top or open WhatsApp"
+      aria-label="Open WhatsApp"
     >
       <i className="fa-brands fa-whatsapp btt-wa" />
     </button>
