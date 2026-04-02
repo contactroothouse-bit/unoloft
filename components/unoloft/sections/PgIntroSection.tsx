@@ -50,8 +50,9 @@ export default function PgIntroSection({
               <div className="pg-feats">
                 <span className="pg-feat">Single &amp; Sharing Rooms</span>
                 <span className="pg-feat">Gym</span>
-                <span className="pg-feat">Study Lounge</span>
-                <span className="pg-feat">24/7 Access</span>
+                <span className="pg-feat">Study Table and Chair</span>
+                <span className="pg-feat">Bed with Extra Storage</span>
+                <span className="pg-feat">Library Area</span>
               </div>
               <a href="#contact" className="pg-link">
                 Book a Visit <i className="fa-solid fa-arrow-right" />
@@ -86,7 +87,7 @@ export default function PgIntroSection({
                 <span className="pg-feat">Dedicated Warden</span>
                 <span className="pg-feat">Premium Interiors</span>
                 <span className="pg-feat">CCTV</span>
-                <span className="pg-feat">Meals Included</span>
+                <span className="pg-feat">Library Area</span>
               </div>
               <a href="#contact" className="pg-link">
                 Book a Visit <i className="fa-solid fa-arrow-right" />

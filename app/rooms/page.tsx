@@ -8,7 +8,7 @@ import { buildPageMetadata, getBreadcrumbSchema } from "@/components/unoloft/seo
 export const metadata: Metadata = buildPageMetadata({
   title: "Unoloft Room Types – Single, Double & Triple Sharing PG Rooms",
   description:
-    "Explore single, double and triple sharing PG room options at Unoloft in Ahmedabad. Fully furnished AC rooms with WiFi, meals and housekeeping.",
+    "Explore single, double and triple sharing PG room options at Unoloft in Ahmedabad. Air-conditioned rooms with WiFi, meals and housekeeping.",
   path: "/rooms",
 });
 

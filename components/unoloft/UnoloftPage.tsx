@@ -25,8 +25,8 @@ import type { GalleryFilter, Home, Mode } from "@/components/unoloft/types";
 const SCROLL_OFFSET = 75;
 
 export default function UnoloftPage() {
-  const mode: Mode = "all";
   const [selectedHome, setSelectedHome] = useState<Home>("aster");
+  const mode: Mode = selectedHome === "aster" ? "boys" : "girls";
   const [galleryFilter, setGalleryFilter] = useState<GalleryFilter>("all");
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
@@ -104,6 +104,17 @@ export default function UnoloftPage() {
   }, [lightboxOpen, mobileOpen]);
 
   useEffect(() => {
+    document.documentElement.setAttribute(
+      "data-mode",
+      selectedHome === "aster" ? "boys" : "girls",
+    );
+
+    return () => {
+      document.documentElement.setAttribute("data-mode", "all");
+    };
+  }, [selectedHome]);
+
+  useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         onLightboxClose();
@@ -167,7 +178,15 @@ export default function UnoloftPage() {
         onNavigate={onLightboxNavigate}
       />
 
-      <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
+      <MobileMenu
+        open={mobileOpen}
+        onClose={() => setMobileOpen(false)}
+        selectedHome={selectedHome}
+        onHomeChange={(home) => {
+          setSelectedHome(home);
+          setGalleryFilter("all");
+        }}
+      />
 
       <Navbar
         navScrolled={navScrolled}
