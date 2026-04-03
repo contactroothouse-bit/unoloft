@@ -18,14 +18,24 @@ const cormorantGaramond = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  manifest: "/manifest.webmanifest",
   title: {
     default: "Unoloft – Premium PG in Ahmedabad",
     template: `%s | ${SITE_NAME}`,
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
+    apple: [
+      {
+        url: "/apple-touch-icon.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
   },
   description:
     "Ahmedabad's premium paying guest accommodation for boys near Gota and SG Highway.",

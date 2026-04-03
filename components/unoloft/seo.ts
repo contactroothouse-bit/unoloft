@@ -4,6 +4,8 @@ import type { FaqItem, Testimonial } from "@/components/unoloft/types";
 export const SITE_URL = "https://www.unoloft.com";
 export const SITE_NAME = "Unoloft";
 export const OG_IMAGE_URL = "/og-image.jpg";
+export const SITE_LOGO_URL = `${SITE_URL}/logo.png`;
+export const SITE_ICON_URL = `${SITE_URL}/icon-192.png`;
 
 export type RouteConfig = {
   path: string;
@@ -149,8 +151,11 @@ export function getLodgingBusinessSchema(name: string) {
   return {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
+    "@id": `${SITE_URL}/#lodging-business`,
     name,
     url: SITE_URL,
+    image: [SITE_LOGO_URL],
+    logo: SITE_LOGO_URL,
     telephone: "+917043306301",
     address: {
       "@type": "PostalAddress",
@@ -190,6 +195,21 @@ export function getLodgingBusinessSchema(name: string) {
         value: true,
       },
     ],
+  };
+}
+
+export function getOrganizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: {
+      "@type": "ImageObject",
+      url: SITE_LOGO_URL,
+    },
+    image: SITE_LOGO_URL,
   };
 }
 
@@ -242,8 +262,12 @@ export function getWebsiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
     name: "Unoloft",
     url: SITE_URL,
+    publisher: {
+      "@id": `${SITE_URL}/#organization`,
+    },
     potentialAction: {
       "@type": "SearchAction",
       target: `${SITE_URL}/?q={search_term_string}`,

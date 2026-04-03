@@ -5,6 +5,7 @@ import { ASTER_TESTIMONIALS } from "@/components/unoloft/data";
 import {
   buildPageMetadata,
   getLodgingBusinessSchema,
+  getOrganizationSchema,
   getReviewSchema,
   getWebsiteSchema,
 } from "@/components/unoloft/seo";
@@ -27,6 +28,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function Page() {
   return (
     <>
+      <JsonLd data={getOrganizationSchema()} />
       <JsonLd data={getLodgingBusinessSchema("Unoloft – Aster Homes")} />
       <JsonLd data={getReviewSchema(ASTER_TESTIMONIALS, "Unoloft", "/")} />
       <JsonLd data={getWebsiteSchema()} />

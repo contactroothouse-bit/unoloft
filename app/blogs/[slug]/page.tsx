@@ -73,11 +73,18 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
             {article.sections.map((section) => (
               <section key={section.heading} className="blog-article-section">
                 <h2>{section.heading}</h2>
-                <ul>
-                  {section.points.map((point) => (
-                    <li key={point}>{point}</li>
-                  ))}
-                </ul>
+                {section.paragraphs?.map((paragraph) => (
+                  <p key={paragraph} className="blog-article-paragraph">
+                    {paragraph}
+                  </p>
+                ))}
+                {section.points?.length ? (
+                  <ul>
+                    {section.points.map((point) => (
+                      <li key={point}>{point}</li>
+                    ))}
+                  </ul>
+                ) : null}
               </section>
             ))}
           </div>

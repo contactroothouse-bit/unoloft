@@ -52,6 +52,8 @@ export default function Navbar({
     ? CONSISTENT_ROUTE_LINKS
     : CONSISTENT_ANCHOR_LINKS;
   const showHomeToggle = Boolean(selectedHome) && Boolean(onHomeChange);
+  const mobileToggleLabelAster = "Aster";
+  const mobileToggleLabelIris = "Iris";
 
   return (
     <nav id="nav" className={cn(navScrolled && "s")}>
@@ -75,7 +77,8 @@ export default function Navbar({
             role="tab"
             aria-selected={selectedHome === "aster"}
           >
-            Aster Homes
+            <span className="pg-tab-desktop-label">Aster Homes</span>
+            <span className="pg-tab-mobile-label">{mobileToggleLabelAster}</span>
           </button>
           <button
             type="button"
@@ -84,7 +87,8 @@ export default function Navbar({
             role="tab"
             aria-selected={selectedHome === "iris"}
           >
-            Iris House
+            <span className="pg-tab-desktop-label">Iris House</span>
+            <span className="pg-tab-mobile-label">{mobileToggleLabelIris}</span>
           </button>
         </div>
       ) : null}
