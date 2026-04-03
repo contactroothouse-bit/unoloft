@@ -479,8 +479,7 @@ footer .nav-logo {
   text-transform: uppercase;
   color: var(--brand);
   margin-bottom: 12px;
-  opacity: 0;
-  animation: fup 0.7s ease 0.3s forwards;
+  animation: fup 0.7s ease 0.3s both;
 }
 
 .hero-ey::before {
@@ -496,8 +495,7 @@ footer .nav-logo {
   font-weight: 900;
   color: var(--navy);
   line-height: 1.08;
-  opacity: 0;
-  animation: fup 0.8s ease 0.5s forwards;
+  animation: fup 0.8s ease 0.5s both;
 }
 
 .h1b {
@@ -508,8 +506,7 @@ footer .nav-logo {
   line-height: 1.08;
   margin-bottom: 26px;
   font-style: italic;
-  opacity: 0;
-  animation: fup 0.8s ease 0.62s forwards;
+  animation: fup 0.8s ease 0.62s both;
 }
 
 .hero-loc {
@@ -519,8 +516,7 @@ footer .nav-logo {
   font-size: 0.88rem;
   color: rgba(45, 62, 96, 0.75);
   margin-bottom: 32px;
-  opacity: 0;
-  animation: fup 0.8s ease 0.72s forwards;
+  animation: fup 0.8s ease 0.72s both;
 }
 
 .hero-loc strong {
@@ -535,8 +531,7 @@ footer .nav-logo {
   flex-wrap: wrap;
   gap: 9px;
   margin-bottom: 36px;
-  opacity: 0;
-  animation: fup 0.8s ease 0.82s forwards;
+  animation: fup 0.8s ease 0.82s both;
 }
 
 .h-pill {
@@ -561,8 +556,7 @@ footer .nav-logo {
   display: flex;
   gap: 13px;
   flex-wrap: wrap;
-  opacity: 0;
-  animation: fup 0.8s ease 0.92s forwards;
+  animation: fup 0.8s ease 0.92s both;
 }
 
 .btn-ora {
@@ -613,8 +607,7 @@ footer .nav-logo {
   display: flex;
   gap: 28px;
   margin-top: 44px;
-  opacity: 0;
-  animation: fup 0.8s ease 1.05s forwards;
+  animation: fup 0.8s ease 1.05s both;
 }
 
 .hs {
@@ -650,8 +643,7 @@ footer .nav-logo {
 .hero-r {
   position: relative;
   height: 570px;
-  opacity: 0;
-  animation: frgt 1s ease 0.4s forwards;
+  animation: frgt 1s ease 0.4s both;
 }
 
 @keyframes frgt {
@@ -1323,24 +1315,24 @@ footer .nav-logo {
 }
 
 .rv {
-  opacity: 0;
-  transform: translateY(28px);
+  opacity: 1;
+  transform: none;
   transition:
     opacity 0.65s ease,
     transform 0.65s ease;
 }
 
 .rvl {
-  opacity: 0;
-  transform: translateX(-28px);
+  opacity: 1;
+  transform: none;
   transition:
     opacity 0.65s ease,
     transform 0.65s ease;
 }
 
 .rvr {
-  opacity: 0;
-  transform: translateX(28px);
+  opacity: 1;
+  transform: none;
   transition:
     opacity 0.65s ease,
     transform 0.65s ease;
@@ -3439,21 +3431,22 @@ footer {
   }
 
   .mob-tabs-w .pg-tab {
-    padding: 10px 16px;
+    padding: 9px 12px;
     font-size: 0.76rem;
-    min-width: 102px;
+    min-width: 88px;
     white-space: nowrap;
   }
 
   .nav-tabs {
-    padding: 3px;
-    gap: 2px;
+    padding: 1px;
+    gap: 0px;
+    margin-left: 30px;
   }
 
   .nav-tabs .pg-tab {
-    padding: 8px 14px;
-    font-size: 0.72rem;
-    min-width: 96px;
+    padding: 6px 9px;
+    font-size: 0.7rem;
+    min-width: 72px;
     white-space: nowrap;
   }
 
