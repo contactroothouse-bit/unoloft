@@ -38,7 +38,8 @@ const INTERNAL_BLOG_ARTICLES: InternalBlogArticle[] = [
   {
     slug: "why-pg-location-ahmedabad-matters",
     cardTitle: "Why Location Changes Everything",
-    title: "Why the Right PG Location in Ahmedabad Changes Everything About Your Stay",
+    title:
+      "Why the Right PG Location in Ahmedabad Changes Everything About Your Stay",
     metaDescription:
       "Choosing a PG in Ahmedabad near Nirma University or SG Highway? Here's why your location shapes your commute, costs, safety, and daily life.",
     thumbnail: "/blogs/uno_b_1.jpg.jpeg",
@@ -132,7 +133,8 @@ const INTERNAL_BLOG_ARTICLES: InternalBlogArticle[] = [
   {
     slug: "pg-checklist-working-professionals-ahmedabad",
     cardTitle: "Working Professional PG Checklist",
-    title: "10 Things That Actually Matter When Choosing a PG as a Working Professional",
+    title:
+      "10 Things That Actually Matter When Choosing a PG as a Working Professional",
     metaDescription:
       "Moving to Ahmedabad for work? Here's what actually matters when choosing a PG, from location and food to security, cleanliness, and total monthly cost.",
     thumbnail: "/blogs/uno_b_3.jpg.jpeg",
@@ -175,7 +177,8 @@ const INTERNAL_BLOG_ARTICLES: InternalBlogArticle[] = [
   {
     slug: "study-tips-pg-students-ahmedabad-gota",
     cardTitle: "Study Habits That Work in PG Life",
-    title: "10 Study Habits That Actually Work When You're Living in a PG in Ahmedabad",
+    title:
+      "10 Study Habits That Actually Work When You're Living in a PG in Ahmedabad",
     metaDescription:
       "Struggling to focus while living in a PG in Ahmedabad? Explore practical study habits that work for students in Gota, Jagatpur Road, SG Highway, and nearby areas.",
     thumbnail: "/blogs/unoloft_b_4.jpg.jpeg",
@@ -222,7 +225,8 @@ const INTERNAL_BLOG_ARTICLES: InternalBlogArticle[] = [
   {
     slug: "pg-near-nirma-university-ahmedabad-gota-unoloft",
     cardTitle: "What Matters Near Nirma",
-    title: "10 Things That Actually Matter When Choosing a PG Near Nirma University Ahmedabad",
+    title:
+      "10 Things That Actually Matter When Choosing a PG Near Nirma University Ahmedabad",
     metaDescription:
       "Looking for a PG near Nirma University? Explore what actually matters, from distance and food to study setup, WiFi, and safety.",
     thumbnail: "/blogs/unoloft_b_5.jpg.jpeg",
@@ -280,7 +284,9 @@ export const BLOG_POSTS: BlogPost[] = INTERNAL_BLOG_ARTICLES.map((article) => ({
 }));
 
 export function getInternalBlogArticle(slug: string) {
-  return INTERNAL_BLOG_ARTICLES.find((article) => article.slug === slug) ?? null;
+  return (
+    INTERNAL_BLOG_ARTICLES.find((article) => article.slug === slug) ?? null
+  );
 }
 
 export function getInternalBlogArticles() {

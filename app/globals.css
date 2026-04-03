@@ -1275,12 +1275,12 @@ footer .nav-logo {
   border-radius: 14px;
   padding: 20px;
 
-.blog-article-paragraph {
-  font-size: 0.98rem;
-  line-height: 1.8;
-  color: var(--gray2);
-  margin-bottom: 14px;
-}
+  .blog-article-paragraph {
+    font-size: 0.98rem;
+    line-height: 1.8;
+    color: var(--gray2);
+    margin-bottom: 14px;
+  }
 }
 
 .blog-article-section h2 {

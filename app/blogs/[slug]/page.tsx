@@ -7,7 +7,10 @@ import {
   getInternalBlogArticle,
   getInternalBlogArticles,
 } from "@/components/unoloft/blogs";
-import { buildPageMetadata, getBreadcrumbSchema } from "@/components/unoloft/seo";
+import {
+  buildPageMetadata,
+  getBreadcrumbSchema,
+} from "@/components/unoloft/seo";
 
 type BlogArticlePageProps = {
   params: Promise<{ slug: string }>;
@@ -38,7 +41,9 @@ export async function generateMetadata({
   });
 }
 
-export default async function BlogArticlePage({ params }: BlogArticlePageProps) {
+export default async function BlogArticlePage({
+  params,
+}: BlogArticlePageProps) {
   const { slug } = await params;
   const article = getInternalBlogArticle(slug);
 
@@ -48,7 +53,9 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
 
   return (
     <>
-      <JsonLd data={getBreadcrumbSchema(`/blogs/${article.slug}`, article.title)} />
+      <JsonLd
+        data={getBreadcrumbSchema(`/blogs/${article.slug}`, article.title)}
+      />
       <PageShell>
         <article className="blog-article-wrap subpage-section">
           <div className="blog-article-media">

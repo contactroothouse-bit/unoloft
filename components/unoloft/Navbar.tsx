@@ -78,7 +78,9 @@ export default function Navbar({
             aria-selected={selectedHome === "aster"}
           >
             <span className="pg-tab-desktop-label">Aster Homes</span>
-            <span className="pg-tab-mobile-label">{mobileToggleLabelAster}</span>
+            <span className="pg-tab-mobile-label">
+              {mobileToggleLabelAster}
+            </span>
           </button>
           <button
             type="button"

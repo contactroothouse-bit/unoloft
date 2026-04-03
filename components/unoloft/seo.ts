@@ -159,7 +159,8 @@ export function getLodgingBusinessSchema(name: string) {
     telephone: "+917043306301",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Royal Lakend, Gota - Jagatpur Road, Sarkhej-Gandhinagar Hwy",
+      streetAddress:
+        "Royal Lakend, Gota - Jagatpur Road, Sarkhej-Gandhinagar Hwy",
       addressLocality: "Ahmedabad",
       addressRegion: "Gujarat",
       postalCode: "382481",
