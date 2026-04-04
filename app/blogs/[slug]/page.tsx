@@ -35,9 +35,10 @@ export async function generateMetadata({
   }
 
   return buildPageMetadata({
-    title: `${article.title} | Unoloft Blogs`,
+    title: article.metaTitle ?? `${article.title} | Unoloft Blogs`,
     description: article.metaDescription,
     path: `/blogs/${article.slug}`,
+    keywords: article.targetKeywords,
   });
 }
 
@@ -74,6 +75,11 @@ export default async function BlogArticlePage({
             <div className="s-ey">Unoloft Blog</div>
             <h1 className="s-t">{article.title}</h1>
             <p className="s-sub">{article.intro}</p>
+            {article.introExtra?.map((paragraph) => (
+              <p key={paragraph} className="s-sub">
+                {paragraph}
+              </p>
+            ))}
           </header>
 
           <div className="blog-article-body">
@@ -85,6 +91,36 @@ export default async function BlogArticlePage({
                     {paragraph}
                   </p>
                 ))}
+                {section.table ? (
+                  <div className="blog-table-wrap" role="region" aria-label={`${section.heading} table`}>
+                    <table className="blog-table">
+                      <thead>
+                        <tr>
+                          {section.table.headers.map((header) => (
+                            <th key={header} scope="col">
+                              {header}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {section.table.rows.map((row) => (
+                          <tr key={row.join("|")}>
+                            {row.map((cell, index) =>
+                              index === 0 ? (
+                                <th key={`${row.join("|")}-${cell}`} scope="row">
+                                  {cell}
+                                </th>
+                              ) : (
+                                <td key={`${row.join("|")}-${cell}`}>{cell}</td>
+                              )
+                            )}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                ) : null}
                 {section.points?.length ? (
                   <ul>
                     {section.points.map((point) => (
