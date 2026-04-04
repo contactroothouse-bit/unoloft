@@ -116,6 +116,10 @@ export default function UnoloftPage() {
   }, [selectedHome]);
 
   useEffect(() => {
+    if (!lightboxOpen) {
+      return;
+    }
+
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         onLightboxClose();
@@ -132,7 +136,7 @@ export default function UnoloftPage() {
 
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
-  }, [onLightboxClose, onLightboxNavigate]);
+  }, [lightboxOpen, onLightboxClose, onLightboxNavigate]);
 
   useEffect(() => {
     const anchors = Array.from(

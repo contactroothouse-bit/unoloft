@@ -2298,10 +2298,16 @@ footer .nav-logo {
   pointer-events: all;
 }
 
-#lb img {
-  max-width: 88vw;
-  max-height: 84vh;
+.lb-media {
+  position: relative;
+  width: min(92vw, 1360px);
+  height: min(84vh, 860px);
   border-radius: 14px;
+  overflow: hidden;
+}
+
+.lb-img {
+  object-fit: contain;
 }
 
 .lbx {
@@ -2312,6 +2318,8 @@ footer .nav-logo {
   font-size: 1.6rem;
   cursor: pointer;
   opacity: 0.6;
+  border: none;
+  background: transparent;
 }
 
 .lbx:hover {
@@ -2330,6 +2338,7 @@ footer .nav-logo {
   border-radius: 12px;
   transition: var(--t);
   opacity: 0.7;
+  border: none;
 }
 
 .lba:hover {

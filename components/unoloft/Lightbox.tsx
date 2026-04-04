@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useEffect } from "react";
 import { cn } from "@/components/unoloft/utils";
 
 type LightboxProps = {
@@ -14,34 +15,76 @@ export default function Lightbox({
   onClose,
   onNavigate,
 }: LightboxProps) {
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+
+      if (event.key === "ArrowLeft") {
+        onNavigate(-1);
+      }
+
+      if (event.key === "ArrowRight") {
+        onNavigate(1);
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [onClose, onNavigate, open]);
+
   return (
-    <div
-      id="lb"
-      className={cn(open && "on")}
-      onClick={(event) => {
-        if (event.currentTarget === event.target) {
+    <div id="lb" className={cn(open && "on")} onClick={onClose}>
+      <button
+        type="button"
+        className="lbx"
+        onClick={(event) => {
+          event.stopPropagation();
           onClose();
-        }
-      }}
-    >
-      <span className="lbx" onClick={onClose}>
+        }}
+        aria-label="Close image preview"
+      >
         <i className="fa-solid fa-xmark" />
-      </span>
-      <span className="lba p" onClick={() => onNavigate(-1)}>
+      </button>
+      <button
+        type="button"
+        className="lba p"
+        onClick={(event) => {
+          event.stopPropagation();
+          onNavigate(-1);
+        }}
+        aria-label="Previous image"
+      >
         <i className="fa-solid fa-chevron-left" />
-      </span>
-      <Image
-        id="lb-img"
-        src={image}
-        alt="Unoloft property gallery enlarged preview"
-        width={1600}
-        height={1200}
-        sizes="90vw"
-        priority
-      />
-      <span className="lba n" onClick={() => onNavigate(1)}>
+      </button>
+      <div className="lb-media" onClick={onClose}>
+        <Image
+          id="lb-img"
+          src={image}
+          alt="Unoloft property gallery enlarged preview"
+          fill
+          sizes="90vw"
+          className="lb-img"
+          priority
+          onClick={(event) => event.stopPropagation()}
+        />
+      </div>
+      <button
+        type="button"
+        className="lba n"
+        onClick={(event) => {
+          event.stopPropagation();
+          onNavigate(1);
+        }}
+        aria-label="Next image"
+      >
         <i className="fa-solid fa-chevron-right" />
-      </span>
+      </button>
     </div>
   );
 }
