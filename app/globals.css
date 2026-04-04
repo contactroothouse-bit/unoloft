@@ -1091,7 +1091,7 @@ footer .nav-logo {
 }
 
 .blog-marquee:hover .blog-track {
-  animation-play-state: paused;
+  animation-duration: 86s;
 }
 
 @keyframes blogMarquee {
@@ -2410,12 +2410,12 @@ footer .nav-logo {
   backface-visibility: hidden;
 }
 
-.testi-track-static {
-  animation: none;
+.testi-marquee-clip:hover .testi-track {
+  animation-duration: 72s;
 }
 
-.testi-marquee-clip:hover .testi-track {
-  animation-play-state: paused;
+.testi-track-static {
+  animation: none;
 }
 
 @keyframes testi-marquee {

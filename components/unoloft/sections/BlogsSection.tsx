@@ -52,7 +52,7 @@ function BlogCard({
 }
 
 export default function BlogsSection() {
-  const marqueePosts = BLOG_POSTS;
+  const marqueePosts = [...BLOG_POSTS, ...BLOG_POSTS];
 
   return (
     <section id="blogs">
@@ -68,7 +68,7 @@ export default function BlogsSection() {
       </div>
 
       <div className="blog-marquee rv" aria-label="Featured blogs">
-        <div className="blog-track blog-track-static">
+        <div className="blog-track">
           {marqueePosts.map((post, index) => (
             <BlogCard
               key={`${post.slug}-${index}`}
