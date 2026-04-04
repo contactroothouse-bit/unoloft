@@ -92,6 +92,14 @@ export default function LocalSeoLandingPage({
                   {isIntroExpanded ? "Read Less" : "Read More"}
                 </button>
               ) : null}
+              <div className="hero-btns local-cta-row" style={{ marginTop: 16 }}>
+                <Link href="/rooms" className="local-near-link">
+                  Explore Single, Double and Triple Sharing PG Rooms
+                </Link>
+                <Link href="/contact" className="local-near-link">
+                  Check Room Availability and Book a Visit
+                </Link>
+              </div>
             </div>
             <div
               className="subpage-intro-shot rv in"
@@ -158,6 +166,35 @@ export default function LocalSeoLandingPage({
                 {item.label}
               </Link>
             ))}
+          </div>
+        </section>
+
+        <section id="faq" className="subpage-section local-faq-layout local-faq-static">
+          <div className="faq-cols">
+            <div className="faq-l rv in">
+              <div className="s-ey">FAQ</div>
+              <h2 className="s-t">
+                Frequently Asked <em>Questions</em>
+              </h2>
+              <p className="s-sub">
+                Answers for students and working professionals comparing PG
+                options in Ahmedabad.
+              </p>
+            </div>
+
+            <div className="faq-list rv in" style={{ transitionDelay: ".06s" }}>
+              {faqs.map((item) => (
+                <article className="faq-i open" key={item.question}>
+                  <h3 className="faq-q">
+                    <span>{item.question}</span>
+                    <div className="faq-ic" aria-hidden="true">
+                      <i className="fa-solid fa-minus" />
+                    </div>
+                  </h3>
+                  <div className="faq-a">{item.answer}</div>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
       </main>

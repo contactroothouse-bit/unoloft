@@ -8,7 +8,7 @@ type TestimonialsSectionProps = {
 export default function TestimonialsSection({
   items,
 }: TestimonialsSectionProps) {
-  const marqueeItems = [...items, ...items];
+  const marqueeItems = items;
 
   return (
     <section id="testimonials">
@@ -24,7 +24,7 @@ export default function TestimonialsSection({
 
       <div className="testi-marquee-clip">
         <div className="testi-marquee">
-          <div className="testi-track">
+          <div className="testi-track testi-track-static">
             {marqueeItems.map((testimonial, index) => (
               <div
                 className={cn(

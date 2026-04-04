@@ -28,10 +28,22 @@ const LANDING_FAQS = [
 ];
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "PG near SG Highway Ahmedabad – Premium Furnished Boys PG | Unoloft",
+  title: "PG Near SG Highway Ahmedabad | Unoloft",
   description:
-    "Unoloft offers premium furnished boys PG near SG Highway Ahmedabad with AC rooms, WiFi, meals, CCTV, gym and study-friendly environment.",
+    "Unoloft offers premium furnished PG near SG Highway Ahmedabad with AC rooms, meals, WiFi, gym and 24/7 security for students and professionals.",
   path: "/pg-near-sg-highway",
+  keywords: [
+    "pg near sg highway",
+    "sg highway pg",
+    "pg in ahmedabad sg highway",
+    "pg in ahmedabad near sg highway",
+    "pg on sg highway ahmedabad",
+    "pg for working professionals",
+    "corporate pg in ahmedabad",
+    "ac pg in ahmedabad",
+    "pg in gota ahmedabad",
+    "paying guest in ahmedabad",
+  ],
 });
 
 export default function PgNearSgHighwayPage() {

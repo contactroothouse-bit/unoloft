@@ -9,10 +9,22 @@ import {
 } from "@/components/unoloft/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Unoloft Room Types – Single, Double & Triple Sharing PG Rooms",
+  title: "Single, Double and Triple Sharing PG Rooms | Unoloft Ahmedabad",
   description:
-    "Explore single, double and triple sharing PG room options at Unoloft in Ahmedabad. Air-conditioned rooms with WiFi, meals and housekeeping.",
+    "Explore single room PG, double sharing and triple sharing room options at Unoloft Ahmedabad with AC, meals, WiFi and housekeeping.",
   path: "/rooms",
+  keywords: [
+    "single room pg",
+    "single pg room",
+    "single room pg in ahmedabad",
+    "pg room",
+    "pg room rent",
+    "double sharing",
+    "double sharing room",
+    "triple sharing pg",
+    "private room pg",
+    "furnished room for rent",
+  ],
 });
 
 export default function RoomsPage() {

@@ -37,7 +37,7 @@ function BlogCard({
         <span className="blog-chip">Unoloft Blog</span>
         <span className="blog-source">{readTime}</span>
       </div>
-      <h3>{cardTitle}</h3>
+      <p className="blog-card-title">{cardTitle}</p>
       <p>{excerpt}</p>
       <div className="blog-meta">
         <span>{audience}</span>
@@ -52,7 +52,7 @@ function BlogCard({
 }
 
 export default function BlogsSection() {
-  const marqueePosts = [...BLOG_POSTS, ...BLOG_POSTS];
+  const marqueePosts = BLOG_POSTS;
 
   return (
     <section id="blogs">
@@ -68,7 +68,7 @@ export default function BlogsSection() {
       </div>
 
       <div className="blog-marquee rv" aria-label="Featured blogs">
-        <div className="blog-track">
+        <div className="blog-track blog-track-static">
           {marqueePosts.map((post, index) => (
             <BlogCard
               key={`${post.slug}-${index}`}

@@ -51,22 +51,27 @@ export const ALL_SEO_ROUTES: RouteConfig[] = [
   { path: "/gallery", changeFrequency: "weekly", priority: 0.7 },
   { path: "/blogs", changeFrequency: "weekly", priority: 0.8 },
   {
-    path: "/blogs/working-professional-pg-decision-framework-ahmedabad",
+    path: "/blogs/why-pg-location-ahmedabad-matters",
     changeFrequency: "monthly",
     priority: 0.7,
   },
   {
-    path: "/blogs/location-first-pg-strategy-students-professionals-ahmedabad",
+    path: "/blogs/cost-of-living-ahmedabad-students",
     changeFrequency: "monthly",
     priority: 0.7,
   },
   {
-    path: "/blogs/student-pg-budget-blueprint-ahmedabad-2026",
+    path: "/blogs/pg-checklist-working-professionals-ahmedabad",
     changeFrequency: "monthly",
     priority: 0.7,
   },
   {
-    path: "/blogs/parents-guide-safe-pg-ahmedabad",
+    path: "/blogs/study-tips-pg-students-ahmedabad-gota",
+    changeFrequency: "monthly",
+    priority: 0.7,
+  },
+  {
+    path: "/blogs/pg-near-nirma-university-ahmedabad-gota-unoloft",
     changeFrequency: "monthly",
     priority: 0.7,
   },
@@ -171,6 +176,48 @@ export function getLodgingBusinessSchema(name: string) {
       latitude: 23.1225,
       longitude: 72.5714,
     },
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Ahmedabad",
+      },
+      {
+        "@type": "Place",
+        name: "Gota",
+      },
+      {
+        "@type": "Place",
+        name: "Jagatpur",
+      },
+      {
+        "@type": "Place",
+        name: "Sarkhej-Gandhinagar Highway",
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Nirma University",
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Silver Oak University",
+      },
+    ],
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "09:00",
+        closes: "20:00",
+      },
+    ],
     priceRange: "INR 11000-16500",
     aggregateRating: {
       "@type": "AggregateRating",
@@ -211,6 +258,15 @@ export function getOrganizationSchema() {
       url: SITE_LOGO_URL,
     },
     image: SITE_LOGO_URL,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+917043306301",
+        contactType: "customer service",
+        areaServed: "IN",
+        availableLanguage: ["en", "hi", "gu"],
+      },
+    ],
   };
 }
 

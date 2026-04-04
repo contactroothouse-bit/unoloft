@@ -1086,6 +1086,10 @@ footer .nav-logo {
   animation: blogMarquee 42s linear infinite;
 }
 
+.blog-track-static {
+  animation: none;
+}
+
 .blog-marquee:hover .blog-track {
   animation-play-state: paused;
 }
@@ -1162,7 +1166,7 @@ footer .nav-logo {
   color: rgba(45, 62, 96, 0.78);
 }
 
-.blog-card h3 {
+.blog-card-title {
   font-family: var(--font-body), sans-serif;
   font-size: 1.05rem;
   line-height: 1.34;
@@ -2371,7 +2375,14 @@ footer .nav-logo {
 }
 
 .testi-marquee-clip {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.testi-marquee-clip::-webkit-scrollbar {
+  display: none;
 }
 
 .testi-marquee {
@@ -2388,6 +2399,10 @@ footer .nav-logo {
   will-change: transform;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
+}
+
+.testi-track-static {
+  animation: none;
 }
 
 .testi-marquee-clip:hover .testi-track {
@@ -2708,6 +2723,24 @@ footer .nav-logo {
 
 .local-faq-layout .faq-list .faq-i {
   border-radius: 16px;
+}
+
+.local-faq-static .faq-list {
+  margin-top: 18px;
+}
+
+.local-faq-static .faq-q {
+  cursor: default;
+}
+
+.local-faq-static .faq-a,
+.local-faq-static .faq-i.open .faq-a {
+  max-height: none;
+  padding: 0 20px 16px;
+}
+
+.local-faq-static .faq-i.open .faq-ic {
+  transform: none;
 }
 
 /* CONTACT */
@@ -3065,7 +3098,7 @@ footer {
   transform: translateY(-3px);
 }
 
-.ft-col h4 {
+.ft-col-title {
   color: #fff;
   font-size: 1rem;
   font-weight: 700;
@@ -3974,7 +4007,7 @@ footer {
     min-height: 396px;
   }
 
-  .blog-card h3 {
+  .blog-card-title {
     font-size: 0.96rem;
   }
 

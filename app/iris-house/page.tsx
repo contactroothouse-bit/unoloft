@@ -21,6 +21,15 @@ export const metadata: Metadata = buildPageMetadata({
   description:
     "Iris House by Unoloft – elegantly designed boys PG in Ahmedabad with dedicated warden, premium interiors, CCTV and meals included.",
   path: "/iris-house",
+  keywords: [
+    "iris house pg ahmedabad",
+    "pg near silver oak university",
+    "pg near silver oak university ahmedabad",
+    "boys pg ahmedabad",
+    "paying guest in ahmedabad",
+    "pg in gota",
+    "furnished pg",
+  ],
 });
 
 export default function IrisHousePage() {

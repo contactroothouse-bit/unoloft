@@ -11,17 +11,27 @@ import {
 } from "@/components/unoloft/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Unoloft – Premium PG in Ahmedabad for Boys | Gota, SG Highway",
+  title: "PG in Ahmedabad Near Nirma University | Unoloft",
   description:
-    "Unoloft offers fully furnished PG accommodation in Ahmedabad with home-cooked meals, gym, AC, WiFi & 24/7 security. Trusted by 1000+ residents. Near Nirma University & SG Highway.",
+    "Premium PG in Ahmedabad (Gota) near Nirma University and SG Highway. Fully furnished AC rooms with meals, WiFi, gym, housekeeping and 24/7 security.",
   path: "/",
   keywords: [
     "PG in Ahmedabad",
+    "paying guest in Ahmedabad",
     "boys PG Ahmedabad",
+    "pg for men",
+    "pg for men in Ahmedabad",
+    "best pg in Ahmedabad",
     "PG near Nirma University",
+    "pg near nirma university ahmedabad",
     "PG in Gota Ahmedabad",
     "paying guest Ahmedabad",
     "PG near SG Highway",
+    "single room pg in Ahmedabad",
+    "double sharing pg",
+    "pg for working professionals",
+    "paying guest for gents near me",
+    "paying guest room near me",
   ],
 });
 

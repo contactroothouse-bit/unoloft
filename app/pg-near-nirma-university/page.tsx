@@ -27,10 +27,22 @@ const LANDING_FAQS = [
 ];
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "PG near Nirma University Ahmedabad – Boys PG with Meals | Unoloft",
+  title: "PG Near Nirma University Ahmedabad | Unoloft",
   description:
-    "Unoloft offers premium boys PG near Nirma University, Ahmedabad with furnished AC rooms, meals, study setup, WiFi and 24/7 security.",
+    "Unoloft offers premium PG near Nirma University Ahmedabad with AC rooms, meals, WiFi, study setup and 24/7 security in Gota.",
   path: "/pg-near-nirma-university",
+  keywords: [
+    "pg near nirma university",
+    "pg near nirma university ahmedabad",
+    "nirma university near pg",
+    "best pg near nirma university",
+    "pg in ahmedabad near nirma university",
+    "single room pg near me",
+    "single sharing pg near me",
+    "pg for students in ahmedabad",
+    "student accommodation in ahmedabad",
+    "paying guest for students",
+  ],
 });
 
 export default function PgNearNirmaUniversityPage() {

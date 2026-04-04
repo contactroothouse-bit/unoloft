@@ -16,7 +16,7 @@ export default function FooterSection() {
             />
           </div>
           <p className="ft-desc">
-            Roothouse Living offers premium paying guest accommodation in
+            Unoloft offers premium paying guest accommodation in
             Ahmedabad. Your home, away from home - since 2021.
           </p>
           <div className="ft-socs">
@@ -33,7 +33,7 @@ export default function FooterSection() {
         </div>
 
         <div className="ft-col">
-          <h4>Navigate</h4>
+          <p className="ft-col-title">Navigate</p>
           <ul className="ft-lks">
             <li>
               <Link href="/">About Us</Link>
@@ -75,7 +75,7 @@ export default function FooterSection() {
         </div>
 
         <div className="ft-col">
-          <h4>Our Homes</h4>
+          <p className="ft-col-title">Our Homes</p>
           <ul className="ft-lks">
             <li>
               <Link href="/aster-homes">Aster Homes</Link>
@@ -96,7 +96,7 @@ export default function FooterSection() {
         </div>
 
         <div className="ft-col">
-          <h4>Contact</h4>
+          <p className="ft-col-title">Contact</p>
           <ul className="ft-lks">
             <li>
               <a href="tel:+917043306301">7043306301</a>
@@ -117,7 +117,7 @@ export default function FooterSection() {
       </div>
 
       <div className="ft-bar">
-        <div>© 2026 Roothouse Living. All rights reserved.</div>
+        <div>© 2026 Unoloft. All rights reserved.</div>
       </div>
     </footer>
   );

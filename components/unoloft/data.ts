@@ -16,9 +16,9 @@
 
 export const HERO_TEXT: Record<Mode, HeroText> = {
   all: {
-    h1: "Your PG Hunt",
-    h2: "is finally over.",
-    ey: "Premium PG  Ahmedabad",
+    h1: "Premium PG in Ahmedabad",
+    h2: "Near Nirma University and SG Highway",
+    ey: "Aster Homes and Iris House | Gota Ahmedabad",
   },
   boys: {
     h1: "Built for",
@@ -28,7 +28,7 @@ export const HERO_TEXT: Record<Mode, HeroText> = {
   girls: {
     h1: "Crafted for",
     h2: "Simple, Elegant Living.",
-    ey: "Iris House · Boys PG · Ahmedabad",
+    ey: "Iris House · Girls PG · Ahmedabad",
   },
 };
 

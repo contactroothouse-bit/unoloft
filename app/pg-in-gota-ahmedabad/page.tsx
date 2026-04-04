@@ -27,10 +27,22 @@ const LANDING_FAQS = [
 ];
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "PG in Gota Ahmedabad – Furnished Rooms with Meals | Unoloft",
+  title: "PG in Gota Ahmedabad Near SG Highway | Unoloft",
   description:
-    "Looking for PG in Gota, Ahmedabad? Unoloft offers fully AC furnished rooms with WiFi, gym, meals & 24/7 security at Gota Circle near SG Highway.",
+    "Looking for PG in Gota Ahmedabad? Unoloft offers AC furnished single, double and triple sharing rooms with meals, WiFi and security near SG Highway.",
   path: "/pg-in-gota-ahmedabad",
+  keywords: [
+    "pg in gota ahmedabad",
+    "pg in gota",
+    "gota pg",
+    "gota pg ahmedabad",
+    "paying guest in ahmedabad",
+    "paying guest room near me",
+    "single room pg in ahmedabad",
+    "double sharing pg",
+    "pg near sg highway",
+    "pg for working professionals",
+  ],
 });
 
 export default function PgInGotaAhmedabadPage() {

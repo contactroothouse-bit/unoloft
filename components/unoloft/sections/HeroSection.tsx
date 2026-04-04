@@ -21,12 +21,12 @@ export default function HeroSection({ mode, selectedHome }: HeroSectionProps) {
           <div className="hero-ey" id="hero-ey">
             {heroText.ey}
           </div>
-          <div className="h1a" id="hero-h1a">
+          <h1 className="h1a" id="hero-h1a">
             {heroText.h1}
-          </div>
-          <div className="h1b" id="hero-h1b">
+          </h1>
+          <p className="h1b" id="hero-h1b">
             {heroText.h2}
-          </div>
+          </p>
 
           <div className="hero-loc">
             <i
