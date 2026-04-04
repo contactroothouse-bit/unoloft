@@ -459,111 +459,84 @@ const INTERNAL_BLOG_ARTICLES: InternalBlogArticle[] = [
       {
         heading: "1. Build a routine that survives PG life (not a perfect one)",
         paragraphs: [
-          "Nobody in a PG follows a “perfect schedule.”",
-          "So don’t try to.",
-          "Instead:",
+          "Nobody in a PG follows a perfect schedule, so don’t aim for perfection.",
+          "A routine doesn’t need to be strict. It just needs to be repeatable.",
         ],
         points: [
           "Fix 2–3 non-negotiable study slots",
-          "Keep sleep/wake time roughly consistent",
-          "Anchor your day around meals + study blocks",
+          "Keep sleep and wake time roughly consistent",
+          "Anchor your day around meals and study blocks",
         ],
-      },
-      {
-        heading: "A routine doesn’t need to be strict — it just needs to be repeatable.",
       },
       {
         heading: "2. Don’t study on your bed (seriously)",
         paragraphs: [
-          "This is where most people lose.",
-          "Bed = sleep + scrolling",
-          "Not focus.",
-          "Even in compact PG rooms:",
-        ],
-        points: ["Use a dedicated chair + table", "Or create a corner setup"],
-      },
-      {
-        heading: "Your brain needs location-based discipline.",
-      },
-      {
-        heading: "3. Noise is not the problem — unmanaged noise is",
-        paragraphs: [
-          "PGs are noisy. That’s not changing.",
-          "What you can control:",
+          "This is where most students lose focus quickly.",
+          "Bed equals sleep and scrolling, not concentration.",
         ],
         points: [
-          "Noise-canceling headphones",
-          "White noise / instrumental playlists",
-          "Fixed “focus hours”",
+          "Use a dedicated chair and table",
+          "Create a compact study corner if space is limited",
         ],
       },
       {
-        heading: "Instead of fighting noise, design around it.",
+        heading: "3. Noise is not the problem, unmanaged noise is",
+        paragraphs: [
+          "PGs are naturally noisy. Instead of fighting it, design around it.",
+        ],
+        points: [
+          "Use noise-canceling headphones",
+          "Play white noise or instrumental playlists",
+          "Set fixed personal focus hours",
+        ],
       },
       {
         heading: "4. Your room is not always the best place to study",
-        paragraphs: ["If your PG in Ahmedabad has:"],
-        points: ["Study rooms", "Lounges"],
-      },
-      {
-        heading: "Use them.",
-        paragraphs: ["If not:"],
-        points: ["Nearby cafés", "College libraries"],
-      },
-      {
-        heading: "Sometimes productivity = changing your environment.",
+        paragraphs: [
+          "Sometimes productivity improves the moment you change your environment.",
+          "If your PG has dedicated spaces, use them first.",
+        ],
+        points: [
+          "Study rooms",
+          "Lounges",
+          "Nearby cafes",
+          "College libraries",
+        ],
       },
       {
         heading: "5. Talk to your roommates early (not after frustration)",
         paragraphs: [
-          "Most conflicts happen because nobody communicates.",
-          "Set expectations:",
+          "Most conflicts happen because expectations are never discussed.",
+          "A five-minute conversation can save months of irritation.",
         ],
         points: ["Quiet hours", "Headphone use", "Sleep schedules"],
       },
       {
-        heading: "A 5-minute conversation can save months of irritation.",
-      },
-      {
         heading: "6. Disorganization kills more time than distraction",
         paragraphs: [
-          "You don’t lose time because of Instagram.",
-          "You lose time because:",
+          "You rarely lose time only because of Instagram.",
+          "You lose time when you can’t find notes or don’t know what to study next.",
         ],
         points: [
-          "You can’t find notes",
-          "You don’t know what to study next",
-        ],
-      },
-      {
-        heading: "Fix this:",
-        points: [
-          "Use Notion / Evernote",
+          "Use Notion or Evernote",
           "Keep physical notes sorted",
           "Maintain a daily task list",
         ],
       },
       {
-        heading: "Clarity = speed.",
-      },
-      {
         heading: "7. Study in short bursts, not long suffering sessions",
         paragraphs: [
-          "Long study sessions don’t work in PG environments.",
-          "Use the Pomodoro method:",
+          "Long sessions usually fail in distraction-heavy PG environments.",
+          "Use Pomodoro blocks to keep momentum high.",
         ],
         points: ["25 minutes focus", "5 minutes break", "Repeat"],
       },
       {
-        heading: "It fits perfectly into a distraction-heavy environment.",
-      },
-      {
-        heading: "8. Study groups work — but only if controlled",
-        paragraphs: ["PG study groups can go two ways:"],
-        points: ["Productive", "Or gossip sessions"],
-      },
-      {
-        heading: "To make them work:",
+        heading: "8. Study groups work only when controlled",
+        paragraphs: [
+          "PG study groups can become productive or turn into gossip sessions.",
+          "Keep structure, or they drift quickly.",
+        ],
         points: [
           "Keep groups small (2–4 people)",
           "Set a clear agenda",
@@ -571,44 +544,34 @@ const INTERNAL_BLOG_ARTICLES: InternalBlogArticle[] = [
         ],
       },
       {
-        heading: "Otherwise, you’re just socializing with books open.",
-      },
-      {
         heading: "9. Stress management is not optional in PG life",
-        paragraphs: ["Between:"],
-        points: ["Exams", "Noise", "Shared spaces"],
-      },
-      {
-        heading: "Your mental load is higher than you think.",
-        paragraphs: ["Simple fixes:"],
+        paragraphs: [
+          "Between exams, noise, and shared spaces, mental load rises fast.",
+          "Focus improves when your mind is not overloaded.",
+        ],
         points: [
-          "5–10 mins daily meditation",
+          "5–10 minutes daily meditation",
           "Deep breathing before study",
           "Journaling",
         ],
       },
       {
-        heading: "Focus improves when your mind is not overloaded.",
-      },
-      {
         heading: "10. If your body is tired, your brain won’t work",
-        paragraphs: ["This is ignored the most.", "Add basic movement:"],
+        paragraphs: [
+          "Physical activity is often ignored, but it directly affects study output.",
+        ],
         points: [
           "Short walks",
           "Gym (if your PG has one)",
           "Stretching",
+          "Better memory, focus, and energy",
         ],
-      },
-      {
-        heading: "Physical activity directly improves:",
-        points: ["Memory", "Focus", "Energy"],
       },
       {
         heading: "The short version",
         paragraphs: [
-          "PG life doesn’t make studying impossible.",
-          "It just removes structure.",
-          "Your job is to rebuild it:",
+          "PG life doesn’t make studying impossible. It removes structure.",
+          "Your job is to rebuild simple systems and follow them consistently.",
         ],
         points: [
           "Control your environment",
@@ -653,182 +616,110 @@ const INTERNAL_BLOG_ARTICLES: InternalBlogArticle[] = [
     ],
     sections: [
       {
-        heading: "Long commutes",
-      },
-      {
-        heading: "Bad food",
-      },
-      {
-        heading: "Poor Wi-Fi",
-      },
-      {
-        heading: "Uncomfortable living",
-      },
-      {
-        heading:
-          "So before you finalize anything in Gota, Jagatpur Road, or near SG Highway, here’s what actually matters.",
+        heading: "Before You Finalize: The 4 Friction Points to Avoid",
+        paragraphs: [
+          "Once college starts, you won’t have time to manage avoidable daily issues.",
+        ],
+        points: [
+          "Long commutes",
+          "Bad food",
+          "Poor Wi-Fi",
+          "Uncomfortable living",
+        ],
       },
       {
         heading: "1. Distance from Nirma University (actual, not assumed)",
         paragraphs: [
-          "Most PGs say “near Nirma University.”",
-          "But the difference between 5 minutes and 25 minutes is your daily energy.",
-          "Good PGs in Gota (like Aster Homes & Iris House by Unoloft) are:",
+          "Most PGs say they are near Nirma University, but 5 minutes and 25 minutes feel completely different every day.",
+          "Good options in Gota, like Aster Homes and Iris House, keep your routine practical.",
         ],
-        points: [
-          "~10 minutes from Nirma",
-          "~2 minutes from SG Highway",
-        ],
-      },
-      {
-        heading: "That’s the kind of proximity you should aim for.",
+        points: ["About 10 minutes from Nirma", "About 2 minutes from SG Highway"],
       },
       {
         heading: "2. Location that supports your entire routine",
-        paragraphs: ["Your life isn’t just college.", "You’ll need:"],
-        points: ["Cafés", "Stores", "Transport access"],
-      },
-      {
-        heading: "Areas around Gota & SG Highway work best because they balance:",
-        points: ["Connectivity", "Peaceful residential setup"],
-      },
-      {
-        heading:
-          "This is why most premium student PGs are concentrated here.",
-      },
-      {
-        heading:
-          "3. Fully furnished rooms (so you don’t waste time setting up)",
-        paragraphs: ["You shouldn’t spend your first week:"],
-        points: ["Buying furniture", "Fixing basics"],
-      },
-      {
-        heading: "Places like Aster Homes and Iris House come with:",
-        points: ["Bed + storage", "Study table", "AC rooms"],
-      },
-      {
-        heading: "You move in → you’re ready.",
-      },
-      {
-        heading: "4. Wi-Fi that actually works (not just “available”)",
         paragraphs: [
-          "Every PG says “high-speed Wi-Fi.”",
-          "But what matters is:",
+          "Your life isn’t just college. You need everyday access to essentials.",
+          "Gota and SG Highway work well because they balance convenience and a calmer residential environment.",
         ],
-        points: ["Speed", "Stability"],
+        points: ["Cafes", "Stores", "Transport access", "Good neighborhood flow"],
       },
       {
-        heading: "At Unoloft PGs:",
-        paragraphs: ["Up to 100 Mbps Wi-Fi is available", "Which is essential for:"],
-        points: ["Assignments", "Online lectures", "Daily usage"],
+        heading: "3. Fully furnished rooms (so you don’t waste time setting up)",
+        paragraphs: [
+          "You should not spend your first week buying furniture and fixing basics.",
+          "Move in and start your semester with zero setup stress.",
+        ],
+        points: ["Bed and storage", "Study table", "AC rooms"],
+      },
+      {
+        heading: "4. Wi-Fi that actually works (not just available)",
+        paragraphs: [
+          "Every PG says high-speed Wi-Fi. What matters is speed plus consistency.",
+          "At Unoloft properties, up to 100 Mbps supports both study and daily usage.",
+        ],
+        points: ["Assignments", "Online lectures", "Daily internet usage"],
       },
       {
         heading: "5. A study-friendly environment (this is underrated)",
-        paragraphs: ["Not every PG is built for students.", "You need:"],
-        points: ["Study tables in rooms", "Quiet zones or study areas"],
-      },
-      {
-        heading: "Unoloft properties include:",
-        points: [
-          "Dedicated study setup in each room",
-          "Library/study areas",
+        paragraphs: [
+          "Not every PG is built for students who need focus.",
+          "A strong study setup directly affects academic performance.",
         ],
-      },
-      {
-        heading: "That directly impacts your productivity.",
+        points: ["Study tables in rooms", "Quiet study zones", "Library or reading area"],
       },
       {
         heading: "6. Food that removes daily decision-making",
         paragraphs: [
-          "Food is the most underestimated factor.",
-          "After a long day, you don’t want to:",
+          "Food is one of the most underestimated factors in PG life.",
+          "After long college days, consistency matters more than variety.",
         ],
-        points: ["Order food", "Skip meals"],
-      },
-      {
-        heading: "At places like Iris House:",
         points: ["4 meals a day", "Live kitchen", "Packed lunch options"],
-      },
-      {
-        heading: "That’s not convenience — that’s consistency.",
       },
       {
         heading: "7. Safety that actually works (not just listed)",
         paragraphs: [
-          "Security isn’t about features — it’s about execution.",
-          "What good PGs provide:",
+          "Security is not a checklist item. It must work in real life.",
+          "A dependable setup gives both students and parents peace of mind.",
         ],
-        points: [
-          "CCTV across key areas",
-          "Biometric access",
-          "24/7 staff",
-        ],
-      },
-      {
-        heading: "Unoloft PGs include all of this + wardens for monitoring",
-      },
-      {
-        heading: "Which matters more than you think.",
+        points: ["CCTV in key areas", "Biometric access", "24/7 staff and wardens"],
       },
       {
         heading: "8. Amenities that reduce daily friction",
-        paragraphs: ["The best PGs solve small problems:"],
-        points: ["Housekeeping", "Laundry", "Gym", "Water & power"],
-      },
-      {
-        heading: "At Aster Homes, you get:",
-        points: [
-          "Daily housekeeping",
-          "Gym access",
-          "Laundry + appliances",
+        paragraphs: [
+          "The best PGs are the ones that quietly solve daily problems.",
+          "These practical amenities make life smoother over months, not just on day one.",
         ],
-      },
-      {
-        heading:
-          "These things decide whether your life feels smooth or exhausting.",
+        points: ["Housekeeping", "Laundry", "Gym", "Reliable water and power"],
       },
       {
         heading: "9. Budget clarity (all-inclusive matters)",
-        paragraphs: ["Don’t just compare rent.", "Compare:"],
+        paragraphs: [
+          "Don’t compare rent in isolation. Compare total monthly living cost.",
+          "All-inclusive pricing keeps planning simple and reduces hidden surprises.",
+        ],
         points: ["Rent", "Food", "Wi-Fi", "Services"],
-      },
-      {
-        heading:
-          "Most Unoloft PGs follow an all-inclusive model, which simplifies living and avoids hidden costs",
       },
       {
         heading: "10. The environment you’ll live in",
         paragraphs: [
-          "This is the most underrated factor.",
-          "You’re not just choosing a room — you’re choosing:",
+          "You’re not only choosing a room. You’re choosing your daily mindset and consistency.",
+          "A well-managed PG setup supports focused living over the long term.",
         ],
-        points: ["Your routine", "Your mindset", "Your productivity"],
-      },
-      {
-        heading: "A well-managed PG like Aster Homes or Iris House is designed for:",
-        points: ["Students", "Focused living", "Long-term comfort"],
-      },
-      {
-        heading: "That difference shows over time.",
+        points: ["Your routine", "Your productivity", "Your long-term comfort"],
       },
       {
         heading: "The short version",
         paragraphs: [
-          "Choosing a PG near Nirma University is about reducing daily friction.",
-          "Get these right:",
+          "Choosing a PG near Nirma University is mainly about reducing daily friction.",
+          "Get the fundamentals right and everything else becomes easier.",
         ],
-        points: [
-          "Location (Gota / SG Highway)",
-          "Food",
-          "Wi-Fi",
-          "Study environment",
-        ],
+        points: ["Location (Gota or SG Highway)", "Food", "Wi-Fi", "Study environment"],
       },
       {
-        heading: "And everything else becomes easier.",
-      },
-      {
-        heading: "If you’re looking for a serious, well-managed PG setup,",
+        heading: "Looking for a serious, well-managed PG setup?",
+        paragraphs: [
+          "Aster Homes and Iris House are already designed around what students actually need.",
+        ],
       },
     ],
     conclusion:
