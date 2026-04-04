@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import JsonLd from "@/components/unoloft/JsonLd";
 import PageShell from "@/components/unoloft/PageShell";
@@ -47,10 +48,23 @@ export default async function BlogArticlePage({
 }: BlogArticlePageProps) {
   const { slug } = await params;
   const article = getInternalBlogArticle(slug);
+  const allArticles = getInternalBlogArticles();
 
   if (!article) {
     notFound();
   }
+
+  const currentIndex = allArticles.findIndex((item) => item.slug === article.slug);
+  const previousArticle = currentIndex > 0 ? allArticles[currentIndex - 1] : null;
+  const nextArticle =
+    currentIndex >= 0 && currentIndex < allArticles.length - 1
+      ? allArticles[currentIndex + 1]
+      : null;
+  const publishedOn = new Intl.DateTimeFormat("en-IN", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  }).format(new Date(article.publishedOn));
 
   return (
     <>
@@ -72,8 +86,30 @@ export default async function BlogArticlePage({
           </div>
 
           <header className="blog-article-head">
+            <div className="blog-article-tools">
+              <Link href="/blogs" className="blog-btn blog-btn-light">
+                All Blogs
+              </Link>
+              <a
+                href="https://wa.me/917043306301"
+                target="_blank"
+                rel="noreferrer"
+                className="blog-btn blog-btn-brand"
+              >
+                Book Visit
+              </a>
+            </div>
             <div className="s-ey">Unoloft Blog</div>
             <h1 className="s-t">{article.title}</h1>
+            <div className="blog-article-meta">
+              <span className="blog-meta-pill">{publishedOn}</span>
+              <span className="blog-meta-pill">{article.readTime}</span>
+              {article.tags?.map((tag) => (
+                <span key={tag} className="blog-meta-pill blog-meta-tag">
+                  {tag}
+                </span>
+              ))}
+            </div>
             <p className="s-sub">{article.intro}</p>
             {article.introExtra?.map((paragraph) => (
               <p key={paragraph} className="s-sub">
@@ -132,9 +168,31 @@ export default async function BlogArticlePage({
             ))}
           </div>
 
-          <footer className="blog-article-foot">
-            <p>{article.conclusion}</p>
-          </footer>
+          {article.conclusion ? (
+            <footer className="blog-article-foot">
+              <p>{article.conclusion}</p>
+            </footer>
+          ) : null}
+
+          <nav className="blog-next-nav" aria-label="Blog article navigation">
+            {previousArticle ? (
+              <Link href={`/blogs/${previousArticle.slug}`} className="blog-next-link">
+                <span className="blog-next-label">Previous</span>
+                <strong>{previousArticle.cardTitle}</strong>
+              </Link>
+            ) : (
+              <div className="blog-next-link blog-next-link-muted" aria-hidden="true" />
+            )}
+
+            {nextArticle ? (
+              <Link href={`/blogs/${nextArticle.slug}`} className="blog-next-link blog-next-link-right">
+                <span className="blog-next-label">Next</span>
+                <strong>{nextArticle.cardTitle}</strong>
+              </Link>
+            ) : (
+              <div className="blog-next-link blog-next-link-muted" aria-hidden="true" />
+            )}
+          </nav>
         </article>
       </PageShell>
     </>

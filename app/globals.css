@@ -1255,6 +1255,66 @@ footer .nav-logo {
   margin-bottom: 18px;
 }
 
+.blog-article-tools {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.blog-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: var(--t);
+  border: 1px solid transparent;
+}
+
+.blog-btn-light {
+  color: var(--navy);
+  background: #fff;
+  border-color: rgba(30, 58, 122, 0.2);
+}
+
+.blog-btn-brand {
+  color: #fff;
+  background: var(--brand);
+  box-shadow: 0 6px 16px rgba(240, 101, 32, 0.25);
+}
+
+.blog-btn:hover {
+  transform: translateY(-1px);
+}
+
+.blog-article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 10px;
+}
+
+.blog-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(30, 58, 122, 0.16);
+  background: rgba(30, 58, 122, 0.05);
+  color: var(--navy);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.blog-meta-tag {
+  background: rgba(240, 101, 32, 0.08);
+  border-color: rgba(240, 101, 32, 0.22);
+  color: #a2481a;
+}
+
 .blog-article-body {
   display: flex;
   flex-direction: column;
@@ -1346,6 +1406,73 @@ footer .nav-logo {
   font-size: 0.94rem;
   line-height: 1.7;
   color: var(--navy);
+}
+
+.blog-next-nav {
+  margin-top: 18px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.blog-next-link {
+  min-height: 92px;
+  border: 1px solid rgba(30, 58, 122, 0.16);
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  transition: var(--t);
+}
+
+.blog-next-link strong {
+  color: var(--navy);
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.blog-next-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(240, 101, 32, 0.38);
+  box-shadow: 0 8px 18px rgba(22, 45, 94, 0.08);
+}
+
+.blog-next-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(45, 62, 96, 0.78);
+}
+
+.blog-next-link-right {
+  text-align: right;
+}
+
+.blog-next-link-muted {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (max-width: 760px) {
+  .blog-article-tools {
+    flex-wrap: wrap;
+  }
+
+  .blog-next-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-next-link-right {
+    text-align: left;
+  }
+
+  .blog-next-link-muted {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
