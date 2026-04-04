@@ -38,7 +38,7 @@ function BlogCard({
         <span className="blog-source">{readTime}</span>
       </div>
       <p className="blog-card-title">{cardTitle}</p>
-      <p>{excerpt}</p>
+      <p className="blog-card-excerpt">{excerpt}</p>
       <div className="blog-meta">
         <span>{audience}</span>
         <span>Ahmedabad</span>

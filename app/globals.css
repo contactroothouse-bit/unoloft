@@ -1166,7 +1166,7 @@ footer .nav-logo {
   color: rgba(45, 62, 96, 0.78);
 }
 
-.blog-card-title {
+.blog-card .blog-card-title {
   font-family: var(--font-body), sans-serif;
   font-size: 1.05rem;
   line-height: 1.34;
@@ -1179,7 +1179,7 @@ footer .nav-logo {
   overflow: hidden;
 }
 
-.blog-card p {
+.blog-card .blog-card-excerpt {
   font-size: 0.8rem;
   line-height: 1.7;
   color: rgba(45, 62, 96, 0.86);
@@ -4007,11 +4007,11 @@ footer {
     min-height: 396px;
   }
 
-  .blog-card-title {
+  .blog-card .blog-card-title {
     font-size: 0.96rem;
   }
 
-  .blog-card p {
+  .blog-card .blog-card-excerpt {
     font-size: 0.78rem;
   }
 
