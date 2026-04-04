@@ -56,8 +56,8 @@ export default function BlogsPage() {
                 <span className="blog-chip">Unoloft Insight</span>
                 <span className="blog-source">{post.readTime}</span>
               </div>
-              <h3>{post.cardTitle}</h3>
-              <p>{post.excerpt}</p>
+              <h3 className="blog-card-title">{post.cardTitle}</h3>
+              <p className="blog-card-excerpt">{post.excerpt}</p>
               <div className="blog-meta">
                 <span>{post.audience}</span>
                 <span>Ahmedabad</span>

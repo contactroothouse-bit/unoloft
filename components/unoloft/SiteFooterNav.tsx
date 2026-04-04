@@ -16,7 +16,7 @@ export default function SiteFooterNav() {
             />
           </div>
           <p className="ft-desc">
-            Roothouse Living offers premium paying guest accommodation in
+            Unoloft offers premium paying guest accommodation in
             Ahmedabad. Your home, away from home - since 2021.
           </p>
           <div className="ft-socs">
@@ -57,16 +57,16 @@ export default function SiteFooterNav() {
               <Link href="/contact">Contact</Link>
             </li>
             <li>
-              <Link href="/pg-near-nirma-university">PG near Nirma University</Link>
+              <Link href="/pg-near-nirma-university">Near Nirma</Link>
             </li>
             <li>
-              <Link href="/pg-near-silver-oak">PG near Silver Oak University</Link>
+              <Link href="/pg-near-silver-oak">Near Silver Oak</Link>
             </li>
             <li>
-              <Link href="/pg-in-gota-ahmedabad">PG in Gota Ahmedabad</Link>
+              <Link href="/pg-in-gota-ahmedabad">PG in Gota</Link>
             </li>
             <li>
-              <Link href="/pg-near-sg-highway">PG near SG Highway</Link>
+              <Link href="/pg-near-sg-highway">Near SG Highway</Link>
             </li>
           </ul>
         </div>
@@ -74,10 +74,10 @@ export default function SiteFooterNav() {
           <h4>Our Homes</h4>
           <ul className="ft-lks">
             <li>
-              <Link href="/aster-homes">Aster Homes</Link>
+              <Link href="/aster-homes">Explore Aster Homes</Link>
             </li>
             <li>
-              <Link href="/iris-house">Iris House</Link>
+              <Link href="/iris-house">Explore Iris House</Link>
             </li>
             <li>
               <Link href="/rooms">Single Room</Link>
@@ -111,7 +111,7 @@ export default function SiteFooterNav() {
         </div>
       </div>
       <div className="ft-bar">
-        <div>© 2026 Roothouse Living. All rights reserved.</div>
+        <div>© 2026 Unoloft. All rights reserved.</div>
       </div>
     </footer>
   );

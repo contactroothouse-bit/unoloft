@@ -94,10 +94,10 @@ export default function LocalSeoLandingPage({
               ) : null}
               <div className="hero-btns local-cta-row" style={{ marginTop: 16 }}>
                 <Link href="/rooms" className="local-near-link">
-                  Explore Single, Double and Triple Sharing PG Rooms
+                  Compare Room Types
                 </Link>
                 <Link href="/contact" className="local-near-link">
-                  Check Room Availability and Book a Visit
+                  Check Availability
                 </Link>
               </div>
             </div>
