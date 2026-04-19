@@ -10,6 +10,7 @@ import {
 } from "@/components/unoloft/blogs";
 import {
   buildPageMetadata,
+  getBlogPostingSchema,
   getBreadcrumbSchema,
 } from "@/components/unoloft/seo";
 
@@ -71,6 +72,7 @@ export default async function BlogArticlePage({
       <JsonLd
         data={getBreadcrumbSchema(`/blogs/${article.slug}`, article.title)}
       />
+      <JsonLd data={getBlogPostingSchema(article)} />
       <PageShell>
         <article className="blog-article-wrap subpage-section">
           <div className="blog-article-media">

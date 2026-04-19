@@ -54,6 +54,9 @@ export default function FooterSection() {
               <Link href="/gallery">Gallery</Link>
             </li>
             <li>
+              <Link href="/blogs">Blogs</Link>
+            </li>
+            <li>
               <Link href="/faq">FAQ</Link>
             </li>
             <li>

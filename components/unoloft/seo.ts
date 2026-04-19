@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { InternalBlogArticle } from "@/components/unoloft/blogs";
 import type { FaqItem, Testimonial } from "@/components/unoloft/types";
 
 export const SITE_URL = "https://www.unoloft.com";
@@ -103,6 +104,17 @@ export function buildPageMetadata({
     title,
     description,
     keywords,
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
     alternates: {
       canonical: path,
     },
@@ -127,6 +139,41 @@ export function buildPageMetadata({
       title,
       description,
       images: [OG_IMAGE_URL],
+    },
+  };
+}
+
+export function getBlogPostingSchema(article: InternalBlogArticle) {
+  const pageUrl = `${SITE_URL}/blogs/${article.slug}`;
+  const imagePath = article.thumbnail.startsWith("http")
+    ? article.thumbnail
+    : `${SITE_URL}${article.thumbnail}`;
+  const published = `${article.publishedOn}T08:00:00+05:30`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: article.title,
+    description: article.metaDescription,
+    image: [imagePath],
+    datePublished: published,
+    dateModified: published,
+    author: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      logo: {
+        "@type": "ImageObject",
+        url: SITE_LOGO_URL,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": pageUrl,
     },
   };
 }
