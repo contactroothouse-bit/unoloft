@@ -204,15 +204,24 @@ export default function UnoloftPage() {
       />
 
       <HeroSection mode={mode} selectedHome={selectedHome} />
-      <PgIntroSection
+      <PgIntroSection />
+      <FacilitiesSection
+        key={selectedHome}
         selectedHome={selectedHome}
+        showHomeSwitch
         onHomeChange={(home) => {
           setSelectedHome(home);
           setGalleryFilter("all");
         }}
       />
-      <FacilitiesSection selectedHome={selectedHome} />
-      <RoomsSection selectedHome={selectedHome} />
+      <RoomsSection
+        selectedHome={selectedHome}
+        showHomeSwitch
+        onHomeChange={(home) => {
+          setSelectedHome(home);
+          setGalleryFilter("all");
+        }}
+      />
 
       <GallerySection
         selectedHome={selectedHome}
@@ -220,6 +229,11 @@ export default function UnoloftPage() {
         filter={galleryFilter}
         onFilterChange={setGalleryFilter}
         onOpenLightbox={onLightboxOpen}
+        showHomeSwitch
+        onHomeChange={(home) => {
+          setSelectedHome(home);
+          setGalleryFilter("all");
+        }}
       />
 
       <TestimonialsSection items={TESTIMONIALS_BY_HOME[selectedHome]} />
@@ -232,7 +246,14 @@ export default function UnoloftPage() {
         }}
       />
 
-      <MapSection selectedHome={selectedHome} />
+      <MapSection
+        selectedHome={selectedHome}
+        showHomeSwitch
+        onHomeChange={(home) => {
+          setSelectedHome(home);
+          setGalleryFilter("all");
+        }}
+      />
       <ContactSection selectedHome={selectedHome} />
       <section id="location-explore">
         <div className="sh sh-c rv">

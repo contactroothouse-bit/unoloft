@@ -18,6 +18,8 @@ type GallerySectionProps = {
   filter: GalleryFilter;
   onFilterChange: (filter: GalleryFilter) => void;
   onOpenLightbox: (index: number) => void;
+  showHomeSwitch?: boolean;
+  onHomeChange?: (home: Home) => void;
 };
 
 function shouldShowItem(
@@ -49,6 +51,8 @@ export default function GallerySection({
   filter,
   onFilterChange,
   onOpenLightbox,
+  showHomeSwitch = false,
+  onHomeChange,
 }: GallerySectionProps) {
   const [visibleCount, setVisibleCount] = useState(INITIAL_ALL_VISIBLE);
   const roomFilter = selectedHome === "aster" ? "boys-room" : "girls-room";
@@ -81,6 +85,25 @@ export default function GallerySection({
           A visual tour of our beautiful spaces, rooms &amp; community.
         </p>
       </div>
+
+      {showHomeSwitch ? (
+        <div className="rooms-home-switch rooms-home-switch-inline" aria-label="Select property">
+          <button
+            type="button"
+            className={cn(selectedHome === "aster" && "active")}
+            onClick={() => onHomeChange?.("aster")}
+          >
+            Aster Homes
+          </button>
+          <button
+            type="button"
+            className={cn(selectedHome === "iris" && "active")}
+            onClick={() => onHomeChange?.("iris")}
+          >
+            Iris House
+          </button>
+        </div>
+      ) : null}
 
       <div className="gal-tabs">
         <button

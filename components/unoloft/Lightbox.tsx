@@ -42,6 +42,18 @@ export default function Lightbox({
     <div id="lb" className={cn(open && "on")} onClick={onClose}>
       <button
         type="button"
+        className="lbb"
+        onClick={(event) => {
+          event.stopPropagation();
+          onClose();
+        }}
+        aria-label="Back to gallery"
+      >
+        <i className="fa-solid fa-arrow-left" />
+        Back
+      </button>
+      <button
+        type="button"
         className="lbx"
         onClick={(event) => {
           event.stopPropagation();
@@ -51,18 +63,18 @@ export default function Lightbox({
       >
         <i className="fa-solid fa-xmark" />
       </button>
-      <button
-        type="button"
-        className="lba p"
-        onClick={(event) => {
-          event.stopPropagation();
-          onNavigate(-1);
-        }}
-        aria-label="Previous image"
-      >
-        <i className="fa-solid fa-chevron-left" />
-      </button>
       <div className="lb-media" onClick={onClose}>
+        <button
+          type="button"
+          className="lba p"
+          onClick={(event) => {
+            event.stopPropagation();
+            onNavigate(-1);
+          }}
+          aria-label="Previous image"
+        >
+          <i className="fa-solid fa-chevron-left" />
+        </button>
         <Image
           id="lb-img"
           src={image}
@@ -73,18 +85,18 @@ export default function Lightbox({
           priority
           onClick={(event) => event.stopPropagation()}
         />
+        <button
+          type="button"
+          className="lba n"
+          onClick={(event) => {
+            event.stopPropagation();
+            onNavigate(1);
+          }}
+          aria-label="Next image"
+        >
+          <i className="fa-solid fa-chevron-right" />
+        </button>
       </div>
-      <button
-        type="button"
-        className="lba n"
-        onClick={(event) => {
-          event.stopPropagation();
-          onNavigate(1);
-        }}
-        aria-label="Next image"
-      >
-        <i className="fa-solid fa-chevron-right" />
-      </button>
     </div>
   );
 }

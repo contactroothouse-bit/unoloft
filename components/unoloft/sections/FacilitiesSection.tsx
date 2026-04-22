@@ -3,15 +3,22 @@
 import { useEffect, useState } from "react";
 import { FACILITIES_BY_HOME } from "@/components/unoloft/data";
 import type { Home } from "@/components/unoloft/types";
+import { cn } from "@/components/unoloft/utils";
 
 type FacilitiesSectionProps = {
   selectedHome: Home;
+  showHomeLabel?: boolean;
+  showHomeSwitch?: boolean;
+  onHomeChange?: (home: Home) => void;
 };
 
 const MOBILE_INITIAL_COUNT = 6;
 
 export default function FacilitiesSection({
   selectedHome,
+  showHomeLabel = false,
+  showHomeSwitch = false,
+  onHomeChange,
 }: FacilitiesSectionProps) {
   const [isMobile, setIsMobile] = useState(false);
   const [visibleCount, setVisibleCount] = useState(MOBILE_INITIAL_COUNT);
@@ -38,6 +45,29 @@ export default function FacilitiesSection({
     <section id="facilities">
       <div className="sh sh-c rv">
         <div className="s-ey">Amenities</div>
+        {showHomeLabel ? (
+          <div className="rooms-home-chip">
+            {selectedHome === "aster" ? "Aster Homes" : "Iris House"}
+          </div>
+        ) : null}
+        {showHomeSwitch ? (
+          <div className="rooms-home-switch rooms-home-switch-inline" aria-label="Select property">
+            <button
+              type="button"
+              className={cn(selectedHome === "aster" && "active")}
+              onClick={() => onHomeChange?.("aster")}
+            >
+              Aster Homes
+            </button>
+            <button
+              type="button"
+              className={cn(selectedHome === "iris" && "active")}
+              onClick={() => onHomeChange?.("iris")}
+            >
+              Iris House
+            </button>
+          </div>
+        ) : null}
         <h2 className="s-t">
           World-Class <em>Facilities</em>
         </h2>

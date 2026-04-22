@@ -42,12 +42,11 @@ export default function MobileMenu({
   open,
   onClose,
   linkMode = "anchors",
-  selectedHome,
-  onHomeChange,
+  selectedHome: _selectedHome,
+  onHomeChange: _onHomeChange,
 }: MobileMenuProps) {
   const isRoutesMode = linkMode === "routes";
   const links = isRoutesMode ? CONSISTENT_ROUTE_LINKS : CONSISTENT_ANCHOR_LINKS;
-  const showHomeToggle = Boolean(selectedHome) && Boolean(onHomeChange);
 
   return (
     <>
@@ -61,30 +60,7 @@ export default function MobileMenu({
           <i className="fa-solid fa-xmark" />
         </span>
 
-        {showHomeToggle ? (
-          <div className="mob-tabs-w" aria-label="Select home">
-            <button
-              type="button"
-              className={cn("pg-tab", selectedHome === "aster" && "active")}
-              onClick={() => {
-                onHomeChange?.("aster");
-                onClose();
-              }}
-            >
-              Aster Homes
-            </button>
-            <button
-              type="button"
-              className={cn("pg-tab", selectedHome === "iris" && "active")}
-              onClick={() => {
-                onHomeChange?.("iris");
-                onClose();
-              }}
-            >
-              Iris House
-            </button>
-          </div>
-        ) : null}
+        <p style={{ fontWeight: 700, marginBottom: 8 }}>Our Properties</p>
 
         {links.map((item) => (
           <Link

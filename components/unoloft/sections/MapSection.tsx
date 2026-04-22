@@ -1,7 +1,10 @@
+import { cn } from "@/components/unoloft/utils";
 import type { Home } from "@/components/unoloft/types";
 
 type MapSectionProps = {
   selectedHome: Home;
+  showHomeSwitch?: boolean;
+  onHomeChange?: (home: Home) => void;
 };
 
 const ASTER_DATA = {
@@ -32,7 +35,11 @@ const IRIS_DATA = {
     "https://www.google.com/maps?q=Iris%20House%20By%20Unoloft%20Hostel%20P.G.%20near%20Nirma%20University&output=embed",
 };
 
-export default function MapSection({ selectedHome }: MapSectionProps) {
+export default function MapSection({
+  selectedHome,
+  showHomeSwitch = false,
+  onHomeChange,
+}: MapSectionProps) {
   const mapData = selectedHome === "iris" ? IRIS_DATA : ASTER_DATA;
 
   return (
@@ -47,6 +54,25 @@ export default function MapSection({ selectedHome }: MapSectionProps) {
           transport in Ahmedabad.
         </p>
       </div>
+
+      {showHomeSwitch ? (
+        <div className="rooms-home-switch rooms-home-switch-inline" aria-label="Select property">
+          <button
+            type="button"
+            className={cn(selectedHome === "aster" && "active")}
+            onClick={() => onHomeChange?.("aster")}
+          >
+            Aster Homes
+          </button>
+          <button
+            type="button"
+            className={cn(selectedHome === "iris" && "active")}
+            onClick={() => onHomeChange?.("iris")}
+          >
+            Iris House
+          </button>
+        </div>
+      ) : null}
 
       <div className="map-adv rv">
         <h3 className="map-adv-t">Prime Location Advantage</h3>
