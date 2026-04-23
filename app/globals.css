@@ -659,6 +659,10 @@ footer .nav-logo {
   animation: fup 0.8s ease 1.05s both;
 }
 
+.hero-stats-mobile {
+  display: none;
+}
+
 .hs {
   display: flex;
   flex-direction: column;
@@ -3609,6 +3613,11 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 1080px) {
+  /* Stack under fixed nav — avoid vertically centering hero in 100vh (creates huge top gap on mobile). */
+  #hero {
+    align-items: flex-start;
+  }
+
   .hero-inner {
     grid-template-columns: 1fr;
   }
@@ -3832,7 +3841,7 @@ footer {
   }
 
   #hero {
-    padding: 86px 18px 0;
+    padding: 78px 18px 0;
   }
 
   .hero-inner {
@@ -3882,14 +3891,22 @@ footer {
   }
 
   .hero-pills {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 8px;
     margin-bottom: 16px;
   }
 
   .h-pill {
+    width: 100%;
+    justify-content: center;
     max-width: 100%;
-    padding: 6px 12px;
-    font-size: 0.74rem;
+    padding: 2px 4px;
+    font-size: 0.66rem;
+    border: none;
+    background: transparent;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
   }
 
   .hero-btns {
@@ -3903,29 +3920,61 @@ footer {
   }
 
   .hero-stats {
-    gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 14px;
     margin-top: 16px;
-    flex-wrap: nowrap;
     align-items: flex-start;
   }
 
   .hs {
     min-width: 0;
-    flex: 1 1 0;
+    flex: initial;
   }
 
   .hs-n {
-    font-size: 0.96rem;
+    font-size: 1.05rem;
     line-height: 1;
   }
 
   .hs-l {
-    font-size: 0.52rem;
+    font-size: 0.68rem;
     line-height: 1.25;
   }
 
   .hs-div {
     display: none;
+  }
+
+  .hero-stats-desktop {
+    display: none;
+  }
+
+  .hero-stats-mobile {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 12px;
+    gap: 8px;
+    animation: none;
+  }
+
+  .hero-stats-mobile .hs {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .hero-stats-mobile .hs-n {
+    font-size: clamp(1rem, 4.2vw, 1.22rem);
+    line-height: 1.05;
+  }
+
+  .hero-stats-mobile .hs-l {
+    font-size: clamp(0.58rem, 2.8vw, 0.72rem);
+    line-height: 1.25;
+    margin-top: 3px;
   }
 
   .avail-g {
