@@ -11,7 +11,7 @@ import {
 } from "@/components/unoloft/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "pg in gota ahmedabad | best pg in gota ahmedabad | best pg near nirmal university | best pg in gota | pg in ahmedabad | best pg in ahmedabad | best pg near silver oak universiry | best pg near SG highway | pg near nirmal universtiy | pg for boys | premium pg in gota | premium pg in ahmedabad | premium pg near nirmal university | premium pg near silver oak university | premium pg near SG highway | premium pg near me | premium pg for boys | premium pg for girls | premium pg for working professionals  ",
+  title: "Pg in Gota Ahmedabad | Premium PG  | Aster homes | Iris house | unoloft by roothouseliving | Nirmal university | Silver oak university | SG highway | Gota circle | Paying guest in gota | Ahmedabad best pg | Good Food Quality | 27/7 security | Gym | AC  ",
   description:
     "Premium PG in Ahmedabad (Gota) near Nirma University and SG Highway. Fully furnished AC rooms with meals, WiFi, gym, housekeeping and 24/7 security. | pg for boys in gota | best pg in gota | best pg in ahmedabad | pg in ahmedabad | pg near me | premium pg in gota | premium pg in ahmedabad | premium pg near nirmal university | premium pg near silver oak university | premium pg near SG highway | premium pg near me | premium pg for boys | premium pg for girls | premium pg for working professionals  ",
   path: "/",
