@@ -1,7 +1,7 @@
 "use client";
 
 import Script from "next/script";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 type GoogleAnalyticsProps = {
@@ -12,17 +12,17 @@ export default function GoogleAnalytics({
   measurementId,
 }: GoogleAnalyticsProps) {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
-    const query = searchParams?.toString();
-    const pagePath = query ? `${pathname}?${query}` : pathname;
+    const query =
+      typeof window !== "undefined" ? window.location.search : "";
+    const pagePath = query ? `${pathname}${query}` : pathname;
 
     window.gtag?.("config", measurementId, {
       page_path: pagePath,
       send_page_view: true,
     });
-  }, [measurementId, pathname, searchParams]);
+  }, [measurementId, pathname]);
 
   return (
     <>
