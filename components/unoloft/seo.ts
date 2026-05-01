@@ -42,49 +42,49 @@ export const LOCAL_ROUTES = [
 ] as const;
 
 export const ALL_SEO_ROUTES: RouteConfig[] = [
-  { path: "/", changeFrequency: "weekly", priority: 1 },
-  { path: "/aster-homes", changeFrequency: "weekly", priority: 0.9 },
-  { path: "/iris-house", changeFrequency: "weekly", priority: 0.9 },
-  { path: "/rooms", changeFrequency: "weekly", priority: 0.7 },
-  { path: "/amenities", changeFrequency: "weekly", priority: 0.7 },
-  { path: "/location", changeFrequency: "weekly", priority: 0.7 },
-  { path: "/contact", changeFrequency: "weekly", priority: 0.7 },
-  { path: "/gallery", changeFrequency: "weekly", priority: 0.7 },
-  { path: "/blogs", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/", changeFrequency: "daily", priority: 1 },
+  { path: "/aster-homes", changeFrequency: "daily", priority: 0.9 },
+  { path: "/iris-house", changeFrequency: "daily", priority: 0.9 },
+  { path: "/rooms", changeFrequency: "daily", priority: 0.7 },
+  { path: "/amenities", changeFrequency: "daily", priority: 0.7 },
+  { path: "/location", changeFrequency: "daily", priority: 0.7 },
+  { path: "/contact", changeFrequency: "daily", priority: 0.7 },
+  { path: "/gallery", changeFrequency: "daily", priority: 0.7 },
+  { path: "/blogs", changeFrequency: "daily", priority: 0.8 },
   {
     path: "/blogs/why-pg-location-ahmedabad-matters",
-    changeFrequency: "monthly",
+    changeFrequency: "daily",
     priority: 0.7,
   },
   {
     path: "/blogs/cost-of-living-ahmedabad-students",
-    changeFrequency: "monthly",
+    changeFrequency: "daily",
     priority: 0.7,
   },
   {
     path: "/blogs/pg-checklist-working-professionals-ahmedabad",
-    changeFrequency: "monthly",
+    changeFrequency: "daily",
     priority: 0.7,
   },
   {
     path: "/blogs/study-tips-pg-students-ahmedabad-gota",
-    changeFrequency: "monthly",
+    changeFrequency: "daily",
     priority: 0.7,
   },
   {
     path: "/blogs/pg-near-nirma-university-ahmedabad-gota-unoloft",
-    changeFrequency: "monthly",
+    changeFrequency: "daily",
     priority: 0.7,
   },
-  { path: "/faq", changeFrequency: "weekly", priority: 0.7 },
-  { path: "/pg-in-gota-ahmedabad", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/faq", changeFrequency: "daily", priority: 0.7 },
+  { path: "/pg-in-gota-ahmedabad", changeFrequency: "daily", priority: 0.9 },
   {
     path: "/pg-near-nirma-university",
-    changeFrequency: "weekly",
+    changeFrequency: "daily",
     priority: 0.9,
   },
-  { path: "/pg-near-silver-oak", changeFrequency: "weekly", priority: 0.9 },
-  { path: "/pg-near-sg-highway", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/pg-near-silver-oak", changeFrequency: "daily", priority: 0.9 },
+  { path: "/pg-near-sg-highway", changeFrequency: "daily", priority: 0.9 },
 ];
 
 type BuildPageMetadataInput = {
