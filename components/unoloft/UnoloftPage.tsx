@@ -255,6 +255,28 @@ export default function UnoloftPage() {
         }}
       />
       <ContactSection selectedHome={selectedHome} />
+      <section id="pg-near-gota">
+        <div className="sh sh-c rv">
+          <div className="s-ey">Top Search Locations</div>
+          <h2 className="s-t">
+            Best PG in Gota and <em>Near Nirma University</em>
+          </h2>
+          <p className="s-sub">
+            Looking for a PG near Gota, a PG near Nirma University, or the
+            best PG in Ahmedabad? Unoloft offers fully furnished AC rooms,
+            meals, WiFi, housekeeping, and 24/7 security near key student and
+            work hubs.
+          </p>
+        </div>
+        <div className="loc-exp-links rv">
+          <Link href="/pg-in-gota-ahmedabad">PG near Gota Ahmedabad</Link>
+          <Link href="/pg-near-nirma-university">
+            PG near Nirma University Ahmedabad
+          </Link>
+          <Link href="/pg-near-sg-highway">Best PG near SG Highway</Link>
+          <Link href="/rooms">Best PG rooms in Ahmedabad</Link>
+        </div>
+      </section>
       <section id="location-explore">
         <div className="sh sh-c rv">
           <div className="s-ey">Explore by Location</div>

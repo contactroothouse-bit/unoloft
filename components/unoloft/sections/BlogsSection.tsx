@@ -52,7 +52,7 @@ function BlogCard({
 }
 
 export default function BlogsSection() {
-  const marqueePosts = [...BLOG_POSTS, ...BLOG_POSTS];
+  const marqueePosts = BLOG_POSTS;
 
   return (
     <section id="blogs">

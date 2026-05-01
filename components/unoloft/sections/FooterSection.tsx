@@ -20,13 +20,31 @@ export default function FooterSection() {
             Ahmedabad. Your home, away from home - since 2021.
           </p>
           <div className="ft-socs">
-            <a href="#" className="ft-soc">
+            <a
+              href="https://www.instagram.com/unoloft_/"
+              className="ft-soc"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Unoloft Instagram"
+            >
               <i className="fa-brands fa-instagram" />
             </a>
-            <a href="#" className="ft-soc">
+            <a
+              href="https://www.facebook.com/unoloft"
+              className="ft-soc"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Unoloft Facebook"
+            >
               <i className="fa-brands fa-facebook-f" />
             </a>
-            <a href="#" className="ft-soc">
+            <a
+              href="https://wa.me/917043306301"
+              className="ft-soc"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Unoloft WhatsApp"
+            >
               <i className="fa-brands fa-whatsapp" />
             </a>
           </div>
