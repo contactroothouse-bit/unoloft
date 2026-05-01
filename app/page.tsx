@@ -11,9 +11,9 @@ import {
 } from "@/components/unoloft/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "PG in Ahmedabad Near Nirma University | Unoloft",
+  title: "pg in gota ahmedabad | best pg in gota ahmedabad | best pg near nirmal university | best pg in gota | pg in ahmedabad | best pg in ahmedabad | best pg near silver oak universiry | best pg near SG highway | pg near nirmal universtiy | pg for boys  ",
   description:
-    "Premium PG in Ahmedabad (Gota) near Nirma University and SG Highway. Fully furnished AC rooms with meals, WiFi, gym, housekeeping and 24/7 security.",
+    "Premium PG in Ahmedabad (Gota) near Nirma University and SG Highway. Fully furnished AC rooms with meals, WiFi, gym, housekeeping and 24/7 security. | pg for boys in gota | best pg in gota | best pg in ahmedabad | pg in ahmedabad | pg near me  ",
   path: "/",
   keywords: [
     "PG in Ahmedabad",
@@ -32,6 +32,11 @@ export const metadata: Metadata = buildPageMetadata({
     "pg for working professionals",
     "paying guest for gents near me",
     "paying guest room near me",
+    "pg for boys in gota",
+    "best pg in gota",
+    "best pg in ahmedabad",
+    "pg in ahmedabad",
+    "pg near me",
   ],
 });
 
