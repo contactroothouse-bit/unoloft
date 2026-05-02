@@ -28,17 +28,20 @@ const LANDING_FAQS = [
 ];
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "PG Near SG Highway Ahmedabad | Unoloft",
+  title:
+    "PG Near SG Highway Ahmedabad – AC Rooms, Meals, Gym & WiFi | Unoloft",
   description:
-    "Unoloft offers premium furnished PG near SG Highway Ahmedabad with AC rooms, meals, WiFi, gym and 24/7 security for students and professionals.",
+    "Premium PG near SG Highway (Gota–Jagatpur): ~2 min to highway access, AC furnished rooms, 4-time meals, gym, 100 Mbps WiFi & round-the-clock security. Suited for offices along SG Highway and students at Nirma/Silver Oak. WhatsApp for availability.",
   path: "/pg-near-sg-highway",
   keywords: [
     "pg near sg highway",
+    "pg near sg highway ahmedabad",
     "sg highway pg",
     "pg in ahmedabad sg highway",
     "pg in ahmedabad near sg highway",
     "pg on sg highway ahmedabad",
     "pg for working professionals",
+    "pg for working professionals near gota",
     "corporate pg in ahmedabad",
     "ac pg in ahmedabad",
     "pg in gota ahmedabad",

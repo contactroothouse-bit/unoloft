@@ -27,21 +27,30 @@ const LANDING_FAQS = [
 ];
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "PG in Gota Ahmedabad Near SG Highway | Unoloft",
+  title:
+    "PG in Gota Ahmedabad – AC Rooms, Meals & WiFi | Near Nirma & SG Highway | Unoloft",
   description:
-    "Looking for PG in Gota Ahmedabad? Unoloft offers AC furnished single, double and triple sharing rooms with meals, WiFi and security near SG Highway.",
+    "Premium PG in Gota (Royal Lakend, Jagatpur Road): AC furnished single/double/triple rooms, 4-time meals, 100 Mbps WiFi, housekeeping & 24/7 security. ~2 min Gota Circle & SG Highway, ~10 min Nirma. WhatsApp to book a visit.",
   path: "/pg-in-gota-ahmedabad",
   keywords: [
     "pg in gota ahmedabad",
     "pg in gota",
+    "pg near gota",
+    "pg near gota ahmedabad",
+    "best pg in gota ahmedabad",
+    "best pg in gota",
     "gota pg",
     "gota pg ahmedabad",
+    "boys pg in gota",
     "paying guest in ahmedabad",
     "paying guest room near me",
     "single room pg in ahmedabad",
     "double sharing pg",
+    "triple sharing pg",
     "pg near sg highway",
+    "pg near nirma university",
     "pg for working professionals",
+    "pg for working professionals near gota",
   ],
 });
 

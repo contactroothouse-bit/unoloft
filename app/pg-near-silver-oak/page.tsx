@@ -27,14 +27,16 @@ const LANDING_FAQS = [
 ];
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "PG Near Silver Oak University Ahmedabad | Unoloft",
+  title:
+    "PG Near Silver Oak University Ahmedabad – Meals, WiFi & AC Rooms | Unoloft",
   description:
-    "Looking for PG near Silver Oak University Ahmedabad? Unoloft offers furnished AC rooms with meals, WiFi and security in Gota.",
+    "Live ~5 minutes from Silver Oak University (Gota–Jagatpur): Unoloft PG with AC single/double/triple rooms, home-style meals, WiFi, housekeeping & 24/7 security. Short commute for classes and labs. See rooms and book a visit today.",
   path: "/pg-near-silver-oak",
   keywords: [
     "pg near silver oak university",
     "pg near silver oak university ahmedabad",
     "silver oak university near pg",
+    "hostel near silver oak university",
     "pg near gota ahmedabad",
     "pg in gota",
     "pg in ahmedabad for students",
@@ -42,6 +44,7 @@ export const metadata: Metadata = buildPageMetadata({
     "double sharing pg",
     "triple sharing pg",
     "paying guest in ahmedabad",
+    "student dormitory ahmedabad",
   ],
 });
 

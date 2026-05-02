@@ -7,17 +7,21 @@ import { BLOG_POSTS } from "@/components/unoloft/blogs";
 import { buildPageMetadata, getBreadcrumbSchema } from "@/components/unoloft/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Unoloft Blogs - Ahmedabad PG Guides for Students and Professionals",
+  title:
+    "Ahmedabad PG Guides – Gota, Nirma & SG Highway | Unoloft Blog",
   description:
-    "Explore practical Unoloft blog guides on Ahmedabad PG living, commute-first location decisions, student budgeting, and professional stay planning.",
+    "Free guides from Unoloft: choosing PG near Nirma University or SG Highway, cost of living for students in Ahmedabad, study habits in a PG, and checklists for working professionals—plus links to Aster Homes & Iris House.",
   path: "/blogs",
   keywords: [
     "Ahmedabad PG blog",
     "PG guide Ahmedabad",
+    "pg in gota ahmedabad guide",
+    "PG near Nirma University guide",
     "student PG budget Ahmedabad",
+    "cost of living ahmedabad students",
     "working professional PG Ahmedabad",
-    "PG near Nirma University",
     "PG near SG Highway",
+    "best pg in ahmedabad tips",
   ],
 });
 
