@@ -94,14 +94,23 @@ type BuildPageMetadataInput = {
   keywords?: string[];
 };
 
+function normalizePageTitle(title: string): string {
+  return title
+    .replace(/\s*\|\s*Unoloft\s*$/i, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
 export function buildPageMetadata({
   title,
   description,
   path,
   keywords,
 }: BuildPageMetadataInput): Metadata {
+  const normalizedTitle = normalizePageTitle(title);
+
   return {
-    title,
+    title: normalizedTitle,
     description,
     keywords,
     robots: {
@@ -122,7 +131,7 @@ export function buildPageMetadata({
       type: "website",
       locale: "en_IN",
       siteName: SITE_NAME,
-      title,
+      title: normalizedTitle,
       description,
       url: `${SITE_URL}${path}`,
       images: [
@@ -136,7 +145,7 @@ export function buildPageMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: normalizedTitle,
       description,
       images: [OG_IMAGE_URL],
     },
