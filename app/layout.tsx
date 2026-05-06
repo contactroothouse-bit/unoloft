@@ -82,6 +82,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-mode="all">
       <head>
+      <script src="https://analytics.ahrefs.com/analytics.js" data-key="pQfVG0Wjn6+1oJfPpobZxw" async></script>
         <link
           rel="preload"
           as="style"
