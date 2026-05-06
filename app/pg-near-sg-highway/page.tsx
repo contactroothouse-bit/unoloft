@@ -56,9 +56,10 @@ export default function PgNearSgHighwayPage() {
         data={getBreadcrumbSchema("/pg-near-sg-highway", "PG near SG Highway")}
       />
       <JsonLd
-        data={getLodgingBusinessSchema(
-          "Unoloft – PG near SG Highway Ahmedabad",
-        )}
+        data={getLodgingBusinessSchema({
+          name: "Unoloft – PG near SG Highway Ahmedabad",
+          path: "/pg-near-sg-highway",
+        })}
       />
       <JsonLd data={getFaqSchema(LANDING_FAQS)} />
       <LocalSeoLandingPage

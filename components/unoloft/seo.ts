@@ -208,29 +208,44 @@ export function getBreadcrumbSchema(path: string, pageName: string) {
   };
 }
 
-export function getLodgingBusinessSchema(name: string) {
+type LodgingBusinessSchemaInput = {
+  name: string;
+  path?: string;
+  streetAddress?: string;
+  postalCode?: string;
+  latitude?: number;
+  longitude?: number;
+};
+
+export function getLodgingBusinessSchema({
+  name,
+  path = "/",
+  streetAddress = "Royal Lakend, Gota - Jagatpur Road, Sarkhej-Gandhinagar Hwy",
+  postalCode = "382481",
+  latitude = 23.1225,
+  longitude = 72.5714,
+}: LodgingBusinessSchemaInput) {
   return {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
-    "@id": `${SITE_URL}/#lodging-business`,
+    "@id": `${SITE_URL}${path}#lodging-business`,
     name,
-    url: SITE_URL,
+    url: `${SITE_URL}${path}`,
     image: [SITE_LOGO_URL],
     logo: SITE_LOGO_URL,
     telephone: "+917043306301",
     address: {
       "@type": "PostalAddress",
-      streetAddress:
-        "Royal Lakend, Gota - Jagatpur Road, Sarkhej-Gandhinagar Hwy",
+      streetAddress,
       addressLocality: "Ahmedabad",
       addressRegion: "Gujarat",
-      postalCode: "382481",
+      postalCode,
       addressCountry: "IN",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 23.1225,
-      longitude: 72.5714,
+      latitude,
+      longitude,
     },
     areaServed: [
       {

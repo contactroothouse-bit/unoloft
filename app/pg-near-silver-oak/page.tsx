@@ -55,9 +55,10 @@ export default function PgNearSilverOakPage() {
         data={getBreadcrumbSchema("/pg-near-silver-oak", "PG near Silver Oak")}
       />
       <JsonLd
-        data={getLodgingBusinessSchema(
-          "Unoloft – PG near Silver Oak University",
-        )}
+        data={getLodgingBusinessSchema({
+          name: "Unoloft – PG near Silver Oak University",
+          path: "/pg-near-silver-oak",
+        })}
       />
       <JsonLd data={getFaqSchema(LANDING_FAQS)} />
       <LocalSeoLandingPage

@@ -36,7 +36,17 @@ export default function AsterHomesPage() {
   return (
     <>
       <JsonLd data={getBreadcrumbSchema("/aster-homes", "Aster Homes")} />
-      <JsonLd data={getLodgingBusinessSchema("Unoloft – Aster Homes")} />
+      <JsonLd
+        data={getLodgingBusinessSchema({
+          name: "Unoloft – Aster Homes",
+          path: "/aster-homes",
+          streetAddress:
+            "Royal Lakend, Gota - Jagatpur Road, Sarkhej-Gandhinagar Hwy",
+          postalCode: "382481",
+          latitude: 23.1225,
+          longitude: 72.5714,
+        })}
+      />
       <JsonLd
         data={getReviewSchema(
           ASTER_TESTIMONIALS,

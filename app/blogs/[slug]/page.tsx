@@ -176,6 +176,16 @@ export default async function BlogArticlePage({
             </footer>
           ) : null}
 
+          <section className="blog-article-foot">
+            <p>
+              Also explore <Link href="/pg-in-gota-ahmedabad">PG in Gota Ahmedabad</Link>,{" "}
+              <Link href="/pg-near-nirma-university">PG near Nirma University</Link>,{" "}
+              <Link href="/pg-near-silver-oak">PG near Silver Oak University</Link>, and{" "}
+              <Link href="/pg-near-sg-highway">PG near SG Highway</Link> to compare
+              options by commute and amenities.
+            </p>
+          </section>
+
           <nav className="blog-next-nav" aria-label="Blog article navigation">
             {previousArticle ? (
               <Link href={`/blogs/${previousArticle.slug}`} className="blog-next-link">

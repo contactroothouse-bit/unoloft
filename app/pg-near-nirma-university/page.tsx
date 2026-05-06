@@ -60,7 +60,14 @@ export default function PgNearNirmaUniversityPage() {
         )}
       />
       <JsonLd
-        data={getLodgingBusinessSchema("Unoloft – PG near Nirma University")}
+        data={getLodgingBusinessSchema({
+          name: "Unoloft – PG near Nirma University",
+          path: "/pg-near-nirma-university",
+          streetAddress: "Behind Nirma University, Beside Adani Pratham, Tragad",
+          postalCode: "382470",
+          latitude: 23.129,
+          longitude: 72.5423,
+        })}
       />
       <JsonLd data={getFaqSchema(LANDING_FAQS)} />
       <LocalSeoLandingPage

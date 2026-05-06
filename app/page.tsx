@@ -11,41 +11,32 @@ import {
 } from "@/components/unoloft/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Pg in Gota Ahmedabad | Premium PG  | Aster homes | Iris house | unoloft by roothouseliving | Nirmal university | Silver oak university | SG highway | Gota circle | Paying guest in gota | Ahmedabad best pg | Good Food Quality | 27/7 security | Gym | AC  ",
+  title: "Premium PG in Ahmedabad Near Gota | Unoloft",
   description:
-    "Premium PG in Ahmedabad (Gota) near Nirma University and SG Highway. Fully furnished AC rooms with meals, WiFi, gym, housekeeping and 24/7 security. | pg for boys in gota | best pg in gota | best pg in ahmedabad | pg in ahmedabad | pg near me | premium pg in gota | premium pg in ahmedabad | premium pg near nirmal university | premium pg near silver oak university | premium pg near SG highway | premium pg near me | premium pg for boys | premium pg for girls | premium pg for working professionals  ",
+    "Unoloft offers premium PG accommodation in Ahmedabad near Gota, Nirma University, Silver Oak University, and SG Highway with AC rooms, meals, WiFi, housekeeping, and 24/7 security.",
   path: "/",
   keywords: [
     "PG in Ahmedabad",
-    "paying guest in Ahmedabad",
-    "boys PG Ahmedabad",
-    "pg for men",
-    "pg for men in Ahmedabad",
-    "best pg in Ahmedabad",
-    "PG near Nirma University",
-    "pg near nirma university ahmedabad",
     "PG in Gota Ahmedabad",
-    "paying guest Ahmedabad",
+    "PG near Nirma University",
     "PG near SG Highway",
-    "single room pg in Ahmedabad",
-    "double sharing pg",
+    "paying guest in Ahmedabad",
+    "best PG in Ahmedabad",
     "pg for working professionals",
-    "paying guest for gents near me",
-    "paying guest room near me",
-    "pg for boys in gota",
-    "best pg in gota",
-    "best pg in ahmedabad",
-    "pg in ahmedabad",
-    "pg near me",
-    "premium pg in gota",
-    "premium pg in ahmedabad",
-    "premium pg near nirmal university",
-    "premium pg near silver oak university",
-    "premium pg near SG highway",
-    "premium pg near me",
-    "premium pg for boys",
-    "premium pg for girls",
-    "premium pg for working professionals",
+    "student accommodation Ahmedabad",
+    "premium PG in Ahmedabad",
+    "premium PG in Gota Ahmedabad",
+    "premium PG near Nirma University",
+    "premium PG near SG Highway",
+    "premium PG for working professionals",
+    "premium PG for students",
+    "Pg for boys near Nirma University",
+    "Pg for boys near SG Highway",
+    "Pg for working professionals near Nirma University",
+    "Pg for working professionals near SG Highway",
+    "Pg for students near Nirma University",
+    "Pg for students near SG Highway",
+    "Pg for working professionals near Nirma University",
   ],
 });
 
@@ -53,7 +44,12 @@ export default function Page() {
   return (
     <>
       <JsonLd data={getOrganizationSchema()} />
-      <JsonLd data={getLodgingBusinessSchema("Unoloft – Aster Homes")} />
+      <JsonLd
+        data={getLodgingBusinessSchema({
+          name: "Unoloft",
+          path: "/",
+        })}
+      />
       <JsonLd data={getReviewSchema(ASTER_TESTIMONIALS, "Unoloft", "/")} />
       <JsonLd data={getWebsiteSchema()} />
       <UnoloftPage />

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/unoloft/JsonLd";
 import PageShell from "@/components/unoloft/PageShell";
 import GalleryPageClient from "@/components/unoloft/GalleryPageClient";
-import { ASTER_TESTIMONIALS, FAQ_ITEMS } from "@/components/unoloft/data";
+import { FAQ_ITEMS, IRIS_TESTIMONIALS } from "@/components/unoloft/data";
 import FacilitiesSection from "@/components/unoloft/sections/FacilitiesSection";
 import MapSection from "@/components/unoloft/sections/MapSection";
 import RoomsSection from "@/components/unoloft/sections/RoomsSection";
@@ -36,10 +36,19 @@ export default function IrisHousePage() {
   return (
     <>
       <JsonLd data={getBreadcrumbSchema("/iris-house", "Iris House")} />
-      <JsonLd data={getLodgingBusinessSchema("Unoloft – Iris House")} />
+      <JsonLd
+        data={getLodgingBusinessSchema({
+          name: "Unoloft – Iris House",
+          path: "/iris-house",
+          streetAddress: "Behind Nirma University, Beside Adani Pratham, Tragad",
+          postalCode: "382470",
+          latitude: 23.129,
+          longitude: 72.5423,
+        })}
+      />
       <JsonLd
         data={getReviewSchema(
-          ASTER_TESTIMONIALS,
+          IRIS_TESTIMONIALS,
           "Unoloft – Iris House",
           "/iris-house",
         )}
@@ -90,7 +99,7 @@ export default function IrisHousePage() {
         <FacilitiesSection selectedHome="iris" />
         <RoomsSection selectedHome="iris" />
         <GalleryPageClient selectedHome="iris" />
-        <TestimonialsSection items={ASTER_TESTIMONIALS} />
+        <TestimonialsSection items={IRIS_TESTIMONIALS} />
         <MapSection selectedHome="iris" />
       </PageShell>
     </>

@@ -64,7 +64,10 @@ export default function PgInGotaAhmedabadPage() {
         )}
       />
       <JsonLd
-        data={getLodgingBusinessSchema("Unoloft – PG in Gota Ahmedabad")}
+        data={getLodgingBusinessSchema({
+          name: "Unoloft – PG in Gota Ahmedabad",
+          path: "/pg-in-gota-ahmedabad",
+        })}
       />
       <JsonLd data={getFaqSchema(LANDING_FAQS)} />
       <LocalSeoLandingPage
