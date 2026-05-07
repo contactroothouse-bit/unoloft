@@ -139,7 +139,7 @@ export function buildPageMetadata({
           url: OG_IMAGE_URL,
           width: 1200,
           height: 630,
-          alt: "Unoloft Premium PG Ahmedabad",
+          alt: "Unoloft Premium PG Gota, Ahmedabad",
         },
       ],
     },

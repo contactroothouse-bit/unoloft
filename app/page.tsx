@@ -11,7 +11,7 @@ import {
 } from "@/components/unoloft/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Premium PG in Ahmedabad Near Gota | Unoloft",
+  title: "Premium PG in Gota Ahmedabad for Boys | Unoloft | Aster Homes | Iris House",
   description:
     "Unoloft offers premium PG accommodation in Ahmedabad near Gota, Nirma University, Silver Oak University, and SG Highway with AC rooms, meals, WiFi, housekeeping, and 24/7 security.",
   path: "/",

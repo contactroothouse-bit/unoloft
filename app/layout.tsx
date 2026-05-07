@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   manifest: "/manifest.webmanifest",
   title: {
-    default: "Unoloft – Premium PG in Ahmedabad",
+    default: "Unoloft Premium pf in Gota Ahmedabad For Boys",
     template: `%s | ${SITE_NAME}`,
   },
   icons: {
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     ],
   },
   description:
-    "Ahmedabad's premium paying guest accommodation for boys near Gota and SG Highway.",
+    "Unoloft Provided Premium PG in Gota Ahmedabad for Boys Near Nirmal University, Silver Oak Universitry and SG Highway, with 4Time Food, GYM, Wifi, AC , Free Parking and other amneties.",
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: "Unoloft Premium PG Ahmedabad",
+        alt: "Unoloft Premium PG Gota, Ahmedabad",
       },
     ],
   },
