@@ -67,8 +67,8 @@ export const HERO_MOSAIC_CARDS: HeroMosaicCard[] = [
     cardClass: "mc4",
     alt: "Building",
     sources: {
-      aster: "/gallery/IMG-20260201-WA0006.jpg",
-      iris: "/gallery/IMG-20260201-WA0006.jpg",
+      aster: "/facilities/IMG-20260201-WA0013.jpg",
+      iris: "/facilities/IMG-20260201-WA0013.jpg",
     },
   },
 ];
