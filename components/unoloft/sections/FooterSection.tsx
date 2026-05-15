@@ -16,24 +16,42 @@ export default function FooterSection() {
             />
           </div>
           <p className="ft-desc">
-            Roothouse Living offers premium paying guest accommodation in
+            Unoloft offers premium paying guest accommodation in
             Ahmedabad. Your home, away from home - since 2021.
           </p>
           <div className="ft-socs">
-            <a href="#" className="ft-soc">
+            <a
+              href="https://www.instagram.com/unoloft_/"
+              className="ft-soc"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Unoloft Instagram"
+            >
               <i className="fa-brands fa-instagram" />
             </a>
-            <a href="#" className="ft-soc">
+            <a
+              href="https://www.facebook.com/unoloft"
+              className="ft-soc"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Unoloft Facebook"
+            >
               <i className="fa-brands fa-facebook-f" />
             </a>
-            <a href="#" className="ft-soc">
+            <a
+              href="https://wa.me/917043306301"
+              className="ft-soc"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Unoloft WhatsApp"
+            >
               <i className="fa-brands fa-whatsapp" />
             </a>
           </div>
         </div>
 
         <div className="ft-col">
-          <h4>Navigate</h4>
+          <p className="ft-col-title">Navigate</p>
           <ul className="ft-lks">
             <li>
               <Link href="/">About Us</Link>
@@ -54,34 +72,37 @@ export default function FooterSection() {
               <Link href="/gallery">Gallery</Link>
             </li>
             <li>
+              <Link href="/blogs">Blogs</Link>
+            </li>
+            <li>
               <Link href="/faq">FAQ</Link>
             </li>
             <li>
               <Link href="/contact">Contact</Link>
             </li>
             <li>
-              <Link href="/pg-near-nirma-university">PG near Nirma University</Link>
+              <Link href="/pg-near-nirma-university">Near Nirma</Link>
             </li>
             <li>
-              <Link href="/pg-near-silver-oak">PG near Silver Oak University</Link>
+              <Link href="/pg-near-silver-oak">Near Silver Oak</Link>
             </li>
             <li>
-              <Link href="/pg-in-gota-ahmedabad">PG in Gota Ahmedabad</Link>
+              <Link href="/pg-in-gota-ahmedabad">PG in Gota</Link>
             </li>
             <li>
-              <Link href="/pg-near-sg-highway">PG near SG Highway</Link>
+              <Link href="/pg-near-sg-highway">Near SG Highway</Link>
             </li>
           </ul>
         </div>
 
         <div className="ft-col">
-          <h4>Our Homes</h4>
+          <p className="ft-col-title">Our Homes</p>
           <ul className="ft-lks">
             <li>
-              <Link href="/aster-homes">Aster Homes</Link>
+              <Link href="/aster-homes">Explore Aster Homes</Link>
             </li>
             <li>
-              <Link href="/iris-house">Iris House</Link>
+              <Link href="/iris-house">Explore Iris House</Link>
             </li>
             <li>
               <Link href="/rooms">Single Room</Link>
@@ -96,7 +117,7 @@ export default function FooterSection() {
         </div>
 
         <div className="ft-col">
-          <h4>Contact</h4>
+          <p className="ft-col-title">Contact</p>
           <ul className="ft-lks">
             <li>
               <a href="tel:+917043306301">7043306301</a>
@@ -117,7 +138,7 @@ export default function FooterSection() {
       </div>
 
       <div className="ft-bar">
-        <div>© 2026 Roothouse Living. All rights reserved.</div>
+        <div>© 2026 Unoloft. All rights reserved.</div>
       </div>
     </footer>
   );

@@ -37,8 +37,8 @@ function BlogCard({
         <span className="blog-chip">Unoloft Blog</span>
         <span className="blog-source">{readTime}</span>
       </div>
-      <h3>{cardTitle}</h3>
-      <p>{excerpt}</p>
+      <p className="blog-card-title">{cardTitle}</p>
+      <p className="blog-card-excerpt">{excerpt}</p>
       <div className="blog-meta">
         <span>{audience}</span>
         <span>Ahmedabad</span>
@@ -52,7 +52,7 @@ function BlogCard({
 }
 
 export default function BlogsSection() {
-  const marqueePosts = [...BLOG_POSTS, ...BLOG_POSTS];
+  const marqueePosts = BLOG_POSTS;
 
   return (
     <section id="blogs">

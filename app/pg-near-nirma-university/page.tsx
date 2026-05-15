@@ -27,10 +27,27 @@ const LANDING_FAQS = [
 ];
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "PG near Nirma University Ahmedabad – Boys PG with Meals | Unoloft",
+  title:
+    "PG Near Nirma University Ahmedabad – AC Rooms, Meals & WiFi | Unoloft",
   description:
-    "Unoloft offers premium boys PG near Nirma University, Ahmedabad with furnished AC rooms, meals, study setup, WiFi and 24/7 security.",
+    "Student-friendly PG near Nirma University from Unoloft (Gota–Jagatpur): AC rooms with study table & chair, hygienic meals, high-speed WiFi, daily housekeeping & secure entry. Ideal for daily campus commute. Book a visit on WhatsApp.",
   path: "/pg-near-nirma-university",
+  keywords: [
+    "pg near nirma university",
+    "pg near nirma university ahmedabad",
+    "hostel near nirma university",
+    "hostels near nirma university",
+    "nirma university near pg",
+    "best pg near nirma university",
+    "best pg in ahmedabad",
+    "pg in ahmedabad near nirma university",
+    "single room pg near me",
+    "single sharing pg near me",
+    "pg for students in ahmedabad",
+    "student accommodation in ahmedabad",
+    "paying guest for students",
+    "boys pg ahmedabad",
+  ],
 });
 
 export default function PgNearNirmaUniversityPage() {
@@ -43,7 +60,14 @@ export default function PgNearNirmaUniversityPage() {
         )}
       />
       <JsonLd
-        data={getLodgingBusinessSchema("Unoloft – PG near Nirma University")}
+        data={getLodgingBusinessSchema({
+          name: "Unoloft – PG near Nirma University",
+          path: "/pg-near-nirma-university",
+          streetAddress: "Behind Nirma University, Beside Adani Pratham, Tragad",
+          postalCode: "382470",
+          latitude: 23.129,
+          longitude: 72.5423,
+        })}
       />
       <JsonLd data={getFaqSchema(LANDING_FAQS)} />
       <LocalSeoLandingPage

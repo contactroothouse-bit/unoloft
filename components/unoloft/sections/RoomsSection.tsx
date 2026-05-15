@@ -12,6 +12,8 @@ type RoomsSectionProps = {
   subtitle?: string;
   homeLabel?: string;
   sectionClassName?: string;
+  showHomeSwitch?: boolean;
+  onHomeChange?: (home: Home) => void;
 };
 
 export default function RoomsSection({
@@ -23,6 +25,8 @@ export default function RoomsSection({
   subtitle = "Flexible options for every budget — fully furnished and ready to move in.",
   homeLabel,
   sectionClassName,
+  showHomeSwitch = false,
+  onHomeChange,
 }: RoomsSectionProps) {
   const rooms = ROOMS_BY_HOME[selectedHome];
   const gridClassName = rooms.length === 2 ? "rooms-g rooms-g-two" : "rooms-g";
@@ -37,6 +41,25 @@ export default function RoomsSection({
         </h2>
         <p className="s-sub">{subtitle}</p>
       </div>
+
+      {showHomeSwitch ? (
+        <div className="rooms-home-switch rooms-home-switch-inline" aria-label="Select property">
+          <button
+            type="button"
+            className={cn(selectedHome === "aster" && "active")}
+            onClick={() => onHomeChange?.("aster")}
+          >
+            Aster Homes
+          </button>
+          <button
+            type="button"
+            className={cn(selectedHome === "iris" && "active")}
+            onClick={() => onHomeChange?.("iris")}
+          >
+            Iris House
+          </button>
+        </div>
+      ) : null}
 
       <div className={gridClassName}>
         {rooms.map((room) => (

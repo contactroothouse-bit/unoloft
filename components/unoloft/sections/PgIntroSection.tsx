@@ -1,22 +1,13 @@
 import Image from "next/image";
-import type { Home } from "@/components/unoloft/types";
-import { cn } from "@/components/unoloft/utils";
+import Link from "next/link";
 
-type PgIntroSectionProps = {
-  selectedHome: Home;
-  onHomeChange: (home: Home) => void;
-};
-
-export default function PgIntroSection({
-  selectedHome,
-  onHomeChange,
-}: PgIntroSectionProps) {
+export default function PgIntroSection() {
   return (
     <section id="pg-intro">
       <div className="sh rv">
         <div className="s-ey">Who We Are</div>
         <h2 className="s-t">
-          Two Homes, <em>One Family</em>
+          Our <em>Properties</em>
         </h2>
         <p className="s-sub">
           Safe, premium, and vibrant PG spaces crafted for Ahmedabad&apos;s
@@ -30,9 +21,9 @@ export default function PgIntroSection({
             <i className="fa-solid fa-mars" /> For Boys
           </div> */}
 
-          <div
-            className={cn("pg-card", selectedHome === "aster" && "active")}
-            onClick={() => onHomeChange("aster")}
+          <Link
+            className="pg-card"
+            href="/aster-homes"
           >
             <Image
               src="/gallery/IMG-20260201-WA0028.jpg"
@@ -54,11 +45,11 @@ export default function PgIntroSection({
                 <span className="pg-feat">Bed with Extra Storage</span>
                 <span className="pg-feat">Library Area</span>
               </div>
-              <a href="#contact" className="pg-link">
+              <span className="pg-link">
                 Book a Visit <i className="fa-solid fa-arrow-right" />
-              </a>
+              </span>
             </div>
-          </div>
+          </Link>
         </div>
 
         <div className="pg-item rv" style={{ transitionDelay: ".12s" }}>
@@ -66,9 +57,9 @@ export default function PgIntroSection({
             <i className="fa-solid fa-mars" /> For Boys
           </div> */}
 
-          <div
-            className={cn("pg-card", selectedHome === "iris" && "active")}
-            onClick={() => onHomeChange("iris")}
+          <Link
+            className="pg-card"
+            href="/iris-house"
           >
             <Image
               src="/Iris%20homes/Iris%20homes/IMG-20260322-WA0001.jpg"
@@ -89,11 +80,11 @@ export default function PgIntroSection({
                 <span className="pg-feat">CCTV</span>
                 <span className="pg-feat">Library Area</span>
               </div>
-              <a href="#contact" className="pg-link">
+              <span className="pg-link">
                 Book a Visit <i className="fa-solid fa-arrow-right" />
-              </a>
+              </span>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>

@@ -27,10 +27,31 @@ const LANDING_FAQS = [
 ];
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "PG in Gota Ahmedabad – Furnished Rooms with Meals | Unoloft",
+  title:
+    "PG in Gota Ahmedabad – AC Rooms, Meals & WiFi | Near Nirma & SG Highway | Unoloft",
   description:
-    "Looking for PG in Gota, Ahmedabad? Unoloft offers fully AC furnished rooms with WiFi, gym, meals & 24/7 security at Gota Circle near SG Highway.",
+    "Premium PG in Gota (Royal Lakend, Jagatpur Road): AC furnished single/double/triple rooms, 4-time meals, 100 Mbps WiFi, housekeeping & 24/7 security. ~2 min Gota Circle & SG Highway, ~10 min Nirma. WhatsApp to book a visit.",
   path: "/pg-in-gota-ahmedabad",
+  keywords: [
+    "pg in gota ahmedabad",
+    "pg in gota",
+    "pg near gota",
+    "pg near gota ahmedabad",
+    "best pg in gota ahmedabad",
+    "best pg in gota",
+    "gota pg",
+    "gota pg ahmedabad",
+    "boys pg in gota",
+    "paying guest in ahmedabad",
+    "paying guest room near me",
+    "single room pg in ahmedabad",
+    "double sharing pg",
+    "triple sharing pg",
+    "pg near sg highway",
+    "pg near nirma university",
+    "pg for working professionals",
+    "pg for working professionals near gota",
+  ],
 });
 
 export default function PgInGotaAhmedabadPage() {
@@ -43,7 +64,10 @@ export default function PgInGotaAhmedabadPage() {
         )}
       />
       <JsonLd
-        data={getLodgingBusinessSchema("Unoloft – PG in Gota Ahmedabad")}
+        data={getLodgingBusinessSchema({
+          name: "Unoloft – PG in Gota Ahmedabad",
+          path: "/pg-in-gota-ahmedabad",
+        })}
       />
       <JsonLd data={getFaqSchema(LANDING_FAQS)} />
       <LocalSeoLandingPage

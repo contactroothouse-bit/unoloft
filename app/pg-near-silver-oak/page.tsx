@@ -28,10 +28,24 @@ const LANDING_FAQS = [
 
 export const metadata: Metadata = buildPageMetadata({
   title:
-    "PG near Silver Oak University Ahmedabad – Furnished Boys PG | Unoloft",
+    "PG Near Silver Oak University Ahmedabad – Meals, WiFi & AC Rooms | Unoloft",
   description:
-    "Looking for PG near Silver Oak University? Unoloft offers furnished AC boys PG rooms with meals, WiFi, gym and security in Gota Ahmedabad.",
+    "Live ~5 minutes from Silver Oak University (Gota–Jagatpur): Unoloft PG with AC single/double/triple rooms, home-style meals, WiFi, housekeeping & 24/7 security. Short commute for classes and labs. See rooms and book a visit today.",
   path: "/pg-near-silver-oak",
+  keywords: [
+    "pg near silver oak university",
+    "pg near silver oak university ahmedabad",
+    "silver oak university near pg",
+    "hostel near silver oak university",
+    "pg near gota ahmedabad",
+    "pg in gota",
+    "pg in ahmedabad for students",
+    "single room pg in ahmedabad",
+    "double sharing pg",
+    "triple sharing pg",
+    "paying guest in ahmedabad",
+    "student dormitory ahmedabad",
+  ],
 });
 
 export default function PgNearSilverOakPage() {
@@ -41,9 +55,10 @@ export default function PgNearSilverOakPage() {
         data={getBreadcrumbSchema("/pg-near-silver-oak", "PG near Silver Oak")}
       />
       <JsonLd
-        data={getLodgingBusinessSchema(
-          "Unoloft – PG near Silver Oak University",
-        )}
+        data={getLodgingBusinessSchema({
+          name: "Unoloft – PG near Silver Oak University",
+          path: "/pg-near-silver-oak",
+        })}
       />
       <JsonLd data={getFaqSchema(LANDING_FAQS)} />
       <LocalSeoLandingPage

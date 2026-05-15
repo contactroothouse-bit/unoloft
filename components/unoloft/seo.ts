@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { InternalBlogArticle } from "@/components/unoloft/blogs";
 import type { FaqItem, Testimonial } from "@/components/unoloft/types";
 
 export const SITE_URL = "https://www.unoloft.com";
@@ -41,44 +42,49 @@ export const LOCAL_ROUTES = [
 ] as const;
 
 export const ALL_SEO_ROUTES: RouteConfig[] = [
-  { path: "/", changeFrequency: "weekly", priority: 1 },
-  { path: "/aster-homes", changeFrequency: "weekly", priority: 0.9 },
-  { path: "/iris-house", changeFrequency: "weekly", priority: 0.9 },
-  { path: "/rooms", changeFrequency: "weekly", priority: 0.7 },
-  { path: "/amenities", changeFrequency: "weekly", priority: 0.7 },
-  { path: "/location", changeFrequency: "weekly", priority: 0.7 },
-  { path: "/contact", changeFrequency: "weekly", priority: 0.7 },
-  { path: "/gallery", changeFrequency: "weekly", priority: 0.7 },
-  { path: "/blogs", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/", changeFrequency: "daily", priority: 1 },
+  { path: "/aster-homes", changeFrequency: "daily", priority: 0.9 },
+  { path: "/iris-house", changeFrequency: "daily", priority: 0.9 },
+  { path: "/rooms", changeFrequency: "daily", priority: 0.7 },
+  { path: "/amenities", changeFrequency: "daily", priority: 0.7 },
+  { path: "/location", changeFrequency: "daily", priority: 0.7 },
+  { path: "/contact", changeFrequency: "daily", priority: 0.7 },
+  { path: "/gallery", changeFrequency: "daily", priority: 0.7 },
+  { path: "/blogs", changeFrequency: "daily", priority: 0.8 },
   {
-    path: "/blogs/working-professional-pg-decision-framework-ahmedabad",
-    changeFrequency: "monthly",
+    path: "/blogs/why-pg-location-ahmedabad-matters",
+    changeFrequency: "daily",
     priority: 0.7,
   },
   {
-    path: "/blogs/location-first-pg-strategy-students-professionals-ahmedabad",
-    changeFrequency: "monthly",
+    path: "/blogs/cost-of-living-ahmedabad-students",
+    changeFrequency: "daily",
     priority: 0.7,
   },
   {
-    path: "/blogs/student-pg-budget-blueprint-ahmedabad-2026",
-    changeFrequency: "monthly",
+    path: "/blogs/pg-checklist-working-professionals-ahmedabad",
+    changeFrequency: "daily",
     priority: 0.7,
   },
   {
-    path: "/blogs/parents-guide-safe-pg-ahmedabad",
-    changeFrequency: "monthly",
+    path: "/blogs/study-tips-pg-students-ahmedabad-gota",
+    changeFrequency: "daily",
     priority: 0.7,
   },
-  { path: "/faq", changeFrequency: "weekly", priority: 0.7 },
-  { path: "/pg-in-gota-ahmedabad", changeFrequency: "weekly", priority: 0.9 },
+  {
+    path: "/blogs/pg-near-nirma-university-ahmedabad-gota-unoloft",
+    changeFrequency: "daily",
+    priority: 0.7,
+  },
+  { path: "/faq", changeFrequency: "daily", priority: 0.7 },
+  { path: "/pg-in-gota-ahmedabad", changeFrequency: "daily", priority: 0.9 },
   {
     path: "/pg-near-nirma-university",
-    changeFrequency: "weekly",
+    changeFrequency: "daily",
     priority: 0.9,
   },
-  { path: "/pg-near-silver-oak", changeFrequency: "weekly", priority: 0.9 },
-  { path: "/pg-near-sg-highway", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/pg-near-silver-oak", changeFrequency: "daily", priority: 0.9 },
+  { path: "/pg-near-sg-highway", changeFrequency: "daily", priority: 0.9 },
 ];
 
 type BuildPageMetadataInput = {
@@ -88,16 +94,36 @@ type BuildPageMetadataInput = {
   keywords?: string[];
 };
 
+function normalizePageTitle(title: string): string {
+  return title
+    .replace(/\s*\|\s*Unoloft\s*$/i, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
 export function buildPageMetadata({
   title,
   description,
   path,
   keywords,
 }: BuildPageMetadataInput): Metadata {
+  const normalizedTitle = normalizePageTitle(title);
+
   return {
-    title,
+    title: normalizedTitle,
     description,
     keywords,
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
     alternates: {
       canonical: path,
     },
@@ -105,7 +131,7 @@ export function buildPageMetadata({
       type: "website",
       locale: "en_IN",
       siteName: SITE_NAME,
-      title,
+      title: normalizedTitle,
       description,
       url: `${SITE_URL}${path}`,
       images: [
@@ -113,15 +139,50 @@ export function buildPageMetadata({
           url: OG_IMAGE_URL,
           width: 1200,
           height: 630,
-          alt: "Unoloft Premium PG Ahmedabad",
+          alt: "Unoloft Premium PG Gota, Ahmedabad",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: normalizedTitle,
       description,
       images: [OG_IMAGE_URL],
+    },
+  };
+}
+
+export function getBlogPostingSchema(article: InternalBlogArticle) {
+  const pageUrl = `${SITE_URL}/blogs/${article.slug}`;
+  const imagePath = article.thumbnail.startsWith("http")
+    ? article.thumbnail
+    : `${SITE_URL}${article.thumbnail}`;
+  const published = `${article.publishedOn}T08:00:00+05:30`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: article.title,
+    description: article.metaDescription,
+    image: [imagePath],
+    datePublished: published,
+    dateModified: published,
+    author: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      logo: {
+        "@type": "ImageObject",
+        url: SITE_LOGO_URL,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": pageUrl,
     },
   };
 }
@@ -147,30 +208,87 @@ export function getBreadcrumbSchema(path: string, pageName: string) {
   };
 }
 
-export function getLodgingBusinessSchema(name: string) {
+type LodgingBusinessSchemaInput = {
+  name: string;
+  path?: string;
+  streetAddress?: string;
+  postalCode?: string;
+  latitude?: number;
+  longitude?: number;
+};
+
+export function getLodgingBusinessSchema({
+  name,
+  path = "/",
+  streetAddress = "Royal Lakend, Gota - Jagatpur Road, Sarkhej-Gandhinagar Hwy",
+  postalCode = "382481",
+  latitude = 23.1225,
+  longitude = 72.5714,
+}: LodgingBusinessSchemaInput) {
   return {
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
-    "@id": `${SITE_URL}/#lodging-business`,
+    "@id": `${SITE_URL}${path}#lodging-business`,
     name,
-    url: SITE_URL,
+    url: `${SITE_URL}${path}`,
     image: [SITE_LOGO_URL],
     logo: SITE_LOGO_URL,
     telephone: "+917043306301",
     address: {
       "@type": "PostalAddress",
-      streetAddress:
-        "Royal Lakend, Gota - Jagatpur Road, Sarkhej-Gandhinagar Hwy",
+      streetAddress,
       addressLocality: "Ahmedabad",
       addressRegion: "Gujarat",
-      postalCode: "382481",
+      postalCode,
       addressCountry: "IN",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 23.1225,
-      longitude: 72.5714,
+      latitude,
+      longitude,
     },
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Ahmedabad",
+      },
+      {
+        "@type": "Place",
+        name: "Gota",
+      },
+      {
+        "@type": "Place",
+        name: "Jagatpur",
+      },
+      {
+        "@type": "Place",
+        name: "Sarkhej-Gandhinagar Highway",
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Nirma University",
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Silver Oak University",
+      },
+    ],
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "09:00",
+        closes: "20:00",
+      },
+    ],
     priceRange: "INR 11000-16500",
     aggregateRating: {
       "@type": "AggregateRating",
@@ -211,6 +329,15 @@ export function getOrganizationSchema() {
       url: SITE_LOGO_URL,
     },
     image: SITE_LOGO_URL,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+917043306301",
+        contactType: "customer service",
+        areaServed: "IN",
+        availableLanguage: ["en", "hi", "gu"],
+      },
+    ],
   };
 }
 

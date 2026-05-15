@@ -11,10 +11,19 @@ import {
 } from "@/components/unoloft/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Unoloft FAQ – PG Rent, Security, Meals, Rules & Booking",
+  title:
+    "Unoloft FAQ – PG in Gota Ahmedabad: Rent, Meals, Security Deposit & Visiting Rules",
   description:
-    "Read frequently asked questions about Unoloft PG in Ahmedabad covering rent inclusions, security deposit, visiting rules, food and booking process.",
+    "Answers about Unoloft PG (Aster Homes & Iris House): what rent includes (meals, WiFi, housekeeping), security deposit refunds, gate timings, booking a visit, and daily operations—before you move in.",
   path: "/faq",
+  keywords: [
+    "unoloft faq",
+    "pg in gota ahmedabad rules",
+    "pg security deposit ahmedabad",
+    "pg meals included ahmedabad",
+    "aster homes pg faq",
+    "iris house pg faq",
+  ],
 });
 
 export default function FaqPage() {

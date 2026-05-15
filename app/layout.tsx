@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import GoogleAnalytics from "@/components/unoloft/GoogleAnalytics";
 import { OG_IMAGE_URL, SITE_NAME, SITE_URL } from "@/components/unoloft/seo";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -20,12 +21,25 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   manifest: "/manifest.webmanifest",
   title: {
-    default: "Unoloft – Premium PG in Ahmedabad",
+    default: "Unoloft Premium pf in Gota Ahmedabad For Boys",
     template: `%s | ${SITE_NAME}`,
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "192x192", type: "image/x-icon" },
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      {
+        url: "/android-chrome-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        url: "/android-chrome-512x512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
       { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
     ],
     shortcut: ["/favicon.ico"],
@@ -38,7 +52,7 @@ export const metadata: Metadata = {
     ],
   },
   description:
-    "Ahmedabad's premium paying guest accommodation for boys near Gota and SG Highway.",
+    "Unoloft Provided Premium PG in Gota Ahmedabad for Boys Near Nirmal University, Silver Oak Universitry and SG Highway, with 4Time Food, GYM, Wifi, AC , Free Parking and other amneties.",
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -48,7 +62,7 @@ export const metadata: Metadata = {
         url: OG_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: "Unoloft Premium PG Ahmedabad",
+        alt: "Unoloft Premium PG Gota, Ahmedabad",
       },
     ],
   },
@@ -63,17 +77,35 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
   return (
     <html lang="en" data-mode="all">
       <head>
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="pQfVG0Wjn6+1oJfPpobZxw" async></script>
+        <meta name="ahrefs-site-verification" content="45f68a668602c282b088aa1a7169dec334033d007443773c9096fb246bbfce24" />
+        <link
+          rel="preload"
+          as="style"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          crossOrigin="anonymous"
+        />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          crossOrigin="anonymous"
         />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       </head>
       <body
         className={`${plusJakartaSans.variable} ${cormorantGaramond.variable}`}
       >
+        {gaMeasurementId ? (
+          <GoogleAnalytics measurementId={gaMeasurementId} />
+        ) : null}
         {children}
       </body>
     </html>

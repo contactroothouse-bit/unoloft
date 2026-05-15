@@ -11,6 +11,38 @@ export default function HeroSection({ mode, selectedHome }: HeroSectionProps) {
   const heroText = HERO_TEXT[mode];
   const sources = HERO_MOSAIC_CARDS.map((card) => card.sources[selectedHome]);
 
+  const heroStats = (
+    <>
+      <div className="hs">
+        <div className="hs-n">
+          1000<em>+</em>
+        </div>
+        <div className="hs-l">Happy Residents</div>
+      </div>
+      <div className="hs-div" />
+      <div className="hs">
+        <div className="hs-n">
+          5<em>yr</em>
+        </div>
+        <div className="hs-l">Of Excellence</div>
+      </div>
+      <div className="hs-div" />
+      <div className="hs">
+        <div className="hs-n">
+          10<em>+</em>
+        </div>
+        <div className="hs-l">Amenities</div>
+      </div>
+      <div className="hs-div" />
+      <div className="hs">
+        <div className="hs-n">
+          4.9<em>★</em>
+        </div>
+        <div className="hs-l">Avg Rating</div>
+      </div>
+    </>
+  );
+
   return (
     <section id="hero">
       <div className="hero-noise" />
@@ -21,12 +53,12 @@ export default function HeroSection({ mode, selectedHome }: HeroSectionProps) {
           <div className="hero-ey" id="hero-ey">
             {heroText.ey}
           </div>
-          <div className="h1a" id="hero-h1a">
+          <h1 className="h1a" id="hero-h1a">
             {heroText.h1}
-          </div>
-          <div className="h1b" id="hero-h1b">
+          </h1>
+          <p className="h1b" id="hero-h1b">
             {heroText.h2}
-          </div>
+          </p>
 
           <div className="hero-loc">
             <i
@@ -74,35 +106,7 @@ export default function HeroSection({ mode, selectedHome }: HeroSectionProps) {
             </a>
           </div>
 
-          <div className="hero-stats">
-            <div className="hs">
-              <div className="hs-n">
-                1000<em>+</em>
-              </div>
-              <div className="hs-l">Happy Residents</div>
-            </div>
-            <div className="hs-div" />
-            <div className="hs">
-              <div className="hs-n">
-                5<em>yr</em>
-              </div>
-              <div className="hs-l">Of Excellence</div>
-            </div>
-            <div className="hs-div" />
-            <div className="hs">
-              <div className="hs-n">
-                10<em>+</em>
-              </div>
-              <div className="hs-l">Amenities</div>
-            </div>
-            <div className="hs-div" />
-            <div className="hs">
-              <div className="hs-n">
-                4.9<em>★</em>
-              </div>
-              <div className="hs-l">Avg Rating</div>
-            </div>
-          </div>
+          <div className="hero-stats hero-stats-desktop">{heroStats}</div>
         </div>
 
         <div className="hero-r">
@@ -126,6 +130,7 @@ export default function HeroSection({ mode, selectedHome }: HeroSectionProps) {
             <i className="fa-solid fa-shield-halved" /> 100% Safe &amp; Verified
           </div>
         </div>
+        <div className="hero-stats hero-stats-mobile">{heroStats}</div>
       </div>
     </section>
   );

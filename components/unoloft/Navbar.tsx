@@ -11,8 +11,6 @@ export type NavLinkItem = {
 
 const CONSISTENT_ANCHOR_LINKS: NavLinkItem[] = [
   { href: "#pg-intro", label: "About" },
-  { href: "/aster-homes", label: "Aster Homes" },
-  { href: "/iris-house", label: "Iris House" },
   { href: "#facilities", label: "Facilities" },
   { href: "#gallery", label: "Gallery" },
   { href: "/blogs", label: "Blogs" },
@@ -22,8 +20,6 @@ const CONSISTENT_ANCHOR_LINKS: NavLinkItem[] = [
 
 const CONSISTENT_ROUTE_LINKS: NavLinkItem[] = [
   { href: "/#pg-intro", label: "About" },
-  { href: "/aster-homes", label: "Aster Homes" },
-  { href: "/iris-house", label: "Iris House" },
   { href: "/#facilities", label: "Facilities" },
   { href: "/gallery", label: "Gallery" },
   { href: "/blogs", label: "Blogs" },
@@ -43,17 +39,14 @@ export default function Navbar({
   navScrolled,
   onMobileOpen,
   linkMode = "anchors",
-  selectedHome,
-  onHomeChange,
+  selectedHome: _selectedHome,
+  onHomeChange: _onHomeChange,
 }: NavbarProps) {
   const isRoutesMode = linkMode === "routes";
   const logoHref = "/";
   const navLinks = isRoutesMode
     ? CONSISTENT_ROUTE_LINKS
     : CONSISTENT_ANCHOR_LINKS;
-  const showHomeToggle = Boolean(selectedHome) && Boolean(onHomeChange);
-  const mobileToggleLabelAster = "Aster";
-  const mobileToggleLabelIris = "Iris";
 
   return (
     <nav id="nav" className={cn(navScrolled && "s")}>
@@ -68,34 +61,19 @@ export default function Navbar({
         />
       </Link>
 
-      {showHomeToggle ? (
-        <div className="nav-tabs" role="tablist" aria-label="Choose home">
-          <button
-            type="button"
-            className={cn("pg-tab", selectedHome === "aster" && "active")}
-            onClick={() => onHomeChange?.("aster")}
-            role="tab"
-            aria-selected={selectedHome === "aster"}
-          >
-            <span className="pg-tab-desktop-label">Aster Homes</span>
-            <span className="pg-tab-mobile-label">
-              {mobileToggleLabelAster}
-            </span>
-          </button>
-          <button
-            type="button"
-            className={cn("pg-tab", selectedHome === "iris" && "active")}
-            onClick={() => onHomeChange?.("iris")}
-            role="tab"
-            aria-selected={selectedHome === "iris"}
-          >
-            <span className="pg-tab-desktop-label">Iris House</span>
-            <span className="pg-tab-mobile-label">{mobileToggleLabelIris}</span>
-          </button>
-        </div>
-      ) : null}
-
       <ul className="nav-r">
+        <li className="nav-properties">
+          <Link
+            href={isRoutesMode ? "/#pg-intro" : "#pg-intro"}
+            className="nav-properties-trigger"
+          >
+            Our Properties
+          </Link>
+          <div className="nav-properties-menu">
+            <Link href="/aster-homes">Aster Homes</Link>
+            <Link href="/iris-house">Iris House</Link>
+          </div>
+        </li>
         {navLinks.map((item) => (
           <li key={item.href}>
             <Link href={item.href} className={item.cta ? "nav-cta" : ""}>

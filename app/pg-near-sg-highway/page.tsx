@@ -28,10 +28,25 @@ const LANDING_FAQS = [
 ];
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "PG near SG Highway Ahmedabad – Premium Furnished Boys PG | Unoloft",
+  title:
+    "PG Near SG Highway Ahmedabad – AC Rooms, Meals, Gym & WiFi | Unoloft",
   description:
-    "Unoloft offers premium furnished boys PG near SG Highway Ahmedabad with AC rooms, WiFi, meals, CCTV, gym and study-friendly environment.",
+    "Premium PG near SG Highway (Gota–Jagatpur): ~2 min to highway access, AC furnished rooms, 4-time meals, gym, 100 Mbps WiFi & round-the-clock security. Suited for offices along SG Highway and students at Nirma/Silver Oak. WhatsApp for availability.",
   path: "/pg-near-sg-highway",
+  keywords: [
+    "pg near sg highway",
+    "pg near sg highway ahmedabad",
+    "sg highway pg",
+    "pg in ahmedabad sg highway",
+    "pg in ahmedabad near sg highway",
+    "pg on sg highway ahmedabad",
+    "pg for working professionals",
+    "pg for working professionals near gota",
+    "corporate pg in ahmedabad",
+    "ac pg in ahmedabad",
+    "pg in gota ahmedabad",
+    "paying guest in ahmedabad",
+  ],
 });
 
 export default function PgNearSgHighwayPage() {
@@ -41,9 +56,10 @@ export default function PgNearSgHighwayPage() {
         data={getBreadcrumbSchema("/pg-near-sg-highway", "PG near SG Highway")}
       />
       <JsonLd
-        data={getLodgingBusinessSchema(
-          "Unoloft – PG near SG Highway Ahmedabad",
-        )}
+        data={getLodgingBusinessSchema({
+          name: "Unoloft – PG near SG Highway Ahmedabad",
+          path: "/pg-near-sg-highway",
+        })}
       />
       <JsonLd data={getFaqSchema(LANDING_FAQS)} />
       <LocalSeoLandingPage
