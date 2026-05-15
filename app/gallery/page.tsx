@@ -20,8 +20,8 @@ export default function GalleryPage() {
     <>
       <JsonLd data={getBreadcrumbSchema("/gallery", "Gallery")} />
       <PageShell>
-        <GalleryPageClient selectedHome="aster" />
         <GalleryPageClient selectedHome="iris" />
+        <GalleryPageClient selectedHome="aster" />
         <section id="contact" className="subpage-section">
           <div className="con-cen rv in">
             <p className="s-sub">

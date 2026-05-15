@@ -43,19 +43,10 @@ export default function RoomsPage() {
             </p>
           </div>
           <div className="rooms-page-switch rv in">
-            <a href="#aster-rooms">Aster Homes Rooms</a>
             <a href="#iris-rooms">Iris House Rooms</a>
+            <a href="#aster-rooms">Aster Homes Rooms</a>
           </div>
         </section>
-        <RoomsSection
-          selectedHome="aster"
-          sectionId="aster-rooms"
-          sectionClassName="rooms-section-aster"
-          eyebrow="Aster Homes"
-          titleStart="Aster Homes"
-          titleEmphasis="Room Options"
-          subtitle="Explore Aster Homes room types with private, double and triple sharing options near SG Highway and Nirma University."
-        />
         <RoomsSection
           selectedHome="iris"
           sectionId="iris-rooms"
@@ -64,6 +55,15 @@ export default function RoomsPage() {
           titleStart="Iris House"
           titleEmphasis="Room Options"
           subtitle="Browse Iris House room layouts designed for comfort, study, and easy daily living near top institutions in Ahmedabad."
+        />
+        <RoomsSection
+          selectedHome="aster"
+          sectionId="aster-rooms"
+          sectionClassName="rooms-section-aster"
+          eyebrow="Aster Homes"
+          titleStart="Aster Homes"
+          titleEmphasis="Room Options"
+          subtitle="Explore Aster Homes room types with private, double and triple sharing options near SG Highway and Nirma University."
         />
         <section id="contact" className="subpage-section">
           <div className="con-cen rv in">

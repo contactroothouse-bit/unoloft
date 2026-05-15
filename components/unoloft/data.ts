@@ -77,8 +77,7 @@ export const ASTER_FACILITIES: Facility[] = [
   {
     icon: "fa-solid fa-bowl-food",
     name: "Fabulous Food",
-    description:
-      "Separate live kitchen and dining facility.",
+    description: "Separate live kitchen and dining facility.",
     delay: ".0s",
   },
   {
@@ -300,6 +299,10 @@ export const FACILITIES_BY_HOME: Record<Home, Facility[]> = {
 export const ASTER_ROOMS: Room[] = [
   {
     image: "/rooms/IMG-20260201-WA0020.jpg",
+    galleryImages: [
+      "/rooms/IMG-20260201-WA0020.jpg",
+      "/rooms/IMG-20260201-WA0018.jpg",
+    ],
     alt: "Single Room",
     badge: "Most Private",
     label: "Single Occupancy",
@@ -311,6 +314,15 @@ export const ASTER_ROOMS: Room[] = [
   },
   {
     image: "/rooms/IMG-20260201-WA0025.jpg",
+    galleryImages: [
+      "/rooms/IMG-20260201-WA0015.jpg",
+      "/rooms/IMG-20260201-WA0016.jpg",
+      "/rooms/IMG-20260201-WA0017.jpg",
+      "/rooms/IMG-20260201-WA0023.jpg",
+      "/rooms/IMG-20260201-WA0024.jpg",
+      "/rooms/IMG-20260201-WA0025.jpg",
+      "/rooms/IMG-20260201-WA0026.jpg",
+    ],
     alt: "Double Room",
     badge: "Popular",
     label: "Double Sharing",
@@ -323,6 +335,11 @@ export const ASTER_ROOMS: Room[] = [
   },
   {
     image: "/rooms/IMG-20260201-WA0002.jpg",
+    galleryImages: [
+      "/rooms/IMG-20260201-WA0002.jpg",
+      "/rooms/IMG-20260201-WA0019.jpg",
+      "/rooms/IMG-20260201-WA0023.jpg",
+    ],
     alt: "Triple Room",
     badge: "Best Value",
     label: "Triple Sharing",
@@ -338,6 +355,12 @@ export const ASTER_ROOMS: Room[] = [
 export const IRIS_ROOMS: Room[] = [
   {
     image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0002.jpg`,
+    galleryImages: [
+      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0002.jpg`,
+      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0020.jpg`,
+      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0019.jpg`,
+      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0022.jpg`,
+    ],
     alt: "Double Room",
     badge: "Popular",
     label: "Double Sharing",
@@ -350,6 +373,13 @@ export const IRIS_ROOMS: Room[] = [
   },
   {
     image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0019.jpg`,
+    galleryImages: [
+      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0021.jpg`,
+      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0019.jpg`,
+      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0024.jpg`,
+      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0025.jpg`,
+      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0023.jpg`,
+    ],
     alt: "Triple Room",
     badge: "Best Value",
     label: "Triple Sharing",

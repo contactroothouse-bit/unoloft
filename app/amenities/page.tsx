@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/unoloft/JsonLd";
 import PageShell from "@/components/unoloft/PageShell";
 import FacilitiesSection from "@/components/unoloft/sections/FacilitiesSection";
-import { buildPageMetadata, getBreadcrumbSchema } from "@/components/unoloft/seo";
+import {
+  buildPageMetadata,
+  getBreadcrumbSchema,
+} from "@/components/unoloft/seo";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Amenities at Unoloft – WiFi, Meals, Gym, Security & Housekeeping",
@@ -27,8 +30,8 @@ export default function AmenitiesPage() {
             </p>
           </div>
         </section>
-        <FacilitiesSection selectedHome="aster" />
         <FacilitiesSection selectedHome="iris" />
+        <FacilitiesSection selectedHome="aster" />
       </PageShell>
     </>
   );

@@ -27,8 +27,7 @@ const IRIS_DATA = {
     { name: "Nirma University", time: "1 km away" },
     { name: "Vaishnodevi Circle", time: "Approx. 2 mins" },
   ],
-  address:
-    "Behind Nirma University, Beside Adani Pratham, Tragad, Ahmedabad.",
+  address: "Behind Nirma University, Beside Adani Pratham, Tragad, Ahmedabad.",
   mapLink:
     "https://www.google.com/maps/place/Iris+House+By+Unoloft+%7C+Hostel%2FP.G.+near+Nirma+University/@23.1273093,72.4747728,12814m/data=!3m1!1e3!4m10!1m2!2m1!1siris+homes+by+unoloft!3m6!1s0x395e839f3f87e59b:0x110995622f32aad1!8m2!3d23.1273093!4d72.5509905!15sChVpcmlzIGhvbWVzIGJ5IHVub2xvZnRaFyIVaXJpcyBob21lcyBieSB1bm9sb2Z0kgERc3R1ZGVudF9kb3JtaXRvcnngAQA!16s%2Fg%2F11xmgynqjm?entry=ttu&g_ep=EgoyMDI2MDMyMi4wIKXMDSoASAFQAw%3D%3D",
   mapEmbed:
@@ -56,20 +55,23 @@ export default function MapSection({
       </div>
 
       {showHomeSwitch ? (
-        <div className="rooms-home-switch rooms-home-switch-inline" aria-label="Select property">
-          <button
-            type="button"
-            className={cn(selectedHome === "aster" && "active")}
-            onClick={() => onHomeChange?.("aster")}
-          >
-            Aster Homes
-          </button>
+        <div
+          className="rooms-home-switch rooms-home-switch-inline"
+          aria-label="Select property"
+        >
           <button
             type="button"
             className={cn(selectedHome === "iris" && "active")}
             onClick={() => onHomeChange?.("iris")}
           >
             Iris House
+          </button>
+          <button
+            type="button"
+            className={cn(selectedHome === "aster" && "active")}
+            onClick={() => onHomeChange?.("aster")}
+          >
+            Aster Homes
           </button>
         </div>
       ) : null}
