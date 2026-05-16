@@ -1,4 +1,4 @@
-﻿import type {
+import type {
   AvailabilityCard,
   Facility,
   FaqItem,
@@ -315,6 +315,8 @@ export const ASTER_ROOMS: Room[] = [
   {
     image: "/rooms/IMG-20260201-WA0025.jpg",
     galleryImages: [
+      "/asterhomes/room/20260405_154326.jpg",
+      "/asterhomes/room/20260405_154417.jpg",
       "/rooms/IMG-20260201-WA0015.jpg",
       "/rooms/IMG-20260201-WA0016.jpg",
       "/rooms/IMG-20260201-WA0017.jpg",
@@ -517,6 +519,8 @@ export const WHY_FEATURES: WhyFeature[] = [
 ];
 
 const ASTER_ROOM_GALLERY_IMAGES = [
+  "/asterhomes/room/20260405_154326.jpg",
+  "/asterhomes/room/20260405_154417.jpg",
   "/rooms/IMG-20260201-WA0002.jpg",
   "/rooms/IMG-20260201-WA0015.jpg",
   "/rooms/IMG-20260201-WA0016.jpg",
@@ -539,6 +543,30 @@ export const ASTER_GALLERY_ITEMS: GalleryItem[] = [
     lightboxImage: image,
     alt: `Aster Room ${index + 1}`,
   })),
+  {
+    category: "facilities",
+    image: "/asterhomes/kitchen/20260405_155737.jpg",
+    lightboxImage: "/asterhomes/kitchen/20260405_155737.jpg",
+    alt: "Aster Kitchen 1",
+  },
+  {
+    category: "facilities",
+    image: "/asterhomes/kitchen/20260405_155840.jpg",
+    lightboxImage: "/asterhomes/kitchen/20260405_155840.jpg",
+    alt: "Aster Kitchen 2",
+  },
+  {
+    category: "facilities",
+    image: "/asterhomes/kitchen/20260405_155906.jpg",
+    lightboxImage: "/asterhomes/kitchen/20260405_155906.jpg",
+    alt: "Aster Kitchen 3",
+  },
+  {
+    category: "facilities",
+    image: "/asterhomes/kitchen/20260405_160040.jpg",
+    lightboxImage: "/asterhomes/kitchen/20260405_160040.jpg",
+    alt: "Aster Kitchen 4",
+  },
   {
     category: "facilities",
     image: "/facilities/IMG-20260201-WA0004.jpg",
