@@ -16,7 +16,7 @@
 
 export const HERO_TEXT: Record<Mode, HeroText> = {
   all: {
-    h1: "Premium PG in Ahmedabad",
+    h1: "Premium PG in Gota, Ahmedabad",
     h2: "Near Nirma University and SG Highway",
     ey: "Aster Homes and Iris House | Gota Ahmedabad",
   },
