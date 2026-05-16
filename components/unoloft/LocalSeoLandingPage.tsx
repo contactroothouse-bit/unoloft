@@ -22,6 +22,7 @@ type LocalSeoLandingPageProps = {
   alsoNearLinks: Array<{ href: string; label: string }>;
   faqs: LandingFaq[];
   introImageSrc?: string;
+  children?: React.ReactNode;
 };
 
 export default function LocalSeoLandingPage({
@@ -32,6 +33,7 @@ export default function LocalSeoLandingPage({
   alsoNearLinks,
   faqs,
   introImageSrc = "/PG%20NEARS%20AREA/nirma.webp",
+  children,
 }: LocalSeoLandingPageProps) {
   const [selectedHome, setSelectedHome] = useState<Home>("aster");
   const [isIntroExpanded, setIsIntroExpanded] = useState(false);
@@ -103,7 +105,13 @@ export default function LocalSeoLandingPage({
             </div>
             <div
               className="subpage-intro-shot rv in"
-              style={{ transitionDelay: ".08s" }}
+              style={{
+                transitionDelay: ".08s",
+                minHeight: "480px",
+                maxWidth: "420px",
+                margin: "0 auto",
+                width: "100%"
+              }}
             >
               <Image
                 src={introImageSrc}
@@ -115,6 +123,8 @@ export default function LocalSeoLandingPage({
             </div>
           </div>
         </section>
+
+        {children}
 
         <section id="map-sec" className="subpage-section local-map-section">
           <div className="sh rv in">

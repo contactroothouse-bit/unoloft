@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/unoloft/JsonLd";
 import LocalSeoLandingPage from "@/components/unoloft/LocalSeoLandingPage";
+import GalleryPageClient from "@/components/unoloft/GalleryPageClient";
+import { ASTER_TESTIMONIALS } from "@/components/unoloft/data";
+import FacilitiesSection from "@/components/unoloft/sections/FacilitiesSection";
+import RoomsSection from "@/components/unoloft/sections/RoomsSection";
+import TestimonialsSection from "@/components/unoloft/sections/TestimonialsSection";
 import {
   buildPageMetadata,
   getBreadcrumbSchema,
@@ -70,10 +75,11 @@ export default function PgInGotaAhmedabadPage() {
         })}
       />
       <JsonLd data={getFaqSchema(LANDING_FAQS)} />
+
       <LocalSeoLandingPage
         h1="PG in Gota Ahmedabad – Unoloft"
         intro="If you are looking for a reliable and premium PG in Gota Ahmedabad, Unoloft offers a complete stay setup designed for students and young working professionals. The property is located at Royal Lakend on Gota-Jagatpur Road, close to SG Highway and just minutes from Gota Circle, so everyday movement across Ahmedabad West remains convenient. This location is especially preferred by students who need regular commute access to Nirma University and Silver Oak University while still living in a quieter residential pocket. Room options include single, double, and triple sharing with furnished AC interiors, wardrobes, study space, and practical storage. Beyond rooms, residents get high-speed WiFi, home-cooked meals, daily housekeeping, filtered water, security surveillance, and support staff availability through the day. Because Gota is well connected to major roads, students can manage class schedules, coaching, and weekend errands without long travel stress. For anyone comparing PG in Gota Ahmedabad, Unoloft stands out for consistent maintenance, safer operations, and an all-inclusive daily living model that prioritizes comfort, commute efficiency, and long-term value."
-        introImageSrc="/PG%20NEARS%20AREA/gota%20lake.avif"
+        introImageSrc="/asterhomes/buildingimage.jpeg"
         landmarks={[
           "Nirma University: approx. 10 minutes",
           "Silver Oak University: approx. 5 minutes",
@@ -90,7 +96,12 @@ export default function PgInGotaAhmedabadPage() {
           { href: "/pg-near-sg-highway", label: "Also near SG Highway" },
         ]}
         faqs={LANDING_FAQS}
-      />
+      >
+        <FacilitiesSection selectedHome="aster" />
+        <RoomsSection selectedHome="aster" />
+        <GalleryPageClient selectedHome="aster" />
+        <TestimonialsSection items={ASTER_TESTIMONIALS} />
+      </LocalSeoLandingPage>
     </>
   );
 }
