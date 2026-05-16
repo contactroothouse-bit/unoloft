@@ -16,8 +16,8 @@ export default function SiteFooterNav() {
             />
           </div>
           <p className="ft-desc">
-            Unoloft offers premium paying guest accommodation in
-            Ahmedabad. Your home, away from home - since 2021.
+            Unoloft offers premium paying guest accommodation in Ahmedabad. Your
+            home, away from home - since 2021.
           </p>
           <div className="ft-socs">
             <a href="#" className="ft-soc">
@@ -26,7 +26,12 @@ export default function SiteFooterNav() {
             <a href="#" className="ft-soc">
               <i className="fa-brands fa-facebook-f" />
             </a>
-            <a href="https://wa.me/917043306301" className="ft-soc" target="_blank" rel="noreferrer">
+            <a
+              href="https://wa.me/917043306301"
+              className="ft-soc"
+              target="_blank"
+              rel="noreferrer"
+            >
               <i className="fa-brands fa-whatsapp" />
             </a>
           </div>
@@ -111,7 +116,7 @@ export default function SiteFooterNav() {
         </div>
       </div>
       <div className="ft-bar">
-        <div>© 2026 Unoloft. All rights reserved.</div>
+        <div>Roothouse living Incorporate since 2024. All Rights Reserved</div>
       </div>
     </footer>
   );

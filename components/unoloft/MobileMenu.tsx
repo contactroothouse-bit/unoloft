@@ -10,8 +10,8 @@ type MenuLinkItem = {
 
 const CONSISTENT_ANCHOR_LINKS: MenuLinkItem[] = [
   { href: "#pg-intro", label: "About" },
-  { href: "/aster-homes", label: "Aster Homes" },
   { href: "/iris-house", label: "Iris House" },
+  { href: "/aster-homes", label: "Aster Homes" },
   { href: "#facilities", label: "Facilities" },
   { href: "#gallery", label: "Gallery" },
   { href: "/blogs", label: "Blogs" },
@@ -21,8 +21,8 @@ const CONSISTENT_ANCHOR_LINKS: MenuLinkItem[] = [
 
 const CONSISTENT_ROUTE_LINKS: MenuLinkItem[] = [
   { href: "/#pg-intro", label: "About" },
-  { href: "/aster-homes", label: "Aster Homes" },
   { href: "/iris-house", label: "Iris House" },
+  { href: "/aster-homes", label: "Aster Homes" },
   { href: "/#facilities", label: "Facilities" },
   { href: "/gallery", label: "Gallery" },
   { href: "/blogs", label: "Blogs" },

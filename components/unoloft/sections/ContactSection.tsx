@@ -25,7 +25,7 @@ const INITIAL_FORM: FormState = {
   name: "",
   phone: "",
   profession: "student",
-  preferredLocation: "aster",
+  preferredLocation: "iris",
   note: "",
 };
 
@@ -35,8 +35,8 @@ const PROFESSION_OPTIONS: DropdownOption<FormState["profession"]>[] = [
 ];
 
 const LOCATION_OPTIONS: DropdownOption<Home>[] = [
-  { value: "aster", label: "Aster" },
   { value: "iris", label: "Iris" },
+  { value: "aster", label: "Aster" },
 ];
 
 function CustomDropdown<T extends string>({

@@ -70,8 +70,8 @@ export default function Navbar({
             Our Properties
           </Link>
           <div className="nav-properties-menu">
-            <Link href="/aster-homes">Aster Homes</Link>
             <Link href="/iris-house">Iris House</Link>
+            <Link href="/aster-homes">Aster Homes</Link>
           </div>
         </li>
         {navLinks.map((item) => (

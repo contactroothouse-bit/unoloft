@@ -67,8 +67,8 @@ export const HERO_MOSAIC_CARDS: HeroMosaicCard[] = [
     cardClass: "mc4",
     alt: "Building",
     sources: {
-      aster: "/gallery/IMG-20260201-WA0006.jpg",
-      iris: "/gallery/IMG-20260201-WA0006.jpg",
+      aster: "/facilities/IMG-20260201-WA0013.jpg",
+      iris: "/facilities/IMG-20260201-WA0013.jpg",
     },
   },
 ];
@@ -77,8 +77,7 @@ export const ASTER_FACILITIES: Facility[] = [
   {
     icon: "fa-solid fa-bowl-food",
     name: "Fabulous Food",
-    description:
-      "Separate live kitchen and dining facility.",
+    description: "Separate live kitchen and dining facility.",
     delay: ".0s",
   },
   {
@@ -300,37 +299,55 @@ export const FACILITIES_BY_HOME: Record<Home, Facility[]> = {
 export const ASTER_ROOMS: Room[] = [
   {
     image: "/rooms/IMG-20260201-WA0020.jpg",
+    galleryImages: [
+      "/rooms/IMG-20260201-WA0020.jpg",
+      "/rooms/IMG-20260201-WA0018.jpg",
+    ],
     alt: "Single Room",
     badge: "Most Private",
     label: "Single Occupancy",
     name: "Private Single Sharing",
     description:
-      "Your personal sanctuary â€” fully furnished private room with attached or shared bath.",
+      "Your personal sanctuary — fully furnished private room with attached or shared bath.",
     chips: ["AC", "Fan", "Study Table", "Wardrobe"],
-    price: "â‚¹16,500",
+    price: "₹16,500",
   },
   {
     image: "/rooms/IMG-20260201-WA0025.jpg",
+    galleryImages: [
+      "/rooms/IMG-20260201-WA0015.jpg",
+      "/rooms/IMG-20260201-WA0016.jpg",
+      "/rooms/IMG-20260201-WA0017.jpg",
+      "/rooms/IMG-20260201-WA0023.jpg",
+      "/rooms/IMG-20260201-WA0024.jpg",
+      "/rooms/IMG-20260201-WA0025.jpg",
+      "/rooms/IMG-20260201-WA0026.jpg",
+    ],
     alt: "Double Room",
     badge: "Popular",
     label: "Double Sharing",
     name: "Two Sharing",
     description:
-      "Spacious room with a friendly roommate â€” perfect blend of privacy and community.",
+      "Spacious room with a friendly roommate — perfect blend of privacy and community.",
     chips: ["AC", "Fan", "Study Table", "Wardrobe"],
-    price: "â‚¹14,500",
+    price: "₹14,500",
     delay: ".1s",
   },
   {
     image: "/rooms/IMG-20260201-WA0002.jpg",
+    galleryImages: [
+      "/rooms/IMG-20260201-WA0002.jpg",
+      "/rooms/IMG-20260201-WA0019.jpg",
+      "/rooms/IMG-20260201-WA0023.jpg",
+    ],
     alt: "Triple Room",
     badge: "Best Value",
     label: "Triple Sharing",
     name: "Triple Share Room",
     description:
-      "Budget-friendly with a great community vibe â€” ideal for students on a budget.",
+      "Budget-friendly with a great community vibe — ideal for students on a budget.",
     chips: ["AC", "Fan", "Study Table", "Wardrobe"],
-    price: "â‚¹11,000",
+    price: "₹11,000",
     delay: ".2s",
   },
 ];
@@ -338,6 +355,12 @@ export const ASTER_ROOMS: Room[] = [
 export const IRIS_ROOMS: Room[] = [
   {
     image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0002.jpg`,
+    galleryImages: [
+      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0002.jpg`,
+      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0020.jpg`,
+      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0019.jpg`,
+      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0022.jpg`,
+    ],
     alt: "Double Room",
     badge: "Popular",
     label: "Double Sharing",
@@ -350,6 +373,13 @@ export const IRIS_ROOMS: Room[] = [
   },
   {
     image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0019.jpg`,
+    galleryImages: [
+      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0021.jpg`,
+      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0019.jpg`,
+      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0024.jpg`,
+      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0025.jpg`,
+      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0023.jpg`,
+    ],
     alt: "Triple Room",
     badge: "Best Value",
     label: "Triple Sharing",
@@ -371,7 +401,7 @@ export const AVAILABILITY_CARDS: AvailabilityCard[] = [
   {
     sharing: "1 Sharing",
     name: "Private Single Sharing",
-    price: "â‚¹16,500",
+    price: "₹16,500",
     slots: ["free", "free", "taken", "taken", "taken", "taken"],
     statusType: "avail",
     statusIcon: "fa-solid fa-bed",
@@ -384,7 +414,7 @@ export const AVAILABILITY_CARDS: AvailabilityCard[] = [
   {
     sharing: "2 Sharing",
     name: "Two Sharing",
-    price: "â‚¹14,500",
+    price: "₹14,500",
     slots: [
       "free",
       "taken",
@@ -407,7 +437,7 @@ export const AVAILABILITY_CARDS: AvailabilityCard[] = [
   {
     sharing: "3 Sharing",
     name: "Triple Share Room",
-    price: "â‚¹11,000",
+    price: "₹11,000",
     slots: [
       "taken",
       "taken",
@@ -433,19 +463,18 @@ export const WHY_POINTS: WhyPoint[] = [
     icon: "fa-solid fa-location-dot",
     title: "Prime Location",
     description:
-      "Near Nirma University, Silver Oak University, SG Highway & Gota Circle â€” effortless daily commuting.",
+      "Near Nirma University, Silver Oak University, SG Highway & Gota Circle — effortless daily commuting.",
   },
   {
     icon: "fa-solid fa-headset",
     title: "Responsive Management",
-    description:
-      "Any issue resolved in under 2 hours â€” warden available 24/7.",
+    description: "Any issue resolved in under 2 hours — warden available 24/7.",
   },
   {
     icon: "fa-solid fa-people-group",
     title: "Community & Events",
     description:
-      "Festivals, movie nights & outings â€” friendships that last a lifetime.",
+      "Festivals, movie nights & outings — friendships that last a lifetime.",
   },
   {
     icon: "fa-solid fa-indian-rupee-sign",
@@ -456,32 +485,32 @@ export const WHY_POINTS: WhyPoint[] = [
 
 export const WHY_FEATURES: WhyFeature[] = [
   {
-    emoji: "ðŸ ",
+    emoji: "🏠",
     title: "Fully Furnished",
-    description: "Move in with just your bag â€” everything ready for you.",
+    description: "Move in with just your bag — everything ready for you.",
   },
   {
-    emoji: "ðŸ”’",
+    emoji: "🔒",
     title: "Total Safety",
     description: "Biometric entry, CCTV, security guards round the clock.",
   },
   {
-    emoji: "ðŸ½ï¸",
+    emoji: "🍽️",
     title: "Fresh Daily Meals",
     description: "Healthy, hygienic, home-style food cooked fresh every day.",
   },
   {
-    emoji: "ðŸ’ª",
+    emoji: "💪",
     title: "Wellness First",
     description: "Gym, yoga space & mental wellness initiatives included.",
   },
   {
-    emoji: "ðŸ“¶",
+    emoji: "📶",
     title: "Always Connected",
     description: "Gigabit fiber WiFi with zero downtime for work & study.",
   },
   {
-    emoji: "ðŸŒ¿",
+    emoji: "🌿",
     title: "Eco Friendly",
     description: "Solar power, water harvesting & sustainable practices.",
   },

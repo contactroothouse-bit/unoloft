@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import JsonLd from "@/components/unoloft/JsonLd";
 import PageShell from "@/components/unoloft/PageShell";
 import ContactSection from "@/components/unoloft/sections/ContactSection";
-import { buildPageMetadata, getBreadcrumbSchema } from "@/components/unoloft/seo";
+import {
+  buildPageMetadata,
+  getBreadcrumbSchema,
+} from "@/components/unoloft/seo";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Contact Unoloft – Book PG Visit in Ahmedabad",
@@ -16,7 +19,7 @@ export default function ContactPage() {
     <>
       <JsonLd data={getBreadcrumbSchema("/contact", "Contact")} />
       <PageShell>
-        <ContactSection selectedHome="aster" />
+        <ContactSection selectedHome="iris" />
       </PageShell>
     </>
   );

@@ -30,6 +30,7 @@ export type Facility = {
 
 export type Room = {
   image: string;
+  galleryImages?: string[];
   alt: string;
   badge: string;
   label: string;

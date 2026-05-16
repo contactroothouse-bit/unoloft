@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { cn } from "@/components/unoloft/utils";
 
 type LightboxProps = {
@@ -7,6 +7,9 @@ type LightboxProps = {
   image: string;
   onClose: () => void;
   onNavigate: (delta: number) => void;
+  title?: string;
+  currentIndex?: number;
+  totalImages?: number;
 };
 
 export default function Lightbox({
@@ -14,7 +17,29 @@ export default function Lightbox({
   image,
   onClose,
   onNavigate,
+  title,
+  currentIndex,
+  totalImages,
 }: LightboxProps) {
+  const hasImage = Boolean(image);
+  const touchStartXRef = useRef<number | null>(null);
+  const touchStartYRef = useRef<number | null>(null);
+  const [isImageLoading, setIsImageLoading] = useState(false);
+
+  const handleNavigate = (delta: number) => {
+    setIsImageLoading(true);
+    onNavigate(delta);
+  };
+
+  useEffect(() => {
+    if (!open || !image) {
+      setIsImageLoading(false);
+      return;
+    }
+
+    setIsImageLoading(true);
+  }, [image, open]);
+
   useEffect(() => {
     if (!open) {
       return;
@@ -26,32 +51,75 @@ export default function Lightbox({
       }
 
       if (event.key === "ArrowLeft") {
-        onNavigate(-1);
+        handleNavigate(-1);
       }
 
       if (event.key === "ArrowRight") {
-        onNavigate(1);
+        handleNavigate(1);
       }
     };
 
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
-  }, [onClose, onNavigate, open]);
+  }, [onClose, open]);
+
+  useEffect(() => {
+    if (!open) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [open]);
+
+  const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+    const touch = event.touches[0];
+    touchStartXRef.current = touch.clientX;
+    touchStartYRef.current = touch.clientY;
+  };
+
+  const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+    if (touchStartXRef.current === null || touchStartYRef.current === null) {
+      return;
+    }
+
+    const touch = event.changedTouches[0];
+    const deltaX = touch.clientX - touchStartXRef.current;
+    const deltaY = touch.clientY - touchStartYRef.current;
+
+    touchStartXRef.current = null;
+    touchStartYRef.current = null;
+
+    if (Math.abs(deltaX) < 40 || Math.abs(deltaX) <= Math.abs(deltaY)) {
+      return;
+    }
+
+    handleNavigate(deltaX > 0 ? -1 : 1);
+  };
+
+  if (!open || !hasImage) {
+    return null;
+  }
 
   return (
     <div id="lb" className={cn(open && "on")} onClick={onClose}>
-      <button
-        type="button"
-        className="lbb"
-        onClick={(event) => {
-          event.stopPropagation();
-          onClose();
-        }}
-        aria-label="Back to gallery"
-      >
-        <i className="fa-solid fa-arrow-left" />
-        Back
-      </button>
+      {typeof totalImages === "number" && totalImages > 1 ? (
+        <div className="lb-count" aria-live="polite">
+          {title ? <span className="lb-count-title">{title}</span> : null}
+          <span>
+            {(currentIndex ?? 0) + 1} / {totalImages}
+          </span>
+        </div>
+      ) : title ? (
+        <div className="lb-count" aria-live="polite">
+          <span className="lb-count-title">{title}</span>
+        </div>
+      ) : null}
       <button
         type="button"
         className="lbx"
@@ -62,27 +130,47 @@ export default function Lightbox({
         aria-label="Close image preview"
       >
         <i className="fa-solid fa-xmark" />
+        <span>Close</span>
       </button>
-      <div className="lb-media" onClick={onClose}>
+      <div
+        className="lb-media"
+        onClick={onClose}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        {isImageLoading ? (
+          <div
+            className="lb-loader"
+            aria-live="polite"
+            aria-label="Loading image"
+          >
+            <div className="lb-loader-ring" />
+          </div>
+        ) : null}
         <button
           type="button"
           className="lba p"
           onClick={(event) => {
             event.stopPropagation();
-            onNavigate(-1);
+            handleNavigate(-1);
           }}
           aria-label="Previous image"
         >
           <i className="fa-solid fa-chevron-left" />
         </button>
         <Image
+          key={image}
           id="lb-img"
           src={image}
-          alt="Unoloft property gallery enlarged preview"
+          alt={
+            title
+              ? `${title} enlarged preview`
+              : "Unoloft property gallery enlarged preview"
+          }
           fill
           sizes="90vw"
-          className="lb-img"
-          priority
+          className={cn("lb-img", isImageLoading && "lb-img-loading")}
+          onLoad={() => setIsImageLoading(false)}
           onClick={(event) => event.stopPropagation()}
         />
         <button
@@ -90,7 +178,7 @@ export default function Lightbox({
           className="lba n"
           onClick={(event) => {
             event.stopPropagation();
-            onNavigate(1);
+            handleNavigate(1);
           }}
           aria-label="Next image"
         >

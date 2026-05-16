@@ -16,8 +16,8 @@ export default function FooterSection() {
             />
           </div>
           <p className="ft-desc">
-            Unoloft offers premium paying guest accommodation in
-            Ahmedabad. Your home, away from home - since 2021.
+            Unoloft offers premium paying guest accommodation in Ahmedabad. Your
+            home, away from home - since 2021.
           </p>
           <div className="ft-socs">
             <a
@@ -138,7 +138,7 @@ export default function FooterSection() {
       </div>
 
       <div className="ft-bar">
-        <div>© 2026 Unoloft. All rights reserved.</div>
+        <div>Roothouse living Incorporate since 2024. All Rights Reserved</div>
       </div>
     </footer>
   );

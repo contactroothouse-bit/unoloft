@@ -26,7 +26,7 @@ import type { GalleryFilter, Home, Mode } from "@/components/unoloft/types";
 const SCROLL_OFFSET = 75;
 
 export default function UnoloftPage() {
-  const [selectedHome, setSelectedHome] = useState<Home>("aster");
+  const [selectedHome, setSelectedHome] = useState<Home>("iris");
   const mode: Mode = "all";
   const [galleryFilter, setGalleryFilter] = useState<GalleryFilter>("all");
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -262,10 +262,10 @@ export default function UnoloftPage() {
             Best PG in Gota and <em>Near Nirma University</em>
           </h2>
           <p className="s-sub">
-            Looking for a PG near Gota, a PG near Nirma University, or the
-            best PG in Ahmedabad? Unoloft offers fully furnished AC rooms,
-            meals, WiFi, housekeeping, and 24/7 security near key student and
-            work hubs.
+            Looking for a PG near Gota, a PG near Nirma University, or the best
+            PG in Ahmedabad? Unoloft offers fully furnished AC rooms, meals,
+            WiFi, housekeeping, and 24/7 security near key student and work
+            hubs.
           </p>
         </div>
         <div className="loc-exp-links rv">

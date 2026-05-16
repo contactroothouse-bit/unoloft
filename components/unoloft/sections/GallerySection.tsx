@@ -87,20 +87,23 @@ export default function GallerySection({
       </div>
 
       {showHomeSwitch ? (
-        <div className="rooms-home-switch rooms-home-switch-inline" aria-label="Select property">
-          <button
-            type="button"
-            className={cn(selectedHome === "aster" && "active")}
-            onClick={() => onHomeChange?.("aster")}
-          >
-            Aster Homes
-          </button>
+        <div
+          className="rooms-home-switch rooms-home-switch-inline"
+          aria-label="Select property"
+        >
           <button
             type="button"
             className={cn(selectedHome === "iris" && "active")}
             onClick={() => onHomeChange?.("iris")}
           >
             Iris House
+          </button>
+          <button
+            type="button"
+            className={cn(selectedHome === "aster" && "active")}
+            onClick={() => onHomeChange?.("aster")}
+          >
+            Aster Homes
           </button>
         </div>
       ) : null}
