@@ -11,13 +11,13 @@ export const SITE_ICON_URL = `${SITE_URL}/icon-192.png`;
 export type RouteConfig = {
   path: string;
   changeFrequency:
-    | "always"
-    | "hourly"
-    | "daily"
-    | "weekly"
-    | "monthly"
-    | "yearly"
-    | "never";
+  | "always"
+  | "hourly"
+  | "daily"
+  | "weekly"
+  | "monthly"
+  | "yearly"
+  | "never";
   priority: number;
 };
 
@@ -35,6 +35,7 @@ export const MAIN_ROUTES = [
 ] as const;
 
 export const LOCAL_ROUTES = [
+  "/pg-in-ahmedabad",
   "/pg-in-gota-ahmedabad",
   "/pg-near-nirma-university",
   "/pg-near-silver-oak",
@@ -77,6 +78,7 @@ export const ALL_SEO_ROUTES: RouteConfig[] = [
     priority: 0.7,
   },
   { path: "/faq", changeFrequency: "daily", priority: 0.7 },
+  { path: "/pg-in-ahmedabad", changeFrequency: "daily", priority: 0.9 },
   { path: "/pg-in-gota-ahmedabad", changeFrequency: "daily", priority: 0.9 },
   {
     path: "/pg-near-nirma-university",
