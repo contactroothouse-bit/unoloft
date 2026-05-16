@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/unoloft/JsonLd";
 import LocalSeoLandingPage from "@/components/unoloft/LocalSeoLandingPage";
+import GalleryPageClient from "@/components/unoloft/GalleryPageClient";
+import { IRIS_TESTIMONIALS } from "@/components/unoloft/data";
+import FacilitiesSection from "@/components/unoloft/sections/FacilitiesSection";
+import RoomsSection from "@/components/unoloft/sections/RoomsSection";
+import TestimonialsSection from "@/components/unoloft/sections/TestimonialsSection";
 import {
   buildPageMetadata,
   getBreadcrumbSchema,
@@ -73,6 +78,7 @@ export default function PgNearNirmaUniversityPage() {
       <LocalSeoLandingPage
         h1="PG near Nirma University, Ahmedabad – Unoloft"
         intro="Unoloft is built for students searching for a dependable PG near Nirma University, Ahmedabad with a practical daily commute and a serious study environment. From the property, Nirma University is approximately a 10 minute commute, and many residents cover the stretch in a quick auto ride from the Gota side. Because this location is also close to SG Highway and Gota Circle, students can easily access coaching centers, food outlets, and transport routes after classes. The PG setup is fully furnished with AC rooms, dedicated study furniture, high-speed WiFi, hygienic home-cooked meals, daily housekeeping, filtered water, and round-the-clock safety systems. For first-year and outstation students, this reduces moving stress and allows better focus during semester schedules, project deadlines, and exam periods. Parents also prefer this locality because it offers a safer residential pocket while keeping Nirma University reachable every day without long travel fatigue. If your priority is a balanced student lifestyle near Nirma University with reliable facilities and responsive management support, Unoloft offers a stable and premium accommodation option designed around academics."
+        introImageSrc="/Iris%20homes/Iris%20homes/IMG-20260322-WA0015.jpg"
         landmarks={[
           "Nirma University main gate: approx. 10 minutes by auto",
           "SG Highway: approx. 2 minutes",
@@ -89,7 +95,12 @@ export default function PgNearNirmaUniversityPage() {
           { href: "/pg-in-gota-ahmedabad", label: "Also in Gota Ahmedabad" },
         ]}
         faqs={LANDING_FAQS}
-      />
+      >
+        <FacilitiesSection selectedHome="iris" />
+        <RoomsSection selectedHome="iris" />
+        <GalleryPageClient selectedHome="iris" />
+        <TestimonialsSection items={IRIS_TESTIMONIALS} />
+      </LocalSeoLandingPage>
     </>
   );
 }
