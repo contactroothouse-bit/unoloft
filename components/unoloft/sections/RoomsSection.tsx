@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Lightbox from "@/components/unoloft/Lightbox";
 import { cn } from "@/components/unoloft/utils";
 import {
@@ -22,6 +22,100 @@ type RoomsSectionProps = {
   showHomeSwitch?: boolean;
   onHomeChange?: (home: Home) => void;
 };
+
+interface RoomCardProps {
+  room: Room;
+  onClick: () => void;
+}
+
+function RoomCard({ room, onClick }: RoomCardProps) {
+  const [hovered, setHovered] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (hovered) {
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          console.log("Video play interrupted/failed:", error);
+        });
+      }
+    } else {
+      video.pause();
+      video.currentTime = 0;
+    }
+  }, [hovered]);
+
+  return (
+    <div
+      className="room-c rv"
+      style={room.delay ? { transitionDelay: room.delay } : undefined}
+      role="button"
+      tabIndex={0}
+      onClick={onClick}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          onClick();
+        }
+      }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      aria-label={`Open ${room.name} image gallery`}
+    >
+      <div className="room-img">
+        <Image
+          src={room.image}
+          alt={`${room.alt} at Unoloft PG in Ahmedabad with AC and study setup`}
+          fill
+          sizes="(max-width: 860px) 100vw, 33vw"
+          loading="lazy"
+          style={{
+            transform: hovered && room.video ? "scale(1.06)" : undefined,
+            transition: "transform 0.5s ease",
+          }}
+        />
+        {room.video && (
+          <video
+            ref={videoRef}
+            src={room.video}
+            muted
+            loop
+            playsInline
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+              backgroundColor: "#000",
+              opacity: hovered ? 1 : 0,
+              transition: "opacity 0.4s ease",
+            }}
+          />
+        )}
+        <span className="r-badge" style={{ zIndex: 2 }}>{room.badge}</span>
+      </div>
+
+      <div className="room-body">
+        <div className="r-label">{room.label}</div>
+        <div className="r-name">{room.name}</div>
+        <p className="r-desc">{room.description}</p>
+        <div className="r-chips">
+          {room.chips.map((chip) => (
+            <span className="r-chip" key={chip}>
+              {chip}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function RoomsSection({
   selectedHome,
@@ -135,45 +229,11 @@ export default function RoomsSection({
 
       <div className={gridClassName}>
         {rooms.map((room) => (
-          <div
-            className="room-c rv"
+          <RoomCard
             key={room.name}
-            style={room.delay ? { transitionDelay: room.delay } : undefined}
-            role="button"
-            tabIndex={0}
+            room={room}
             onClick={() => openRoomGallery(room)}
-            onKeyDown={(event) => {
-              if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                openRoomGallery(room);
-              }
-            }}
-            aria-label={`Open ${room.name} image gallery`}
-          >
-            <div className="room-img">
-              <Image
-                src={room.image}
-                alt={`${room.alt} at Unoloft PG in Ahmedabad with AC and study setup`}
-                fill
-                sizes="(max-width: 860px) 100vw, 33vw"
-                loading="lazy"
-              />
-              <span className="r-badge">{room.badge}</span>
-            </div>
-
-            <div className="room-body">
-              <div className="r-label">{room.label}</div>
-              <div className="r-name">{room.name}</div>
-              <p className="r-desc">{room.description}</p>
-              <div className="r-chips">
-                {room.chips.map((chip) => (
-                  <span className="r-chip" key={chip}>
-                    {chip}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
+          />
         ))}
       </div>
     </section>

@@ -39,6 +39,7 @@ export type Room = {
   chips: string[];
   price: string;
   delay?: string;
+  video?: string;
 };
 
 export type AvailabilityCard = {

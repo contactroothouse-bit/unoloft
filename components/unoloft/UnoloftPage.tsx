@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import BackToTopButton from "@/components/unoloft/BackToTopButton";
-import Lightbox from "@/components/unoloft/Lightbox";
+
 import MobileMenu from "@/components/unoloft/MobileMenu";
 import Navbar from "@/components/unoloft/Navbar";
 import {
@@ -29,37 +29,12 @@ export default function UnoloftPage() {
   const [selectedHome, setSelectedHome] = useState<Home>("iris");
   const mode: Mode = "all";
   const [galleryFilter, setGalleryFilter] = useState<GalleryFilter>("all");
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxIndex, setLightboxIndex] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [navScrolled, setNavScrolled] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   const galleryItems = GALLERY_ITEMS_BY_HOME[selectedHome];
-  const lightboxImages = useMemo(
-    () => galleryItems.map((item) => item.lightboxImage),
-    [galleryItems],
-  );
-
-  const onLightboxOpen = useCallback((index: number) => {
-    setLightboxIndex(index);
-    setLightboxOpen(true);
-  }, []);
-
-  const onLightboxClose = useCallback(() => {
-    setLightboxOpen(false);
-  }, []);
-
-  const onLightboxNavigate = useCallback(
-    (delta: number) => {
-      setLightboxIndex(
-        (previous) =>
-          (previous + delta + lightboxImages.length) % lightboxImages.length,
-      );
-    },
-    [lightboxImages.length],
-  );
 
   useEffect(() => {
     const onScroll = () => {
@@ -93,7 +68,7 @@ export default function UnoloftPage() {
   }, [selectedHome]);
 
   useEffect(() => {
-    if (lightboxOpen || mobileOpen) {
+    if (mobileOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
@@ -102,7 +77,7 @@ export default function UnoloftPage() {
     return () => {
       document.body.style.overflow = "";
     };
-  }, [lightboxOpen, mobileOpen]);
+  }, [mobileOpen]);
 
   useEffect(() => {
     document.documentElement.setAttribute(
@@ -115,28 +90,7 @@ export default function UnoloftPage() {
     };
   }, [selectedHome]);
 
-  useEffect(() => {
-    if (!lightboxOpen) {
-      return;
-    }
 
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        onLightboxClose();
-      }
-
-      if (event.key === "ArrowLeft") {
-        onLightboxNavigate(-1);
-      }
-
-      if (event.key === "ArrowRight") {
-        onLightboxNavigate(1);
-      }
-    };
-
-    document.addEventListener("keydown", onKeyDown);
-    return () => document.removeEventListener("keydown", onKeyDown);
-  }, [lightboxOpen, onLightboxClose, onLightboxNavigate]);
 
   useEffect(() => {
     const anchors = Array.from(
@@ -176,12 +130,7 @@ export default function UnoloftPage() {
 
   return (
     <>
-      <Lightbox
-        open={lightboxOpen}
-        image={lightboxImages[lightboxIndex] ?? ""}
-        onClose={onLightboxClose}
-        onNavigate={onLightboxNavigate}
-      />
+
 
       <MobileMenu
         open={mobileOpen}
@@ -228,7 +177,6 @@ export default function UnoloftPage() {
         items={galleryItems}
         filter={galleryFilter}
         onFilterChange={setGalleryFilter}
-        onOpenLightbox={onLightboxOpen}
         showHomeSwitch
         onHomeChange={(home) => {
           setSelectedHome(home);

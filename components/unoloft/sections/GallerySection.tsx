@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
+import Lightbox from "@/components/unoloft/Lightbox";
 import type {
   GalleryFilter,
   GalleryItem,
@@ -9,15 +10,14 @@ import type {
 } from "@/components/unoloft/types";
 import { cn } from "@/components/unoloft/utils";
 
-const INITIAL_ALL_VISIBLE = 8;
-const LOAD_MORE_STEP = 8;
+const INITIAL_ALL_VISIBLE = 12;
+const LOAD_MORE_STEP = 12;
 
 type GallerySectionProps = {
   selectedHome: Home;
   items: GalleryItem[];
   filter: GalleryFilter;
   onFilterChange: (filter: GalleryFilter) => void;
-  onOpenLightbox: (index: number) => void;
   showHomeSwitch?: boolean;
   onHomeChange?: (home: Home) => void;
 };
@@ -50,23 +50,38 @@ export default function GallerySection({
   items,
   filter,
   onFilterChange,
-  onOpenLightbox,
   showHomeSwitch = false,
   onHomeChange,
 }: GallerySectionProps) {
   const [visibleCount, setVisibleCount] = useState(INITIAL_ALL_VISIBLE);
   const roomFilter = selectedHome === "aster" ? "boys-room" : "girls-room";
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
 
   useEffect(() => {
     setVisibleCount(INITIAL_ALL_VISIBLE);
   }, [selectedHome, filter]);
 
-  const filteredItems = useMemo(
-    () =>
-      items
-        .map((item, index) => ({ ...item, index }))
-        .filter((item) => shouldShowItem(selectedHome, filter, item.category)),
-    [filter, items, selectedHome],
+  const filteredItems = useMemo(() => {
+    const list = items
+      .map((item, index) => ({ ...item, index }))
+      .filter((item) => shouldShowItem(selectedHome, filter, item.category));
+
+    if (filter === "all") {
+      return [...list].sort((a, b) => {
+        const aIsCommon = a.category === "common" || a.category === "facilities";
+        const bIsCommon = b.category === "common" || b.category === "facilities";
+        if (aIsCommon && !bIsCommon) return -1;
+        if (!aIsCommon && bIsCommon) return 1;
+        return 0;
+      });
+    }
+    return list;
+  }, [filter, items, selectedHome]);
+
+  const lightboxImages = useMemo(
+    () => filteredItems.map((item) => item.lightboxImage),
+    [filteredItems],
   );
 
   const renderedItems =
@@ -130,12 +145,15 @@ export default function GallerySection({
       </div>
 
       <div className="gal-masonry" id="galGrid">
-        {renderedItems.map((item) => (
+        {renderedItems.map((item, idx) => (
           <div
             className="gi"
             data-cat={item.category}
             key={`${item.alt}-${item.index}`}
-            onClick={() => onOpenLightbox(item.index)}
+            onClick={() => {
+              setLightboxIndex(idx);
+              setLightboxOpen(true);
+            }}
           >
             <Image
               src={item.image}
@@ -166,6 +184,18 @@ export default function GallerySection({
           </button>
         </div>
       ) : null}
+
+      <Lightbox
+        open={lightboxOpen}
+        image={lightboxImages[lightboxIndex] ?? ""}
+        onClose={() => setLightboxOpen(false)}
+        onNavigate={(delta) =>
+          setLightboxIndex(
+            (previous) =>
+              (previous + delta + lightboxImages.length) % lightboxImages.length,
+          )
+        }
+      />
     </section>
   );
 }

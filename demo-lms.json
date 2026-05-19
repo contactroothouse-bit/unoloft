@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Administrator",
+        "email": "admin@example.com"
+    },
+    {
+        "name": "ash@ipp.com",
+        "email": "ash@ipp.com"
+    },
+    {
+        "name": "Guest",
+        "email": "guest@example.com"
+    },
+    {
+        "name": "jane.smith@example.com",
+        "email": "jane.smith@example.com"
+    },
+    {
+        "name": "jannat@example.com",
+        "email": "jannat@example.com"
+    },
+    {
+        "name": "john.doe@example.com",
+        "email": "john.doe@example.com"
+    }
+]

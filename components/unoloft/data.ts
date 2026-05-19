@@ -301,7 +301,6 @@ export const ASTER_ROOMS: Room[] = [
     image: "/rooms/IMG-20260201-WA0020.jpg",
     galleryImages: [
       "/rooms/IMG-20260201-WA0020.jpg",
-      "/rooms/IMG-20260201-WA0018.jpg",
     ],
     alt: "Single Room",
     badge: "Most Private",
@@ -315,9 +314,6 @@ export const ASTER_ROOMS: Room[] = [
   {
     image: "/rooms/IMG-20260201-WA0025.jpg",
     galleryImages: [
-      "/asterhomes/room/20260405_154326.jpg",
-      "/asterhomes/room/20260405_154417.jpg",
-      "/rooms/IMG-20260201-WA0015.jpg",
       "/rooms/IMG-20260201-WA0016.jpg",
       "/rooms/IMG-20260201-WA0017.jpg",
       "/rooms/IMG-20260201-WA0023.jpg",
@@ -356,12 +352,11 @@ export const ASTER_ROOMS: Room[] = [
 
 export const IRIS_ROOMS: Room[] = [
   {
-    image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0002.jpg`,
+    image: "/irisroom/2sharing/WhatsApp%20Image%202026-05-19%20at%2020.18.00.jpeg",
     galleryImages: [
+      "/irisroom/2sharing/WhatsApp%20Image%202026-05-19%20at%2020.18.00.jpeg",
       `${IRIS_IMAGE_BASE}/IMG-20260322-WA0002.jpg`,
       `${IRIS_IMAGE_BASE}/IMG-20260322-WA0020.jpg`,
-      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0019.jpg`,
-      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0022.jpg`,
     ],
     alt: "Double Room",
     badge: "Popular",
@@ -372,14 +367,13 @@ export const IRIS_ROOMS: Room[] = [
     chips: ["AC", "Fan", "Study Table", "Wardrobe"],
     price: "₹14,500",
     delay: ".1s",
+    video: "/2sharing.mp4",
   },
   {
-    image: `${IRIS_IMAGE_BASE}/IMG-20260322-WA0019.jpg`,
+    image: "/irisroom/threesharing/WhatsApp%20Image%202026-05-19%20at%2020.17.57.jpeg",
     galleryImages: [
       `${IRIS_IMAGE_BASE}/IMG-20260322-WA0021.jpg`,
-      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0019.jpg`,
       `${IRIS_IMAGE_BASE}/IMG-20260322-WA0024.jpg`,
-      `${IRIS_IMAGE_BASE}/IMG-20260322-WA0025.jpg`,
       `${IRIS_IMAGE_BASE}/IMG-20260322-WA0023.jpg`,
     ],
     alt: "Triple Room",
@@ -391,6 +385,7 @@ export const IRIS_ROOMS: Room[] = [
     chips: ["AC", "Fan", "Study Table", "Wardrobe"],
     price: "₹11,000",
     delay: ".2s",
+    video: "/3sharingiris.mp4",
   },
 ];
 
@@ -519,10 +514,7 @@ export const WHY_FEATURES: WhyFeature[] = [
 ];
 
 const ASTER_ROOM_GALLERY_IMAGES = [
-  "/asterhomes/room/20260405_154326.jpg",
-  "/asterhomes/room/20260405_154417.jpg",
   "/rooms/IMG-20260201-WA0002.jpg",
-  "/rooms/IMG-20260201-WA0015.jpg",
   "/rooms/IMG-20260201-WA0016.jpg",
   "/rooms/IMG-20260201-WA0017.jpg",
   "/rooms/IMG-20260201-WA0018.jpg",
@@ -543,18 +535,6 @@ export const ASTER_GALLERY_ITEMS: GalleryItem[] = [
     lightboxImage: image,
     alt: `Aster Room ${index + 1}`,
   })),
-  {
-    category: "facilities",
-    image: "/asterhomes/kitchen/20260405_155737.jpg",
-    lightboxImage: "/asterhomes/kitchen/20260405_155737.jpg",
-    alt: "Aster Kitchen 1",
-  },
-  {
-    category: "facilities",
-    image: "/asterhomes/kitchen/20260405_155840.jpg",
-    lightboxImage: "/asterhomes/kitchen/20260405_155840.jpg",
-    alt: "Aster Kitchen 2",
-  },
   {
     category: "facilities",
     image: "/asterhomes/kitchen/20260405_155906.jpg",

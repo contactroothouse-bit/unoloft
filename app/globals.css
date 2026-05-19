@@ -1633,7 +1633,7 @@ footer .nav-logo {
   overflow: hidden;
   position: relative;
   height: 560px;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 4;
   cursor: pointer;
   transition: var(--t);
   box-shadow: 0 14px 48px rgba(0, 0, 0, 0.12);

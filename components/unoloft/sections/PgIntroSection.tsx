@@ -55,7 +55,7 @@ export default function PgIntroSection() {
 
           <Link className="pg-card" href="/aster-homes">
             <Image
-              src="/gallery/IMG-20260201-WA0028.jpg"
+              src="/asterhomes/buildingimage.jpeg"
               alt="Aster Homes boys PG building and premium rooms in Gota Ahmedabad"
               fill
               sizes="(max-width: 860px) 100vw, 50vw"
